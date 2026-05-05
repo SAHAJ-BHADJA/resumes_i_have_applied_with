@@ -4,10 +4,10 @@ This file is the strict operating guide for generating Sahaj Bhadja's resumes fr
 
 ## Output Rules
 
-- Output root: `E:\Projects\Random\Resume`
+- Output root: `E:\Projects\Random\Resume\COMPANY`
 - Company folder name must be lowercase.
 - Folder pattern:
-  - `E:\Projects\Random\Resume\<company-name>\<YYYY-MM-DD>\`
+  - `E:\Projects\Random\Resume\COMPANY\<company-name>\<YYYY-MM-DD>\`
 - If multiple resumes are generated for the same company on the same date, create versioned PDFs:
   - `Sahaj_Bhavesh_Bhadja.pdf`
   - `Sahaj_Bhavesh_Bhadja_v2.pdf`
@@ -99,6 +99,7 @@ For weak or vague JDs:
 - Bullets may be rewritten, merged, split, compressed, or expanded.
 - Project idea and factual direction must remain aligned with the master data.
 - Default to 2 bullets for each included work experience.
+- Target bullet length is 22 to 30 words for readability consistency.
 - Bolding should be used strategically for high-signal technologies, impact, metrics, and role-relevant terms.
 - Every finalized resume bullet should include bolded JD-critical keywords (stack, domain terms, impact terms, metrics) where natural and readable.
 - Top roles can use up to 3 bullets.
@@ -144,6 +145,9 @@ For weak or vague JDs:
 - Project count is flexible, but experience must remain at a minimum of 4 entries.
 - Projects should be selected to maximize JD fit.
 - Use 0 to 3 projects depending on space and relevance.
+- Default to 1 bullet per selected project when space is constrained or when using concise one-page formatting.
+- Target project bullet length is 22 to 30 words.
+- Include bolded JD-critical keywords in project bullets where natural and readable.
 - Projects may be rewritten aggressively as long as the underlying idea remains consistent.
 - If a completely new project is created for fit, the user must be told in chat.
 - If the experience section becomes visually cramped while the projects section has spare space, rebalance spacing and/or content so the page looks intentionally distributed rather than bottom-light and middle-dense.

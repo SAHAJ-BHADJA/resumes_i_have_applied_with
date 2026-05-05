@@ -90,13 +90,13 @@ Do not stop after drafting. The workflow is only complete after:
 
 All resumes must be saved under:
 
-- `E:\Projects\Random\Resume\<company-lowercase>\<YYYY-MM-DD>\`
+- `E:\Projects\Random\Resume\COMPANY\<company-lowercase>\<YYYY-MM-DD>\`
 
 Examples:
 
-- `E:\Projects\Random\Resume\aura\2026-04-23\`
-- `E:\Projects\Random\Resume\salesforce\2026-04-22\`
-- `E:\Projects\Random\Resume\ixl learning\2026-04-22\`
+- `E:\Projects\Random\Resume\COMPANY\aura\2026-04-23\`
+- `E:\Projects\Random\Resume\COMPANY\salesforce\2026-04-22\`
+- `E:\Projects\Random\Resume\COMPANY\ixl learning\2026-04-22\`
 
 Rules:
 
@@ -305,6 +305,16 @@ Avoid:
 
 - single-bullet experiences
 - 3-bullet experiences unless absolutely necessary
+
+Project bullets:
+
+- Prefer `1` bullet per selected project in concise one-page mode.
+- Keep each project bullet around `22 to 30` words.
+
+Bullet wording and emphasis:
+
+- Keep each experience bullet around `22 to 30` words.
+- Bold JD-critical keywords in both experience and project bullets (technology, domain terms, metrics, and impact words) where natural and readable.
 
 ## Education Rules
 
