@@ -65,19 +65,22 @@ Those decisions should be made automatically using this guide.
 For every new resume request:
 
 1. Read the JD carefully.
-2. Identify the role family.
-3. Select the best 4 to 5 experiences.
-4. Select the best 0 to 3 projects.
-5. Rewrite summary, coursework, bullets, and skills.
-6. If gaps remain, create a short list of unverified enhancement bullets and get explicit user confirmation.
-7. Update `master_resume_data.json` with confirmed enhancements only.
-8. Create a temporary `.tex` file in the Resume root.
-9. Compile it with the renderer.
-10. Verify it is exactly one page.
-11. Render a preview image and visually inspect layout quality.
-12. Fix any layout or chronology issues.
-13. Delete the temporary `.tex` and preview image.
-14. Return the PDF path to the user.
+2. Identify the role family and infer the likely team/product area from JD clues.
+3. Research team-specific stack, responsibilities, and recent initiatives where available.
+4. Research company priorities, current products, and recent news/engineering direction.
+5. Select the best 5 experiences using JD + external research context.
+6. Select the best 3 projects using JD + external research context.
+7. Rewrite summary, coursework, bullets, and skills.
+8. Provide explicit rationale for selected experiences/projects and why they were chosen over non-selected options.
+9. If gaps remain, create a short list of unverified enhancement bullets and get explicit user confirmation.
+10. Update `master_resume_data.json` with confirmed enhancements only.
+11. Create a temporary `.tex` file in the Resume root.
+12. Compile it with the renderer.
+13. Verify it is exactly one page.
+14. Render a preview image and visually inspect layout quality.
+15. Fix any layout or chronology issues.
+16. Delete the temporary `.tex` and preview image.
+17. Return the PDF path to the user.
 
 Do not stop after drafting. The workflow is only complete after:
 
@@ -248,6 +251,12 @@ Do not:
 - make it multi-page
 
 Minor spacing changes are allowed and expected.
+
+Bullet rendering requirement:
+
+- Resume bullets must render as `•` consistently.
+- In LaTeX macros, set explicit itemize labels (for example, `label=\textbullet`) in the list definitions used by experience/project bullets.
+- Do not rely on default itemize markers, which can fallback to dashes in some renders.
 
 ## Default Section Order
 

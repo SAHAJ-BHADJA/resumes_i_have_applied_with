@@ -39,6 +39,7 @@ The generated resume must preserve the current template's visual identity unless
 - Section ordering may be changed per JD.
 - Minor spacing changes are allowed if needed to keep the resume at exactly one page.
 - Font family and `10pt` size must not change.
+- Bullet marker must always render as `•` (not `-`). Use explicit list labels such as `label=\textbullet` in itemize macros instead of relying on default markers.
 
 ## Candidate Identity Rules
 
@@ -53,11 +54,25 @@ Primary optimization order:
 1. ATS keyword match
 2. Recruiter readability
 3. Hiring-manager technical depth
+4. Team/context-specific fit based on external research
 
 For weak or vague JDs:
 
 - Optimize based on the role responsibilities and company context.
 - Prefer the role track that best matches the candidate profile.
+
+## External Research Requirements
+
+For every JD, perform targeted external research before finalizing selection and bullet tailoring:
+
+1. Team-level research:
+   - Infer which specific team/product area the role belongs to from the JD.
+   - Research likely team stack, platform conventions, and recent team-facing initiatives when available.
+2. Company-level research:
+   - Research what the company is currently building, recent launches/news, engineering priorities, and relevant strategic direction.
+3. Tailoring use:
+   - Use this research to refine keyword targeting, emphasis, and role/project selection.
+   - Do not add unverified personal claims; all candidate claims must still remain truthful and consistent with known data.
 
 ## Section Selection Rules
 
@@ -85,6 +100,7 @@ For weak or vague JDs:
 - There is no strict 4-experience cap; add a 5th relevant role when space remains and it improves JD alignment.
 - Fill the page as effectively as possible without spilling past 1 page or adding low-signal filler.
 - Maximum recommended experience entries: 5.
+- Default target: select 5 experiences for each JD unless page-fit constraints force otherwise.
 - Always order work experience from most recent to oldest across all included roles with no exceptions.
 - Chronology must be evaluated by the actual date ranges, not by role type or section preference.
 - Prioritize `USC Dornsife` and `Grad8` for backend, AI, platform, and applied-ML roles unless the JD strongly suggests otherwise.
@@ -145,6 +161,7 @@ For weak or vague JDs:
 - Project count is flexible, but experience must remain at a minimum of 4 entries.
 - Projects should be selected to maximize JD fit.
 - Use 0 to 3 projects depending on space and relevance.
+- Default target: select 3 projects for each JD unless page-fit constraints force otherwise.
 - Default to 1 bullet per selected project when space is constrained or when using concise one-page formatting.
 - Target project bullet length is 22 to 30 words.
 - Include bolded JD-critical keywords in project bullets where natural and readable.
@@ -246,11 +263,13 @@ These are default heuristics, not hard constraints:
 For each JD:
 
 1. Analyze the JD deeply.
-2. Identify target role family and company context.
-3. Select best 4 to 5 experiences.
-4. Select best projects, if any.
-5. Tailor coursework, skills, summary, titles, and bullets.
-6. If needed, propose unverified enhancement bullets and get explicit user confirmation before inclusion.
-7. Persist confirmed new details to `master_resume_data.json`.
-8. Ensure the result is exactly one page.
-9. Render a PDF only to the company/date folder with versioning.
+2. Identify target role family, team context, and likely product area.
+3. Perform external research on the team stack/recent activity and company-level priorities/news.
+4. Select best 5 experiences using JD + research context.
+5. Select best 3 projects using JD + research context.
+6. Tailor coursework, skills, summary, titles, and bullets.
+7. Provide explicit rationale for each selected experience/project and why it was chosen over non-selected options.
+8. If needed, propose unverified enhancement bullets and get explicit user confirmation before inclusion.
+9. Persist confirmed new details to `master_resume_data.json`.
+10. Ensure the result is exactly one page.
+11. Render a PDF only to the company/date folder with versioning.

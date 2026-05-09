@@ -17,15 +17,17 @@ This folder contains the reusable resume framework for JD-tailored one-page resu
 
 Generated PDFs must go to:
 
-`E:\Projects\Random\Resume\<company-lowercase>\<YYYY-MM-DD>\`
+`E:\Projects\Random\Resume\COMPANY\<company-lowercase>\<YYYY-MM-DD>\`
 
 Filename pattern:
 
 `Sahaj_Bhavesh_Bhadja.pdf`
 
-If a second resume is generated for the same company on the same date, use:
+If additional resumes are generated for the same company on the same date, use:
 
 `Sahaj_Bhavesh_Bhadja_v2.pdf`
+
+and increment (`_v3`, `_v4`, ...).
 
 ## Note
 
