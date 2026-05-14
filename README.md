@@ -32,3 +32,10 @@ and increment (`_v3`, `_v4`, ...).
 ## Note
 
 The current machine does not have `pdflatex` available on PATH, so PDF rendering will require a LaTeX distribution to be installed or exposed before the render script can succeed.
+
+## Resume Ordering Rule
+
+Experience entries must always be listed in strict reverse-chronological order:
+
+- newest role first
+- then older roles in date order

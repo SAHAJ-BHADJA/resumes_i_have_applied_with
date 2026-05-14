@@ -101,8 +101,9 @@ For every JD, perform targeted external research before finalizing selection and
 - Fill the page as effectively as possible without spilling past 1 page or adding low-signal filler.
 - Maximum recommended experience entries: 5.
 - Default target: select 5 experiences for each JD unless page-fit constraints force otherwise.
-- Always order work experience from most recent to oldest across all included roles with no exceptions.
-- Chronology must be evaluated by the actual date ranges, not by role type or section preference.
+- Always order work experience in strict reverse-chronological order (newest first, then older roles) with no exceptions.
+- Chronology must be evaluated by actual date ranges only, not by role type, domain fit, section preference, or perceived relevance.
+- If two roles overlap, the role with the more recent start date must appear first.
 - Prioritize `USC Dornsife` and `Grad8` for backend, AI, platform, and applied-ML roles unless the JD strongly suggests otherwise.
 - Allowed title changes:
   - `USC AD Labs`: alternate truthful ML/research phrasing is allowed

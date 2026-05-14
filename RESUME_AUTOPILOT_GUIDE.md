@@ -288,9 +288,11 @@ Do not arbitrarily drop to `4` if there is still space on the page.
 
 This is strict:
 
-- all experience entries must be in reverse chronological order
-- order must be based on actual dates
+- all experience entries must be in strict reverse-chronological order (newest first)
+- order must be based on actual dates only
 - do not group roles out of order because they “fit better”
+- do not reorder for narrative flow, technology grouping, or company preference
+- if dates overlap, list the role with the latest start date first
 
 Example of correct ordering:
 
