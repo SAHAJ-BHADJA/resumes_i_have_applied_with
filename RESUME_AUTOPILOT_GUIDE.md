@@ -320,11 +320,11 @@ Avoid:
 Project bullets:
 
 - Prefer `1` bullet per selected project in concise one-page mode.
-- Keep each project bullet around `22 to 30` words.
+- Keep each project bullet around `25 to 32` words.
 
 Bullet wording and emphasis:
 
-- Keep each experience bullet around `22 to 30` words.
+- Keep each experience bullet around `25 to 32` words.
 - Bold JD-critical keywords in both experience and project bullets (technology, domain terms, metrics, and impact words) where natural and readable.
 
 ## Education Rules

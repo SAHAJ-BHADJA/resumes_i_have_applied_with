@@ -1,0 +1,120 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-3pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-1pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-6pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto: bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-20pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Full-stack engineer with 2+ years building \textbf{secure cloud-native applications}, \textbf{microservices}, and \textbf{AI-enabled workflows} using React, TypeScript, Python, Java, SQL, Docker, and CI/CD.}}
+\end{itemize}
+\vspace{-18pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Analysis of Algorithms, Database Systems, Web Technologies, Advanced NLP}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Software Engineering, Operating Systems, Object-Oriented Programming, Data Retrieval}
+\resumeSubHeadingListEnd
+\vspace{-20pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{LA, California}{Software Engineer}{September 2025 - Present}
+\resumeItemListStart
+\resumeItem{Architected \textbf{multi-tenant backend services} on Azure SQL/PostgreSQL and optimized query patterns, reducing dashboard latency from \textbf{1.2s to 350ms} while supporting 500+ production users.}
+\resumeItem{Built \textbf{FastAPI orchestration pipelines} for 5K+ monthly jobs with validation, reconciliation, and failure-isolation controls, improving release reliability and enabling scalable service operations.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{LA, California}{Software Engineer Intern}{June 2025 - August 2025}
+\resumeItemListStart
+\resumeItem{Developed \textbf{React + Flask full-stack applications} handling 10K+ daily grading requests with secure file ingestion, REST APIs, and concurrent processing for high-throughput education workflows.}
+\resumeItem{Implemented \textbf{CI/CD and automated quality controls} across model-backed services, reducing feedback turnaround by \textbf{60\%} while maintaining stable production behavior under peak load.}
+\resumeItemListEnd
+\resumeSubheading{USC AD Labs}{Los Angeles, CA}{ML Research Assistant}{January 2025 - May 2025}
+\resumeItemListStart
+\resumeItem{Built \textbf{Python experimentation pipelines} over 100K+ trajectory logs with reproducible evaluation workflows, strengthening statistical analysis and model-debugging quality for AI system development.}
+\resumeItem{Delivered technical diagnostics and implementation summaries that accelerated translation of research findings into production-ready engineering plans and cross-team decisions.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 - July 2024}
+\resumeItemListStart
+\resumeItem{Engineered \textbf{API and ETL microservices} using Python/Java OOP, AWS Glue, and S3, improving response times by \textbf{30\%} and supporting resilient data integration across distributed systems.}
+\resumeItem{Maintained \textbf{20+ automated unit/integration suites} with Jenkins, PyTest, and Mockito in Agile sprints, boosting pipeline efficiency by \textbf{68\%} and reducing technical debt by \textbf{20\%}.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Full Stack Developer Intern - (VibrantChem)}{May 2023 - August 2023}
+\resumeItemListStart
+\resumeItem{Built \textbf{MERN app modules} with REST APIs and WebSockets supporting eight workflows and 2M+ synchronized records, improving scalability and maintainability for client-facing operations.}
+\resumeItem{Automated \textbf{Docker/Jenkins deployment pipelines}, reducing deployment time by \textbf{50\%} and improving release consistency for cross-functional engineering teams.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}: \textbf{Python}, \textbf{Java}, \textbf{JavaScript/TypeScript}, SQL, C++ \\
+\textbf{Frontend}: \textbf{React.js}, HTML5, CSS3, responsive UI development \\
+\textbf{Backend}: \textbf{Flask}, \textbf{FastAPI}, Node.js, REST APIs, microservices \\
+\textbf{Cloud/DevOps}: \textbf{AWS} (S3, Glue, RDS), Azure SQL, Docker, Kubernetes, GitHub Actions, Jenkins, CI/CD \\
+\textbf{Data/AI}: PostgreSQL, MySQL, MongoDB, LLM-integrated workflows, model evaluation, production monitoring
+}}
+\end{itemize}
+\vspace{-15pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-3pt}
+\resumeProjectHeading{\textbf{FinNexus} {\href{https://fin-nexus.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{Next.js, TypeScript, Kubernetes, MongoDB}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{scalable fintech platform} supporting 50K+ users and 1M+ transactions with secure API integrations, real-time synchronization, and Kubernetes-backed deployment reliability.}
+\resumeProjItemListEnd
+\resumeProjectHeading{\textbf{Chat2SQL} {\href{https://github.com/SAHAJ-BHADJA/Chat2SQL}{\textcolor{red}{\underline{Code}}}} $|$ \emph{Java, TypeScript, SQL, Docker}}
+\resumeProjItemListStart
+\resumeItem{Designed a \textbf{schema-aware SQL assistant} for 10+ databases with validated query generation, structured outputs, and cross-platform execution workflows for enterprise-style data operations.}
+\resumeProjItemListEnd
+\resumeProjectHeading{\textbf{Linguistix} $|$ \emph{Python, FastAPI, AWS ECS/Fargate, CodePipeline}}
+\resumeProjItemListStart
+\resumeItem{Developed a \textbf{containerized RESTful service} with automated CI/CD releases, validation checks, and production deployment controls, achieving \textbf{87\%} processing accuracy.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

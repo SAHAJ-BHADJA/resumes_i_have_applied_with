@@ -116,7 +116,7 @@ For every JD, perform targeted external research before finalizing selection and
 - Bullets may be rewritten, merged, split, compressed, or expanded.
 - Project idea and factual direction must remain aligned with the master data.
 - Default to 2 bullets for each included work experience.
-- Target bullet length is 22 to 30 words for readability consistency.
+- Target bullet length is 25 to 32 words for readability consistency.
 - Bolding should be used strategically for high-signal technologies, impact, metrics, and role-relevant terms.
 - Every finalized resume bullet should include bolded JD-critical keywords (stack, domain terms, impact terms, metrics) where natural and readable.
 - Top roles can use up to 3 bullets.
@@ -164,7 +164,7 @@ For every JD, perform targeted external research before finalizing selection and
 - Use 0 to 3 projects depending on space and relevance.
 - Default target: select 3 projects for each JD unless page-fit constraints force otherwise.
 - Default to 1 bullet per selected project when space is constrained or when using concise one-page formatting.
-- Target project bullet length is 22 to 30 words.
+- Target project bullet length is 25 to 32 words.
 - Include bolded JD-critical keywords in project bullets where natural and readable.
 - Projects may be rewritten aggressively as long as the underlying idea remains consistent.
 - If a completely new project is created for fit, the user must be told in chat.
