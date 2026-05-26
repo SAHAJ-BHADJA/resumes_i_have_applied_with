@@ -1,0 +1,106 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Jane Developer}} \\ \vspace{1pt}
+\small \href{tel:(555) 123-4567}{\faPhone\ \underline{(555) 123-4567}} ~ \href{mailto:jane.dev@email.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{jane.dev@email.com}} ~
+\href{https://www.linkedin.com/in/jane-developer/}{\raisebox{-0.2\height}\faLinkedin\ \underline{jane-developer}} ~ \href{https://github.com/janedev}{\raisebox{-0.2\height}\faGithub\ \underline{janedev}} ~
+\href{https://janedev.com/}{\raisebox{-0.2\height}\faGlobe\ \underline{janedev.com}}
+\end{center}
+\vspace{-18pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Full-stack engineer with 3+ years building \textbf{React/Node.js applications}, \textbf{Python APIs}, and \textbf{cloud-native systems} across AWS and GCP environments. Seeking backend or full-stack roles at growth-stage companies.}}
+\end{itemize}
+\vspace{-16pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{Stanford University, Stanford, CA}{September 2018 -- June 2022}{Bachelor of Science in Computer Science}{GPA: 3.85/4.0}{Coursework: Distributed Systems, Database Design, Machine Learning, Computer Networks}
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{TechCorp Inc.}{San Francisco, CA}{Software Engineer}{July 2022 -- Present}
+\resumeItemListStart
+\resumeItem{Built \textbf{microservices architecture} handling 50K+ daily requests, reducing API latency from \textbf{800ms to 150ms} through query optimization, caching strategies, and connection pooling across PostgreSQL and Redis backends.}
+\resumeItem{Implemented \textbf{real-time data pipeline} processing 1M+ events daily using Kafka and Python, enabling sub-second analytics dashboards and reducing data staleness from hours to seconds for business intelligence teams.}
+\resumeItemListEnd
+\resumeSubheading{StartupXYZ}{Remote}{Backend Engineer Intern}{May 2021 -- August 2021}
+\resumeItemListStart
+\resumeItem{Developed \textbf{RESTful APIs} serving 10K+ users using Node.js and Express, implementing JWT authentication, rate limiting, and comprehensive error handling while maintaining 99.5\% uptime during peak traffic periods.}
+\resumeItem{Built \textbf{automated testing pipeline} with Jest and GitHub Actions, achieving 85\% code coverage and reducing production bugs by \textbf{40\%} through pre-deployment validation and integration testing workflows.}
+\resumeItemListEnd
+\resumeSubheading{University Research Lab}{Stanford, CA}{Research Assistant}{January 2021 -- May 2021}
+\resumeItemListStart
+\resumeItem{Developed \textbf{data processing pipelines} analyzing 500K+ research records using Python and Pandas, automating weekly reporting workflows and reducing manual data preparation time by \textbf{70\%} for research team.}
+\resumeItem{Built \textbf{visualization dashboards} using Plotly and Streamlit, enabling researchers to explore complex datasets interactively and identify patterns that led to two peer-reviewed publication contributions.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}: Python, TypeScript, JavaScript, SQL, Go, Java \\
+\textbf{Frontend}: React, Next.js, Vue.js, TailwindCSS, responsive design \\
+\textbf{Backend \& APIs}: Node.js, FastAPI, Express, REST APIs, GraphQL \\
+\textbf{Databases}: PostgreSQL, MySQL, MongoDB, Redis, database optimization \\
+\textbf{Cloud \& DevOps}: AWS (EC2, S3, Lambda), Docker, Kubernetes, CI/CD, Terraform
+}}
+\end{itemize}
+\vspace{-16pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{TaskFlow} {\href{https://taskflow-demo.com/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{Next.js, PostgreSQL, Stripe, WebSockets}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{real-time project management SaaS} supporting 500+ active users with collaborative boards, Stripe subscriptions, and WebSocket-powered live updates achieving sub-100ms sync latency.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{DataSync} {\href{https://github.com/janedev/datasync}{\textcolor{red}{\underline{Code}}}} $|$ \emph{Python, AWS Lambda, DynamoDB, CI/CD}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{serverless ETL pipeline} on AWS processing 100K+ records daily with automated validation, error recovery, and monitoring, reducing data processing costs by \textbf{60\%} compared to previous EC2-based solution.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{CodeReview AI} {\href{https://github.com/janedev/codereview-ai}{\textcolor{red}{\underline{Code}}}} $|$ \emph{Python, OpenAI API, GitHub Actions}}
+\resumeProjItemListStart
+\resumeItem{Built an \textbf{AI-powered code review assistant} integrated with GitHub PRs, analyzing 50+ repositories and providing automated suggestions that reduced review turnaround time by \textbf{35\%} for development teams.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

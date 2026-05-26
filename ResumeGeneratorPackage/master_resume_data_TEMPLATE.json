@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "document_type": "resume_master_data",
+    "notes": [
+      "This file stores ALL your resume content in one place.",
+      "Add multiple bullet variations for each role - you'll pick the best ones per application.",
+      "Keep this file updated as you gain new experiences."
+    ]
+  },
+  "personal": {
+    "name": "Your Full Name",
+    "phone": "(123) 456-7890",
+    "email": "your.email@example.com",
+    "linkedin": "https://www.linkedin.com/in/your-handle/",
+    "linkedin_handle": "your-handle",
+    "github": "https://github.com/your-username",
+    "github_handle": "your-username",
+    "website": "https://yourwebsite.com/",
+    "website_handle": "yourwebsite"
+  },
+  "summary": {
+    "active": [
+      "Your primary professional summary goes here. Keep it to 2-3 sentences highlighting your experience level, core skills, and what you're seeking."
+    ],
+    "alternatives": [
+      "Alternative summary for different role types (e.g., backend-focused)",
+      "Another alternative (e.g., full-stack focused)"
+    ]
+  },
+  "education": [
+    {
+      "institution": "University Name",
+      "location": "City, State",
+      "start_date": "August 2020",
+      "end_date": "May 2024",
+      "degree": "Bachelor of Science in Computer Science",
+      "gpa": "3.8/4.0",
+      "coursework": [
+        "Data Structures",
+        "Algorithms",
+        "Database Systems",
+        "Operating Systems"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Company Name",
+      "location": "City, State",
+      "title": "Software Engineer",
+      "start_date": "June 2024",
+      "end_date": "Present",
+      "detailed_context": {
+        "overview": "Brief description of what you did at this role",
+        "technologies_used": ["Python", "AWS", "PostgreSQL"],
+        "business_impact": [
+          "Key metric or achievement 1",
+          "Key metric or achievement 2"
+        ]
+      },
+      "bullet_bank": [
+        "Your first bullet point with a quantified achievement. Built X using Y, resulting in Z% improvement.",
+        "Alternative version of the first bullet for different JD emphasis.",
+        "Second bullet point highlighting another achievement or responsibility.",
+        "Third bullet point - keep 3-5 variations per role for flexibility."
+      ]
+    },
+    {
+      "company": "Previous Company",
+      "location": "City, State",
+      "title": "Software Engineer Intern",
+      "start_date": "May 2023",
+      "end_date": "August 2023",
+      "detailed_context": {
+        "overview": "Internship description",
+        "technologies_used": ["React", "Node.js", "MongoDB"],
+        "business_impact": ["Impact 1", "Impact 2"]
+      },
+      "bullet_bank": [
+        "Internship bullet 1 with quantified results.",
+        "Internship bullet 2 highlighting technical skills.",
+        "Alternative versions for different emphasis."
+      ]
+    }
+  ],
+  "skills": {
+    "Languages": ["Python", "JavaScript", "TypeScript", "SQL", "Java", "C++"],
+    "Frontend": ["React", "Next.js", "HTML", "CSS", "TailwindCSS"],
+    "Backend & APIs": ["Node.js", "Express", "FastAPI", "Flask", "REST APIs"],
+    "Databases": ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+    "Cloud & DevOps": ["AWS", "Docker", "Kubernetes", "CI/CD", "Git"],
+    "Tools": ["VS Code", "Postman", "JIRA", "GitHub Actions"]
+  },
+  "projects": [
+    {
+      "name": "Project Name",
+      "live_url": "https://project-demo.com/",
+      "code_url": "https://github.com/you/project",
+      "technologies": ["Next.js", "PostgreSQL", "AWS"],
+      "detailed_context": {
+        "overview": "What the project does and why you built it",
+        "key_features": ["Feature 1", "Feature 2"],
+        "impact": ["Metric or user count if applicable"]
+      },
+      "bullet_bank": [
+        "Project bullet 1 - what you built, tech used, and impact/scale.",
+        "Alternative bullet with different emphasis.",
+        "Technical deep-dive bullet if relevant."
+      ]
+    },
+    {
+      "name": "Another Project",
+      "code_url": "https://github.com/you/another-project",
+      "technologies": ["Python", "Docker", "CI/CD"],
+      "bullet_bank": [
+        "Bullet describing this project's achievements."
+      ]
+    }
+  ]
+}

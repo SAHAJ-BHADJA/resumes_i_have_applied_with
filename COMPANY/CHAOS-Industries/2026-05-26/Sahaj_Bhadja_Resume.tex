@@ -1,0 +1,118 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-18pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Software engineer with 2+ years building \textbf{data pipelines}, \textbf{ML systems on sensor data}, and \textbf{full-stack applications} across cloud infrastructure. Experienced translating user requirements into deployed solutions in fast-paced, customer-facing environments.}}
+\end{itemize}
+\vspace{-16pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4.0}{Coursework: Analysis of Algorithms, Database Systems, Web Technologies, Advanced NLP}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4.0}{Coursework: Software Engineering, Operating Systems, Object-Oriented Programming, Data Retrieval}
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC AD Labs}{Los Angeles, CA}{ML Research Assistant}{January 2025 -- May 2025}
+\resumeItemListStart
+\resumeItem{Built \textbf{ML pipelines processing 100K+ sensor trajectory records} for autonomous driving, implementing data ingestion, feature extraction, and model training workflows using PyTorch, enabling reproducible evaluation and rapid iteration.}
+\resumeItem{Designed \textbf{spatial-temporal encoder} integrating HD-map geometry with vehicle sensor data via multi-head attention, improving closed-loop planning stability by 15\% and demonstrating ML applied to real-world sensor problems.}
+\resumeItemListEnd
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Built \textbf{data integration pipelines} processing 5K+ monthly jobs across SQL databases, cloud storage, and external APIs with validation checks, error handling, and automated recovery, achieving 99\%+ production reliability.}
+\resumeItem{Deployed \textbf{Python backend services} on Azure serving 500+ users, reducing latency from \textbf{1.2s to 350ms} through query optimization, indexing, and performance tuning while supporting CI/CD-backed production releases.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Engineer Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Developed \textbf{full-stack platform with Python/Flask backend and React frontend} serving 150+ instructors, translating user workflow requirements into technical specifications and shipping features handling 10K+ daily requests.}
+\resumeItem{Integrated \textbf{ML models (GPT-4o, Claude) into production workflows} with concurrent batch processing, reducing feedback turnaround by \textbf{60\%} while maintaining stable API performance under instructor workloads.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Engineered \textbf{cross-platform deployment pipelines} with Jenkins CI/CD across Windows, Linux, and macOS, automating build, test, and release workflows while maintaining 20+ test suites with PyTest and Mockito.}
+\resumeItem{Built \textbf{API integrations and ETL workflows} using Python, AWS Glue, and S3, improving response times by \textbf{30\%} and reducing technical debt through OOP design patterns and maintainable service architecture.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Full Stack Developer Intern - (VibrantChem)}{May 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Developed \textbf{real-time data synchronization platform} using MERN stack and WebSockets, enabling 2M+ record syncs across distributed locations with conflict resolution and live status updates.}
+\resumeItem{Deployed \textbf{Docker-based services on Azure} with Jenkins automation, cutting release cycles by \textbf{50\%} through containerized builds, staged deployments, and production monitoring integration.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}: \textbf{Python}, \textbf{TypeScript}, JavaScript, SQL, C++, Java, Bash \\
+\textbf{ML/Data}: PyTorch, sensor data processing, feature engineering, data pipelines, ETL workflows \\
+\textbf{Full-Stack}: React, Next.js, Flask, FastAPI, Node.js, REST APIs, WebSockets \\
+\textbf{Infrastructure}: AWS (S3, Glue, EC2), Azure, Docker, Kubernetes, Linux, Git, CI/CD \\
+\textbf{Tools}: Git, SSH, command-line workflows, Jenkins, testing automation, Agile/Scrum
+}}
+\end{itemize}
+\vspace{-16pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{Linguistix} {\href{https://github.com/SAHAJ-BHADJA/Linguistix}{\textcolor{red}{\underline{Code}}}} $|$ \emph{Python, AWS, Docker, CI/CD}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{containerized data processing API} deployed on AWS ECS/Fargate with CodePipeline automation, implementing validation gates and monitoring for production-grade reliability across deployment environments.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{Chat2SQL} {\href{https://github.com/SAHAJ-BHADJA/Chat2SQL}{\textcolor{red}{\underline{Code}}}} $|$ \emph{Java, TypeScript, PostgreSQL, Docker}}
+\resumeProjItemListStart
+\resumeItem{Built an \textbf{AI-powered database workspace} supporting 10+ storage systems (PostgreSQL, MongoDB, Redis, Snowflake), enabling schema exploration and query generation across diverse data backends.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{CPU Scheduling Simulator} {\href{https://cpu-scheduler-amber.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{C++, React, JavaScript}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{systems-level scheduling simulator} implementing FCFS, SJF, Round Robin, and MLQ algorithms with real-time Gantt visualization, demonstrating OS internals and resource allocation optimization.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}
