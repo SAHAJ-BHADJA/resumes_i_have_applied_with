@@ -1,0 +1,117 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-18pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Software engineer with 2+ years building \textbf{ML/AI systems}, \textbf{computer vision pipelines}, and \textbf{production applications} in Python and C++. Experience implementing research techniques with transformers, optimizing performance, and deploying scalable systems.}}
+\end{itemize}
+\vspace{-16pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4.0}{Coursework: Analysis of Algorithms, Advanced NLP, Computer Vision, Machine Learning}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4.0}{Coursework: Computer Graphics, Image Processing, Deep Learning, Algorithms}
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Built \textbf{production backend systems in Python} with async processing pipelines, implementing optimizations that reduced latency from \textbf{1.2s to 350ms} and increased throughput by 3x under concurrent workloads.}
+\resumeItem{Developed \textbf{scalable data processing infrastructure} handling 5K+ monthly jobs with performance tuning, achieving 99\%+ reliability while collaborating with cross-functional teams on end-to-end solutions.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Engineer Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Implemented \textbf{computer vision pipelines integrating multiple ML models} (GPT-4o Vision, Claude Vision, OCR) for image processing, optimizing inference to handle 10K+ daily requests with efficient resource utilization.}
+\resumeItem{Designed \textbf{concurrent batch-processing engine} using multithreading, processing 1K+ files per batch with fault-tolerant execution and clear technical documentation for research-to-production workflows.}
+\resumeItemListEnd
+\resumeSubheading{USC AD Labs}{Los Angeles, CA}{ML Research Assistant}{January 2025 -- May 2025}
+\resumeItemListStart
+\resumeItem{Built a \textbf{GPT-based transformer model for autonomous systems} using PyTorch, implementing research techniques from papers to improve trajectory planning by 18\% with end-to-end training pipelines on 100K+ records.}
+\resumeItem{Architected a \textbf{spatial-temporal encoder} integrating geometric data with agent context via multi-head attention, demonstrating ability to implement complex algorithms from research and optimize for real-world deployment.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Engineered \textbf{performance-optimized APIs and data pipelines} using Python, improving response times by 30\% and pipeline efficiency by \textbf{68\%} through algorithmic optimization and resource-efficient design.}
+\resumeItem{Built \textbf{cross-platform software with automated CI/CD} using Jenkins and GitHub, delivering production-quality code with comprehensive testing in Agile sprints collaborating with engineering teams.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Full Stack Developer Intern - (VibrantChem)}{May 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Developed \textbf{real-time streaming systems} using WebSockets for 2M+ records, implementing efficient data synchronization and compression techniques to minimize bandwidth and memory requirements.}
+\resumeItem{Built \textbf{scalable microservice architecture} with Docker deployments, collaborating with cloud and content teams to design end-to-end solutions that scaled to production workloads.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}: Python, C++, JavaScript/TypeScript, SQL, CUDA basics \\
+\textbf{ML/CV}: PyTorch, Transformers, CLIP, Stable Diffusion, computer vision, neural networks, embeddings \\
+\textbf{Infrastructure}: Docker, AWS, GCP, Kubernetes, CI/CD, distributed systems, performance optimization \\
+\textbf{Practices}: Research implementation, algorithm optimization, Agile/Scrum, technical documentation
+}}
+\end{itemize}
+\vspace{-16pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{PiXMod} {\href{https://pixmod.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{CLIP, Stable Diffusion, SAM, PyTorch, MongoDB}}
+\resumeProjItemListStart
+\resumeItem{Built an \textbf{AI-powered image processing platform} using transformer models (CLIP, Stable Diffusion, SAM) for segmentation, generation, and semantic search across 100K+ embeddings with optimized inference.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{CaptionCraft} {\href{https://imagecaptiongenerator.com/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{Transformers, PyTorch, BLIP, ViT-GPT-2, Flask}}
+\resumeProjItemListStart
+\resumeItem{Benchmarked \textbf{multiple transformer architectures} (BLIP, GIT, ViT-GPT-2) on 10K images/100K captions, implementing research techniques to improve caption accuracy from 81\% to 96\% with scalable inference APIs.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{Big-Brain} {\href{https://big-brain-pied.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{LLaMA-2, FAISS, Pinecone, GCP}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{semantic retrieval system} using transformer embeddings and vector search (FAISS), processing 50K+ documents with optimized similarity search pipelines achieving sub-second retrieval latency.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

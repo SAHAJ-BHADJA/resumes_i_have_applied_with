@@ -1,0 +1,118 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-18pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Full-stack engineer with 2+ years shipping \textbf{AI-powered features}, \textbf{React/TypeScript interfaces}, and \textbf{data-driven applications}. Experienced building with LLMs (GPT-4, Claude), iterating rapidly in startup environments, and translating user feedback into shipped products.}}
+\end{itemize}
+\vspace{-16pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4.0}{Coursework: Analysis of Algorithms, Database Systems, Web Technologies, Advanced NLP}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4.0}{Coursework: Software Engineering, Operating Systems, Object-Oriented Programming, Data Retrieval}
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Engineer Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Shipped \textbf{AI-native features using GPT-4o, Claude, and Qwen-VL} with switchable model architecture, building natural language workflows that processed 10K+ daily requests and reduced feedback turnaround by \textbf{60\%}.}
+\resumeItem{Built \textbf{React interfaces and Python APIs} in a fast-moving startup, iterating rapidly on user feedback from 150+ instructors while maintaining stable performance under production workloads.}
+\resumeItemListEnd
+\resumeSubheading{USC AD Labs}{Los Angeles, CA}{ML Research Assistant}{January 2025 -- May 2025}
+\resumeItemListStart
+\resumeItem{Built \textbf{data analysis pipelines processing 100K+ records} with PyTorch, implementing feature extraction, visualization workflows, and experiment tracking for reproducible analytics and model evaluation.}
+\resumeItem{Designed \textbf{transformer-based models} with multi-head attention, improving planning accuracy by 18\% through rapid experimentation, systematic benchmarking, and iterative model refinement.}
+\resumeItemListEnd
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Built \textbf{analytics dashboard backend} serving 500+ users, reducing query latency from \textbf{1.2s to 350ms} through database optimization, enabling faster data exploration and real-time insights.}
+\resumeItem{Developed \textbf{data pipelines} processing 5K+ monthly jobs with automated validation, supporting analytics workflows with 99\%+ reliability across production deployments.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Full Stack Developer Intern - (VibrantChem)}{May 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Built \textbf{real-time collaboration platform} with MERN stack and WebSockets, enabling 2M+ record sync across distributed users with live updates and conflict resolution.}
+\resumeItem{Shipped features rapidly with \textbf{Docker-based CI/CD}, cutting release cycles by \textbf{50\%} through automated testing, staged deployments, and quick iteration on user feedback.}
+\resumeItemListEnd
+\resumeSubheading{LST Capitals}{India}{Web Developer Intern}{November 2022 -- January 2023}
+\resumeItemListStart
+\resumeItem{Built \textbf{real-time analytics with Databricks and Flask}, enabling data analysis on 50K+ records with sub-200ms API responses and Firebase-powered live synchronization.}
+\resumeItem{Developed \textbf{cross-platform React interfaces} for web and mobile, translating product requirements directly into shipped features while gathering user feedback to guide iteration.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Frontend}: \textbf{React}, \textbf{TypeScript}, Next.js, JavaScript, responsive UI, data visualization \\
+\textbf{AI/LLM}: GPT-4/Claude APIs, LLM orchestration, AI-assisted development, coding agents, prompt engineering \\
+\textbf{Backend}: Python, Flask, FastAPI, Node.js, REST APIs, PostgreSQL, MongoDB \\
+\textbf{Data}: Data pipelines, analytics workflows, Databricks, PyTorch, feature engineering \\
+\textbf{Tools}: Git, Docker, AWS, CI/CD, rapid iteration, Agile/startup workflows
+}}
+\end{itemize}
+\vspace{-16pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{Big-Brain} {\href{https://big-brain-pied.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{LLaMA-2, FAISS, Pinecone, PostgreSQL, GCP}}
+\resumeProjItemListStart
+\resumeItem{Built an \textbf{AI-powered data intelligence platform} with natural language search and Q\&A across 50K+ documents, achieving 95\% query accuracy through vector embeddings and LLM-powered analysis.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{PiXMod} {\href{https://pixmod.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{Next.js, TypeScript, MongoDB, Transformers}}
+\resumeProjItemListStart
+\resumeItem{Built an \textbf{AI-native SaaS platform} with CLIP and Stable Diffusion, implementing semantic search across 100K+ embeddings with real-time processing and intuitive user workflows.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{FinNexus} {\href{https://fin-nexus.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{Next.js, TypeScript, MongoDB, WebSockets}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{real-time analytics dashboard} supporting 50K+ users and 1M+ transactions with live data sync, advanced filtering, and responsive visualizations for financial insights.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

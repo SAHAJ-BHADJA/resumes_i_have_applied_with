@@ -14,19 +14,49 @@ Extract:
 
 ## 2. Do company and team research first
 
-Research:
+**This step is mandatory. Do not skip to resume generation.**
 
-- current company product
-- recent company direction
-- likely engineering stack
-- likely team context
+### What to research
 
-Use this research to refine:
+| Area | What to find |
+|------|--------------|
+| **Company product** | What do they build/sell? Who are their customers? B2B or B2C? |
+| **Domain** | Industry vertical (fintech, healthcare, defense, SaaS, etc.) |
+| **Recent direction** | News, acquisitions, pivots, funding rounds, product launches |
+| **Engineering stack** | Languages, frameworks, cloud providers, databases they actually use |
+| **Team context** | Team size, engineering culture, what problems they're solving |
 
-- experience selection
-- project selection
-- summary wording
-- skills ordering
+### Where to research
+
+- **Company website** - About page, careers page, product pages
+- **LinkedIn** - Company page, engineering team profiles, job posts
+- **Glassdoor** - Interview reviews, tech stack mentions
+- **Web search** - "[Company] engineering blog", "[Company] tech stack", "[Company] news 2026"
+- **GitHub** - Public repos, open source contributions
+- **Crunchbase** - Funding, company size, investors
+- **News** - TechCrunch, industry publications
+
+### How to apply research
+
+Use findings to refine:
+
+| Resume section | How research informs it |
+|----------------|------------------------|
+| **Experience selection** | Prioritize experiences matching their domain (e.g., healthcare company → emphasize HMIS) |
+| **Project selection** | Choose projects that patch stack/domain gaps |
+| **Summary wording** | Use their language, mention relevant domain experience |
+| **Skills ordering** | Put their stack first (e.g., if they use GCP, list GCP before AWS) |
+| **Bullet phrasing** | Mirror their terminology, emphasize relevant impact |
+
+### Research output checklist
+
+Before proceeding to Step 3, confirm you know:
+
+- [ ] What the company's core product/service is
+- [ ] What industry/domain they operate in
+- [ ] Their likely tech stack (beyond JD mentions)
+- [ ] Recent company news or direction
+- [ ] What the specific team/role focuses on
 
 ## 3. Select best-fit resume content
 
