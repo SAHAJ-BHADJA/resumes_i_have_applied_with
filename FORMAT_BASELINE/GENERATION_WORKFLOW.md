@@ -45,7 +45,7 @@ Use findings to refine:
 | **Experience selection** | Prioritize experiences matching their domain (e.g., healthcare company → emphasize HMIS) |
 | **Project selection** | Choose projects that patch stack/domain gaps |
 | **Summary wording** | Use their language, mention relevant domain experience |
-| **Skills ordering** | Put their stack first (e.g., if they use GCP, list GCP before AWS) |
+| **Skills section** | Build from full research (JD + product + news + stack + team); minimum 30 terms; put researched stack first |
 | **Bullet phrasing** | Mirror their terminology, emphasize relevant impact |
 
 ### Research output checklist
@@ -89,9 +89,9 @@ Rewrite:
 
 - summary
 - coursework
-- experience bullets
-- skills ordering
-- project bullets
+- experience bullets (`27-32` words each)
+- skills section (minimum `30` individual skill terms, built from full company/team research)
+- project bullets (`27-32` words each)
 
 Keep:
 
@@ -110,14 +110,16 @@ Check:
 - no cramped experience block
 - no broken projects spacing
 - no inconsistent locations/dates
+- skills section has at least 30 individual skill terms
+- experience and project bullets are each 27-32 words
 
 ## 7. Fix wording first, spacing second
 
 Preferred order:
 
 1. remove weak wording
-2. shorten bullets
-3. tighten skills text
+2. shorten bullets (stay within `27-32` words when possible)
+3. verify skills section has at least `30` terms
 4. only then touch spacing
 
 ## 8. Deliver

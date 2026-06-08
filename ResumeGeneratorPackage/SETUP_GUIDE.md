@@ -85,8 +85,9 @@ tlmgr install fontawesome5
 ```
 
 ### PDF doesn't fit on one page
-1. First, shorten your bullet points (aim for 25-30 words each)
-2. Only then adjust spacing values in the template
+1. First, shorten your bullet points (aim for 27-32 words each)
+2. Verify your skills section includes at least 30 individual skill terms
+3. Only then adjust spacing values in the template
 
 ### Text overflows to the right
 Reword the bullet to be shorter - don't break lines manually.

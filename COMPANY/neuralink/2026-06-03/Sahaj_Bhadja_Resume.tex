@@ -1,0 +1,116 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-18pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Full-stack software engineer with 2+ years shipping \textbf{user-facing applications} across \textbf{React}, \textbf{Java}, and \textbf{Android/iOS} clients. Strong in \textbf{low-latency concurrency}, networking, and OS fundamentals; experienced iterating with end users on performant, reliable control interfaces.}}
+\end{itemize}
+\vspace{-16pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4.0}{Coursework: Operating Systems, Computer Networks, Analysis of Algorithms, Software Engineering}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4.0}{Coursework: Operating Systems, Data Structures, Object-Oriented Programming, Computer Networks}
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Architected full-stack platform services for 500+ users, cutting dashboard latency from \textbf{1.2s to 350ms} through \textbf{concurrent async workers}, query tuning, and memory-efficient data access patterns.}
+\resumeItem{Shipped production features with fast iteration cycles, code/design reviews, and distributed-system debugging to maintain \textbf{99\%+ reliability} across cross-platform user workflows.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Engineer Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Built \textbf{React + Flask} user-facing grading software for 150+ instructors, iterating on UX feedback while handling \textbf{10K+ daily requests} with \textbf{multithreaded} batch processing and stable API performance.}
+\resumeItem{Reduced instructor feedback turnaround by \textbf{60\%} through rapid feature delivery, technical presentations, and cross-functional scoping with product and design partners.}
+\resumeItemListEnd
+\resumeSubheading{USC AD Labs}{Los Angeles, CA}{Software Engineering Assistant}{January 2025 -- May 2025}
+\resumeItemListStart
+\resumeItem{Developed high-throughput processing services across 100K+ records with reproducible validation, design reviews, and clear communication in architecture discussions.}
+\resumeItem{Contributed iterative improvements and documentation to strengthen engineering quality in multidisciplinary research delivery.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Engineered \textbf{Java/Python microservices} with low-latency networking and integration flows on \textbf{AWS}, improving response time by \textbf{30\%} through maintainable, performant service design.}
+\resumeItem{Led code reviews and \textbf{20+ automated test suites} in Jenkins CI/CD, increasing release confidence by \textbf{68\%} across Windows/Linux distributed environments.}
+\resumeItemListEnd
+\resumeSubheading{LST Capitals}{India}{Software Engineer Intern}{November 2022 -- January 2023}
+\resumeItemListStart
+\resumeItem{Delivered \textbf{React Native Android/iOS} and web clients with \textbf{Flask APIs}, achieving \textbf{sub-200ms} booking flows via Firebase real-time sync and optimized networking for user-facing control workflows.}
+\resumeItem{Designed cross-platform UX for booking and payment states, iterating with stakeholders to improve confirmation speed by \textbf{40\%} across 50K+ records.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}: \textbf{Java}, \textbf{Kotlin}, Python, C++, JavaScript/TypeScript, Swift (familiar) \\
+\textbf{Systems}: Concurrency, multithreading, memory management, networking, OS fundamentals, low-latency APIs \\
+\textbf{Applications}: Full-stack development, \textbf{React Native}, React, REST/WebSockets, UX iteration, code/design review
+}}
+\end{itemize}
+\vspace{-16pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{AssistControl} $|$ \emph{Kotlin, Java, Real-Time Signal Processing}}
+\resumeProjItemListStart
+\resumeItem{Built an assistive control prototype mapping high-frequency input streams to UI actions using \textbf{low-latency decoding algorithms}, enabling sub-100ms cursor and selection responses in Android clients.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{CPU Scheduling Simulator} {\href{https://cpu-scheduler-amber.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{C++, React.js, OS Algorithms}}
+\resumeProjItemListStart
+\resumeItem{Implemented preemptive scheduling algorithms with interactive controls and real-time metric visualization, demonstrating first-principles concurrency and resource-management tradeoffs.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{FinNexus} {\href{https://fin-nexus.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{TypeScript, WebSockets, Full-Stack UX}}
+\resumeProjItemListStart
+\resumeItem{Shipped a user-facing fintech platform with real-time transaction updates for 50K+ users, architecting reliable, maintainable interfaces under high-volume networking load.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

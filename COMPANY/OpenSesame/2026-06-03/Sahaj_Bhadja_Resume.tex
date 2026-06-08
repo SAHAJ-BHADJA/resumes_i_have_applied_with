@@ -1,0 +1,116 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-18pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Full-stack engineer with 2+ years building \textbf{React/TypeScript/Node.js} services, \textbf{SQL} data layers, and \textbf{AWS} deployments. Experienced in \textbf{authentication flows}, unit/smoke testing, \textbf{GitHub Actions} CI/CD, and collaborative delivery through pairing, code reviews, and production triage.}}
+\end{itemize}
+\vspace{-16pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4.0}{Coursework: Database Systems, Software Engineering, Web Technologies, Computer Networks}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4.0}{Coursework: Software Engineering, Object-Oriented Programming, Data Structures, Operating Systems}
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Built platform services with \textbf{TypeScript/Python APIs} and \textbf{PostgreSQL/SQL Server}, serving 500+ users while reducing dashboard latency from \textbf{1.2s to 350ms} through query tuning and defensive data-access patterns.}
+\resumeItem{Shipped CI/CD-backed releases for 5K+ monthly integration jobs with unit validation, smoke checks, and log-driven debugging to maintain \textbf{99\%+ reliability} across production workflows.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Engineer Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Developed \textbf{React + Flask} features with \textbf{auth workflows} and REST APIs for 150+ users, participating in pairing, code reviews, and Agile planning while handling \textbf{10K+ daily requests}.}
+\resumeItem{Automated deployments with \textbf{GitHub Actions}, wrote unit tests for core modules, and reduced feedback turnaround by \textbf{60\%} through iterative debugging with senior engineers.}
+\resumeItemListEnd
+\resumeSubheading{USC AD Labs}{Los Angeles, CA}{Software Engineering Assistant}{January 2025 -- May 2025}
+\resumeItemListStart
+\resumeItem{Contributed to data processing services across 100K+ records with reproducible tests, documentation, and careful investigation of edge cases in complex legacy-style research systems.}
+\resumeItem{Supported team quality practices through structured reviews, smoke-test scenarios, and clear communication in standups and design discussions.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Maintained shared \textbf{AWS microservices} and integration APIs with relational schemas, improving response time by \textbf{30\%} and triaging production issues using logs and observability tooling.}
+\resumeItem{Expanded \textbf{20+ automated test suites} and Jenkins/\textbf{GitHub Actions} pipelines, increasing release confidence by \textbf{68\%} through code review and defensive programming practices.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Full Stack Developer Intern - (VibrantChem)}{May 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Built \textbf{React/Node.js} modules with \textbf{JWT authentication}, role-based access, and \textbf{Azure SQL} persistence across billing and customer workflows spanning 2M+ records.}
+\resumeItem{Wrote \textbf{Jest/Mocha unit tests} and Docker/Jenkins release automation, cutting deployment time by \textbf{50\%} while improving maintainability of commerce-adjacent platform services.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Full Stack}: \textbf{React}, \textbf{TypeScript}, \textbf{Node.js}, Python, REST APIs, authentication flows \\
+\textbf{Platform}: \textbf{AWS}, \textbf{GitHub Actions}, Terraform (familiar), Docker, CI/CD, SAML/OIDC concepts \\
+\textbf{Data \& Quality}: \textbf{PostgreSQL}, SQL Server, Azure SQL, unit/smoke testing, pairing, on-call triage mindset
+}}
+\end{itemize}
+\vspace{-16pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{IdentityBridge} $|$ \emph{Node.js, React, TypeScript, OIDC/SAML}}
+\resumeProjItemListStart
+\resumeItem{Implemented enterprise-style login flows with \textbf{OIDC and SAML} integration patterns, session handling, and role-aware routing for multi-tenant application access.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{StudyHub} $|$ \emph{Next.js, TypeScript, PostgreSQL, AWS}}
+\resumeProjItemListStart
+\resumeItem{Built a learning-pathway platform with course catalog APIs, progress tracking, and SQL-backed assessments supporting personalized workforce-style training workflows.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{Chat2SQL} {\href{https://github.com/SAHAJ-BHADJA/Chat2SQL}{\textcolor{red}{\underline{Code}}}} $|$ \emph{TypeScript, Java, SQL, Docker}}
+\resumeProjItemListStart
+\resumeItem{Developed full-stack data services across 10+ relational databases with schema exploration, unhappy-path error handling, and production-style local deployment workflows.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

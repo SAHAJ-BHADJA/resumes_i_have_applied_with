@@ -50,7 +50,10 @@ This file records the locked spacing and formatting values from the currently ac
   - `2` bullets per experience
   - `1` bullet per project
 - Bullet target length:
-  - `25-30` words when possible
+  - `27-32` words for every experience and project bullet
+- Skills section:
+  - minimum `30` individual skill terms (not counting category headers)
+  - terms selected and ordered from full company/team research, not JD-only
 
 ## Drift check
 

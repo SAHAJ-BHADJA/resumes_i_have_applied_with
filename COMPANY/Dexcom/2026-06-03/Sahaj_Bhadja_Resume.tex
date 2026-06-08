@@ -1,0 +1,116 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-18pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Software test engineer with 2+ years building \textbf{automation frameworks}, \textbf{CI/CD-integrated test suites}, and integration validation across \textbf{Python/Java/C++} codebases. Experienced in device/API testing, reproducible test artifacts, and quality practices for safety-conscious systems.}}
+\end{itemize}
+\vspace{-16pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4.0}{Coursework: Software Engineering, Computer Networks, Database Systems, Operating Systems}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4.0}{Coursework: Software Engineering, Operating Systems, Object-Oriented Programming, Data Structures}
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Test Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Designed \textbf{automated validation frameworks} for platform integrations serving 500+ users, including regression suites, data reconciliation checks, and release-readiness gates across dev/test/production environments.}
+\resumeItem{Produced structured \textbf{test logs and failure artifacts} for 5K+ monthly pipeline jobs, supporting root-cause analysis, deterministic replay, and CI/CD quality metrics at 99\%+ reliability.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Test Engineering Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Automated \textbf{web and API integration tests} for React/Flask systems handling 10K+ daily requests, validating end-to-end workflows, timing behavior, and defect reproduction with cross-functional engineering partners.}
+\resumeItem{Supported mobile-adjacent testing workflows using \textbf{ADB-style device commands} and scripted diagnostics to accelerate triage of customer-facing application issues.}
+\resumeItemListEnd
+\resumeSubheading{USC AD Labs}{Los Angeles, CA}{Software Engineering Assistant}{January 2025 -- May 2025}
+\resumeItemListStart
+\resumeItem{Built reusable \textbf{test harnesses and scenario libraries} across 100K+ records, enabling system/integration validation, regression comparisons, and documented verification evidence for research platforms.}
+\resumeItem{Collaborated with engineers on structured test reporting and quality reviews to improve traceability and repeatable verification practices.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Maintained \textbf{20+ automated PyTest suites} integrated into Jenkins CI/CD for distributed microservices, improving regression coverage and release confidence by \textbf{68\%} across Windows/Linux environments.}
+\resumeItem{Developed \textbf{API and ETL integration tests} with mock services and fault-injection scenarios, reducing production defects and supporting hardware/software boundary debugging.}
+\resumeItemListEnd
+\resumeSubheading{MedDevice Test Systems}{India}{Test Automation Intern}{January 2023 -- April 2023}
+\resumeItemListStart
+\resumeItem{Implemented \textbf{Python automation libraries} for device communication testing, including \textbf{BLE connection lifecycle} scenarios (pairing, reconnect, drop/recover) and latency/staleness validation using simulators and mocks.}
+\resumeItem{Integrated automated suites into CI pipelines with standardized logs/reports suitable for regulated verification workflows and cross-team quality reviews.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Automation}: Test framework design, reusable libraries, system/integration testing, mocks/simulators, regression suites \\
+\textbf{Languages \& Tools}: \textbf{Python}, \textbf{Java}, \textbf{C++}, ADB commands, Jenkins CI/CD, Git, PyTest, Mockito \\
+\textbf{Domains}: Device/API protocols, BLE testing concepts, connected health workflows, quality-system awareness, artifact reporting
+}}
+\end{itemize}
+\vspace{-16pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{BLEInterop Test Suite} $|$ \emph{Python, BLE Simulation, Test Automation}}
+\resumeProjItemListStart
+\resumeItem{Built automation for device-to-device communication tests covering pairing, bonding, reconnect, and fault scenarios with deterministic logs for integration verification.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{HealthSync Validator} $|$ \emph{Java, Python, Integration Testing}}
+\resumeProjItemListStart
+\resumeItem{Developed reusable test modules for data validation, timing checks, and backend/mobile API interoperability in connected-health style distributed systems.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{APIValidator} $|$ \emph{Python, REST APIs, CI/CD}}
+\resumeProjItemListStart
+\resumeItem{Created API test harnesses with automated reporting and pipeline integration, supporting repeatable validation across firmware-adjacent service workflows.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

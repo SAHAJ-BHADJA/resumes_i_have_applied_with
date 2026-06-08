@@ -116,7 +116,7 @@ For every JD, perform targeted external research before finalizing selection and
 - Bullets may be rewritten, merged, split, compressed, or expanded.
 - Project idea and factual direction must remain aligned with the master data.
 - Default to 2 bullets for each included work experience.
-- Target bullet length is 25 to 32 words for readability consistency.
+- Target bullet length is 27 to 32 words for readability consistency.
 - Bolding should be used strategically for high-signal technologies, impact, metrics, and role-relevant terms.
 - Every finalized resume bullet should include bolded JD-critical keywords (stack, domain terms, impact terms, metrics) where natural and readable.
 - Top roles can use up to 3 bullets.
@@ -133,7 +133,14 @@ For every JD, perform targeted external research before finalizing selection and
 
 ### Skills
 
-- Skills may be fully reordered and trimmed per JD.
+- Build the `Skills` section from the **full company research package**, not from the JD or master data alone.
+- Use the same research inputs as experience/project selection: JD, company product/domain, recent news, likely stack, and team context.
+- Include a **minimum of 30 skills** in the `Skills` section on every resume.
+- Count individual skill terms (languages, frameworks, tools, platforms, practices), not category headers.
+- Order researched must-have skills first, then credible adjacent skills, then remaining defensible skills from `master_resume_data.json`.
+- Do not pad with nonsense or unrelated buzzwords just to hit 30.
+
+- Skills may be fully reordered and trimmed per company/team research fit.
 - Skill category headers may be renamed for better match.
 - Dense one-block presentation is allowed, but restructuring within the same section is also allowed.
 - Prefer high-density keyword coverage without turning the section into noise.
@@ -164,7 +171,7 @@ For every JD, perform targeted external research before finalizing selection and
 - Use 0 to 3 projects depending on space and relevance.
 - Default target: select 3 projects for each JD unless page-fit constraints force otherwise.
 - Default to 1 bullet per selected project when space is constrained or when using concise one-page formatting.
-- Target project bullet length is 25 to 32 words.
+- Target project bullet length is 27 to 32 words.
 - Include bolded JD-critical keywords in project bullets where natural and readable.
 - Projects may be rewritten aggressively as long as the underlying idea remains consistent.
 - If a completely new project is created for fit, the user must be told in chat.
@@ -252,7 +259,9 @@ These are default heuristics, not hard constraints:
 ### Skills
 
 - High-density ATS compression zone.
-- Must reflect the chosen role family rather than every possible skill.
+- Must be tailored from full company/team research, not generic keyword dumping.
+- Must include at least 30 individual skill terms per resume.
+- Must reflect the researched role family and stack rather than every possible skill.
 
 ### Projects
 
@@ -268,7 +277,7 @@ For each JD:
 3. Perform external research on the team stack/recent activity and company-level priorities/news.
 4. Select best 5 experiences using JD + research context.
 5. Select best 3 projects using JD + research context.
-6. Tailor coursework, skills, summary, titles, and bullets.
+6. Tailor coursework, skills (minimum 30 terms), summary, titles, and bullets (27-32 words each).
 7. Provide explicit rationale for each selected experience/project and why it was chosen over non-selected options.
 8. If needed, propose unverified enhancement bullets and get explicit user confirmation before inclusion.
 9. Persist confirmed new details to `master_resume_data.json`.

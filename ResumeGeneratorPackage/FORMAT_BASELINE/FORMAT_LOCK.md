@@ -57,7 +57,8 @@ partopsep=0pt
 | Experience order | Strict reverse chronological |
 | Bullets per experience | 2 bullets |
 | Bullets per project | 1 bullet |
-| Bullet length | 25-30 words when possible |
+| Bullet length | 27-32 words for every experience and project bullet |
+| Skills count | Minimum 30 individual skill terms (not category headers), from full company/team research |
 
 ## Drift Check Process
 

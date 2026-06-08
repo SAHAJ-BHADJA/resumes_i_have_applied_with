@@ -31,6 +31,12 @@ This folder is the permanent source of truth for the accepted resume formatting.
 - If a resume looks visually off, compare it against `sample_resume.tex`
 - Fix wording first, spacing second
 
+## Content Targets (Every Resume)
+
+- Experience bullets: `27-32` words each (`2` per role)
+- Project bullets: `27-32` words each (`1` per project)
+- Skills section: minimum `30` individual skill terms, selected from full company/team research
+
 ## Important
 
 This folder is meant to be reusable across all future company-specific resumes. Don't modify these files for individual applications - copy them to your output folder instead.

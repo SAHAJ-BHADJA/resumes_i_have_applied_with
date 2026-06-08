@@ -26,6 +26,12 @@ Source-of-truth rule:
 - If a future resume looks visually off, compare it against `firmpilot_reference_sample.tex`
 - Fix wording first, spacing second
 
+Content targets (every resume):
+
+- Experience bullets: `27-32` words each (`2` per role)
+- Project bullets: `27-32` words each (`1` per project)
+- Skills section: minimum `30` individual skill terms, selected from full company/team research
+
 Location:
 
 - This folder intentionally lives outside `/COMPANY`

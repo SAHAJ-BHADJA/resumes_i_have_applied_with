@@ -70,7 +70,7 @@ For every new resume request:
 4. Research company priorities, current products, and recent news/engineering direction.
 5. Select the best 5 experiences using JD + external research context.
 6. Select the best 3 projects using JD + external research context.
-7. Rewrite summary, coursework, bullets, and skills.
+7. Rewrite summary, coursework, bullets (`27-32` words each), and skills (minimum `30` terms).
 8. Provide explicit rationale for selected experiences/projects and why they were chosen over non-selected options.
 9. If gaps remain, create a short list of unverified enhancement bullets and get explicit user confirmation.
 10. Update `master_resume_data.json` with confirmed enhancements only.
@@ -320,11 +320,11 @@ Avoid:
 Project bullets:
 
 - Prefer `1` bullet per selected project in concise one-page mode.
-- Keep each project bullet around `25 to 32` words.
+- Keep each project bullet between `27 to 32` words.
 
 Bullet wording and emphasis:
 
-- Keep each experience bullet around `25 to 32` words.
+- Keep each experience bullet between `27 to 32` words.
 - Bold JD-critical keywords in both experience and project bullets (technology, domain terms, metrics, and impact words) where natural and readable.
 
 ## Education Rules
@@ -371,6 +371,31 @@ The goal is:
 
 The user does not want the skills section to be too thin.
 
+### Skills Selection From Full Research
+
+Skills are **not** chosen from the JD alone or from `master_resume_data.json` alone.
+
+Build the `Skills` section from the **same full research package** used to select experiences and projects:
+
+- job description keywords
+- company product and domain
+- recent company news and direction
+- confirmed or likely engineering stack
+- team responsibilities and platform conventions
+
+Then:
+
+1. List researched must-have and high-signal skills first.
+2. Add credible adjacent skills supported by the candidate's background.
+3. Fill to at least 30 terms using remaining defensible skills from `master_resume_data.json`.
+4. Order categories and terms so the section reads like a direct match to that company/team.
+
+### Minimum Skills Count
+
+- Include a **minimum of 30 skills** in the `Skills` section on every resume.
+- Count individual skill terms (languages, frameworks, tools, platforms, practices), not category headers.
+- Do not pad with nonsense or unrelated buzzwords just to hit 30.
+
 Start from this dense baseline structure:
 
 - Languages
@@ -393,6 +418,7 @@ You may:
 You should not:
 
 - collapse the skills section into a tiny 2-line dump
+- deliver fewer than 30 skills unless the user explicitly overrides this rule
 - remove major categories unless the JD truly makes them irrelevant and space is impossible
 
 ### Adjacent Skills Rule
@@ -894,6 +920,8 @@ Before returning the PDF to the user, confirm all of the following:
 - education entries both appear
 - GPA appears for both education entries
 - coursework appears for both education entries
+- skills section includes at least `30` individual skill terms
+- experience and project bullets are each `27-32` words
 - no text overflows page boundaries
 - layout is not visibly cramped in one section and loose in another
 

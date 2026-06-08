@@ -1,0 +1,116 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-18pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Database-focused analyst with 2+ years maintaining \textbf{PostgreSQL/SQL Server} systems, writing multi-table \textbf{SQL} validation queries, and performing \textbf{data audits} with traceable documentation. Skilled in \textbf{Excel} reporting (pivots, XLOOKUP, Power Query), requirements gathering, and \textbf{AWS RDS/S3/Glue} data workflows.}}
+\end{itemize}
+\vspace{-16pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4.0}{Coursework: Database Systems, Software Engineering, Analysis of Algorithms, Computer Networks}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4.0}{Coursework: Data Structures, Software Engineering, Operating Systems, Object-Oriented Programming}
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{IT Software Engineer Analyst}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Maintain and audit \textbf{PostgreSQL/SQL Server} schemas for 500+ users, writing joins, aggregations, and validation checks that improved query performance by \textbf{35\%} while preserving data integrity and traceability.}
+\resumeItem{Perform \textbf{data quality reconciliation} on 5K+ monthly ETL jobs, documenting root causes, field mappings, change logs, and remediation steps to achieve \textbf{99\%+ accuracy} in production datasets.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{Los Angeles, CA}{Database Analyst Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Partnered with instructors to gather requirements, challenge ambiguous requests, and translate needs into \textbf{MySQL/AWS RDS} table definitions and reporting logic for 150+ users.}
+\resumeItem{Built \textbf{Excel audit workbooks} with pivot tables and lookup validation to verify grading datasets across 10K+ daily records, documenting discrepancies and repeatable fix procedures.}
+\resumeItemListEnd
+\resumeSubheading{USC AD Labs}{Los Angeles, CA}{Data Systems Assistant}{January 2025 -- May 2025}
+\resumeItemListStart
+\resumeItem{Investigated inconsistencies across 100K+ research records, validating assumptions with stakeholders and producing audit findings with clear remediation recommendations.}
+\resumeItem{Created table-definition documentation and validation scenarios to support repeatable data controls and cross-team review of update workflows.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Data Integration Analyst - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Audited and improved \textbf{AWS Glue/S3/RDS} ETL pipelines, reviewing transformation logic for defects and edge cases while boosting pipeline efficiency by \textbf{68\%}.}
+\resumeItem{Reconciled cross-system datasets, analyzed tradeoffs before implementing fixes, and maintained governance controls around permissions, updates, and production data access.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Database Analyst Intern - (VibrantChem)}{May 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Updated and audited \textbf{Azure SQL} asset and customer datasets spanning \textbf{2M+ records}, applying keys, constraints, and normalization concepts to reduce sync conflicts by \textbf{33\%}.}
+\resumeItem{Supported engineering-style resource workflows with SQL reporting, Excel verification tools, and documented field mappings for billing and equipment allocation logic.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-14pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Database \& SQL}: \textbf{PostgreSQL}, SQL Server, MySQL, Azure SQL, joins/aggregations, constraints, normalization, data integrity \\
+\textbf{Analysis \& Reporting}: \textbf{Excel} (pivot tables, XLOOKUP/VLOOKUP, Power Query), data audits, reconciliation, requirements gathering \\
+\textbf{Cloud \& Tools}: \textbf{AWS RDS}, S3, Glue, IAM concepts, documentation, change logs, asset/time-series concepts (familiar)
+}}
+\end{itemize}
+\vspace{-16pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{DataAudit Toolkit} $|$ \emph{PostgreSQL, Excel, Power Query}}
+\resumeProjItemListStart
+\resumeItem{Built repeatable audit workflows combining SQL validation queries with Excel pivot and lookup reports to trace discrepancies, document causes, and verify remediation outcomes.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{AssetView Dashboard} $|$ \emph{SQL, Excel, Asset Reporting}}
+\resumeProjItemListStart
+\resumeItem{Designed asset-tracking reports with equipment hierarchy mappings, acceptance criteria, and audit-ready verification checks for engineering-style operational datasets.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{Chat2SQL} {\href{https://github.com/SAHAJ-BHADJA/Chat2SQL}{\textcolor{red}{\underline{Code}}}} $|$ \emph{SQL, PostgreSQL, Data Validation}}
+\resumeProjItemListStart
+\resumeItem{Developed cross-database SQL exploration and validation tooling across 10+ relational systems with schema documentation and unhappy-path integrity checks.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

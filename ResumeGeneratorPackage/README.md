@@ -36,6 +36,8 @@ ResumeGeneratorPackage/
 
 - **Content changes per JD, formatting stays locked** - Don't touch spacing unless absolutely necessary
 - **Fix wording first, spacing second** - If it doesn't fit, shorten bullets before adjusting spacing
+- **Bullet length** - Experience and project bullets: `27-32` words each
+- **Skills density** - Include at least `30` individual skill terms, built from full company/team research
 - **Keep it to one page** - The format is optimized for a dense, readable single page
 
 ## Requirements
