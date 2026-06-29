@@ -7,13 +7,20 @@ This file is the strict operating guide for generating Sahaj Bhadja's resumes fr
 - Output root: `E:\Projects\Random\Resume\COMPANY`
 - Company folder name must be lowercase.
 - Folder pattern:
-  - `E:\Projects\Random\Resume\COMPANY\<company-name>\<YYYY-MM-DD>\`
-- If multiple resumes are generated for the same company on the same date, create versioned PDFs:
+  - `E:\Projects\Random\Resume\COMPANY\<company-name>\<YYYY-MM-DD(Position-Name_JobID)>\`
+  - Sanitize position title: spaces → hyphens, drop special characters
+  - Use requisition / job / JR code as `JobID` when present (e.g. `_350393`, `_JR2013065`)
+  - If no job ID in the JD, use `YYYY-MM-DD(Position-Name)` only
+- Examples:
+  - `SeatGeek\2026-06-01(Software-Engineer-New-Grad)\`
+  - `Deloitte-Cyber\2026-06-01(Cyber-Full-Stack-Software-Engineer_350393)\`
+- If multiple resumes are generated for the same company, date, position, and job ID, create versioned PDFs:
   - `Sahaj_Bhavesh_Bhadja.pdf`
   - `Sahaj_Bhavesh_Bhadja_v2.pdf`
   - `Sahaj_Bhavesh_Bhadja_v3.pdf`
-- Do not save `.tex` files in company output folders.
-- Final output for each JD run is a PDF only.
+- Company output folders are **PDF-only**.
+- After `pdflatex` succeeds, delete `*.tex`, `*.aux`, `*.log`, `*.out`, and any other build artifacts.
+- Final output for each JD run is only `Sahaj_Bhadja_Resume.pdf` (or `_v2`, `_v3`, etc.).
 
 ## Immutable Template Constraints
 
@@ -25,6 +32,8 @@ The generated resume must preserve the current template's visual identity unless
 - Font family: preserve the template defaults exactly
 - One page only
 - Keep the existing section style, macro system, and overall visual language
+- Every section header must use a full-width rule **on its own line below the title** via `[\color{black}\vspace{-3pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]` and `\titlespacing*{\section}{0pt}{6pt}{0pt}` — **never use `\titlerule`** (renders through title text)
+- Prior-section content must sit clearly above the next section header; follow inter-section `\vspace` caps in `FORMAT_LOCK.md`
 - Header links must remain present:
   - phone
   - email

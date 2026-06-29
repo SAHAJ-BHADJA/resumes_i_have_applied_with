@@ -1,0 +1,121 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-3pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto: bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Cloud-focused Software Engineer pursuing an MSCS at USC with 2+ years building and operating Azure and AWS infrastructure, Infrastructure as Code, containerized deployments, and CI/CD pipelines, with experience in cloud monitoring, security, cost optimization, and performance tuning.}}
+\end{itemize}
+\vspace{-6pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Database Systems, Analysis of Algorithms, Web Technologies, Advanced NLP}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Operating Systems, Software Engineering, Object-Oriented Programming, Data Retrieval}
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Designed and managed \textbf{Azure cloud infrastructure} (Azure SQL, Blob Storage) for 500+ users, optimizing performance, scalability, and queries to cut latency from 1.2s to 350ms.}
+\resumeItem{Monitored and troubleshot \textbf{cloud systems} with validation, reconciliation, and CI/CD releases across 5K+ monthly jobs, maintaining 99\%+ availability and reliability.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Engineer Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Deployed and operated \textbf{cloud-hosted backend services} (AWS RDS) with GitHub Actions CI/CD for 150+ users, scripting automation in Python for 10K+ daily requests.}
+\resumeItem{Troubleshot and \textbf{optimized cloud application performance} under peak load, remediating issues and reducing turnaround \textbf{60\%} across environments.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Built \textbf{AWS cloud automation} (Glue, S3) with Jenkins CI/CD across three platforms, optimizing storage costs \textbf{15\%} and improving pipeline efficiency \textbf{68\%}.}
+\resumeItem{Implemented \textbf{Bash/Python scripting} and automated build and test infrastructure, performing root cause analysis and collaborating with DevOps stakeholders in Agile sprints.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Full Stack Developer Intern - (VibrantChem)}{May 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Provisioned \textbf{Azure infrastructure with ARM templates (IaC)} and App Services, containerizing eight microservices with Docker and automating Jenkins CI/CD deployments.}
+\resumeItem{Enforced \textbf{cloud security and observability} with Snyk, OWASP, Azure Monitor, and Kibana (ELK), cutting deployment time \textbf{50\%} with governance and monitoring best practices.}
+\resumeItemListEnd
+\resumeSubheading{LST Capitals}{India}{Web Developer Intern}{November 2022 -- January 2023}
+\resumeItemListStart
+\resumeItem{Deployed \textbf{cloud-backed real-time infrastructure} (Firebase, AWS) for 50K+ records with sub-200ms latency, integrating secure access and webhook automation.}
+\resumeItem{Documented \textbf{infrastructure architecture and procedures}, collaborating with clients to troubleshoot and resolve issues across cloud environments and applications.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Cloud Platforms}: Microsoft Azure (App Services, Blob, Azure SQL), AWS (EC2, S3, Glue, RDS, ECS), GCP, Hybrid/Multi-Cloud \\
+\textbf{IaC \& Automation}: Terraform, ARM Templates, CloudFormation, Ansible, Infrastructure Automation, Bash \\
+\textbf{Containers \& Orchestration}: Docker, Kubernetes, Docker Compose, Microservices, Cloud-Native Architecture \\
+\textbf{CI/CD \& DevOps}: Jenkins, GitHub Actions, GitLab CI, CI/CD Pipelines, Git, Deployment Automation \\
+\textbf{Monitoring \& Security}: CloudWatch, Azure Monitor, Kibana (ELK), Grafana, IAM \& Networking, Cloud Security \\
+\textbf{Languages \& Practices}: Python, Bash, SQL, Cost Optimization, Performance Tuning, Compliance \& Governance
+}}
+\end{itemize}
+\vspace{-6pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{Linguistix} $|$ \emph{AWS (ECS/Fargate, CodePipeline), Docker, CI/CD}}
+\resumeProjItemListStart
+\resumeItem{Deployed a \textbf{containerized API on AWS} (ECS/Fargate, CodePipeline) with automated CI/CD, validation, and infrastructure automation at production-grade reliability.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{FinNexus} {\href{https://fin-nexus.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{Kubernetes, CI/CD, MongoDB, Firewall}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{Kubernetes-based cloud platform} with CI/CD pipelines and a token-based firewall, scaling to 50K+ users and 1M+ transactions with secure access.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{Big-Brain} {\href{https://big-brain-pied.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{GCP, PostgreSQL, REST APIs}}
+\resumeProjItemListStart
+\resumeItem{Deployed a \textbf{cloud data platform} on GCP with scalable storage, indexing, and performance tuning that cut retrieval latency \textbf{40\%}.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

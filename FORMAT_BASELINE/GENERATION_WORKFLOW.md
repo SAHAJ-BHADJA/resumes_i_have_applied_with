@@ -82,6 +82,7 @@ Rule:
 
 - content changes per JD
 - formatting stays anchored to this baseline unless there is a specific layout problem
+- section headers must be unnumbered (`Summary`, `Education`, etc.); always include `\setcounter{secnumdepth}{0}` immediately after `\usepackage{titlesec}`
 
 ## 5. Tailor the content
 
@@ -93,6 +94,14 @@ Rewrite:
 - skills section (minimum `30` individual skill terms, built from full company/team research)
 - project bullets (`27-32` words each)
 
+**Never change (locked from `master_resume_data.json`):**
+
+- experience **company names**
+- experience **job titles** (e.g. USC Dornsife stays `Software Engineer`, not the target JD title)
+- experience **dates** and **locations** unless correcting a factual error in master data
+
+Tailor JD fit through bullet wording, summary, skills, coursework, and project selection only.
+
 Keep:
 
 - one page
@@ -100,7 +109,14 @@ Keep:
 - readable spacing
 - strong JD keyword coverage
 
-## 6. Compile and visually QA
+## 6. Compile, clean up, and visually QA
+
+Compile with `pdflatex`, then **delete all non-PDF artifacts** from the company output folder:
+
+- remove `*.tex`, `*.aux`, `*.log`, `*.out` (and any other LaTeX build files)
+- **keep only** `Sahaj_Bhadja_Resume.pdf` (or versioned `Sahaj_Bhadja_Resume_v2.pdf`, etc.)
+
+The company folder is PDF-only. Do not leave source or build files there.
 
 Check:
 
@@ -112,6 +128,7 @@ Check:
 - no inconsistent locations/dates
 - skills section has at least 30 individual skill terms
 - experience and project bullets are each 27-32 words
+- folder contains **only** the final PDF
 
 ## 7. Fix wording first, spacing second
 
@@ -122,12 +139,45 @@ Preferred order:
 3. verify skills section has at least `30` terms
 4. only then touch spacing
 
-## 8. Deliver
+## 8. Save to the correct folder
+
+Output root:
+
+- `E:\Projects\Random\Resume\COMPANY\<company-name>\<folder-name>\`
+
+Folder name pattern:
+
+- `YYYY-MM-DD(Position-Name_JobID)`
+
+Rules:
+
+- `YYYY-MM-DD` = **today's actual calendar date** on the day the resume is generated (not a fixed placeholder). If generating on June 11, 2026, the folder must start with `2026-06-11`.
+- `Position-Name` = JD title sanitized (spaces → hyphens, remove special characters)
+- `JobID` = requisition / job / JR code from the posting (e.g. `350393`, `JR2013065`)
+- If the JD has no job ID, omit the underscore suffix: `YYYY-MM-DD(Position-Name)`
+- Company folder stays lowercase; spaces in company names are allowed
+- Each new generation day gets its own dated folder; do not reuse `2026-06-01` unless that is actually today's date
+
+Examples:
+
+- `mlb\2026-06-11(Associate-Software-Engineer-Web-Platform-Architecture)\`
+- `Deloitte-Cyber\2026-06-11(Cyber-Full-Stack-Software-Engineer_350393)\`
+- `nvidia\2026-06-08(Formal-Verification-Engineer-New-College-Grad-2026_JR2013065)\`
+
+PDF filename stays:
+
+- `Sahaj_Bhadja_Resume.pdf`
+
+If the same company + folder already has a PDF and you are regenerating, version the PDF:
+
+- `Sahaj_Bhadja_Resume_v2.pdf`
+
+## 9. Deliver
 
 Return:
 
-- final company PDF
-- working `.tex` draft for iteration
+- final PDF path using the folder pattern above
+- confirm the output folder contains **only** the PDF
 
 ## Baseline rule
 

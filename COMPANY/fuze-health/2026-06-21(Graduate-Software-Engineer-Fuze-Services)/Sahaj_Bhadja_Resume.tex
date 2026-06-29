@@ -1,0 +1,120 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-3pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto: bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Graduate Software Engineer pursuing an MSCS at USC with experience analyzing logs, triaging production issues, and shipping fixes in Python and JavaScript on AWS and Azure, with automated testing and healthcare technology interest.}}
+\end{itemize}
+\vspace{-6pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Database Systems, Web Technologies, Analysis of Algorithms}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Software Engineering, Operating Systems, Object-Oriented Programming}
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Reviewed \textbf{logs and operational data} across 5K+ jobs, identifying errors via validation and reconciliation to maintain 99\%+ reliability.}
+\resumeItem{Triaged \textbf{data integrity issues} with root-cause analysis on Azure SQL and PostgreSQL, documenting findings for engineering teams.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Engineer Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Triaged and fixed \textbf{bugs across dev, test, and production} for 150+ users, writing automated tests and analyzing logs under 10K+ daily requests.}
+\resumeItem{Collaborated with QA and engineering to \textbf{document issues and resolutions}, reducing turnaround \textbf{60\%} with clear communication and disciplined testing.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Performed \textbf{log analysis and root-cause troubleshooting} on CI/CD failures across three platforms, providing findings to engineers and boosting pipeline efficiency \textbf{68\%}.}
+\resumeItem{Shipped \textbf{bug fixes and automated tests} (PyTest, Mockito) on AWS services in Agile sprints, resolving issues and delivering reliable production code.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Full Stack Developer Intern - (VibrantChem)}{May 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Used \textbf{observability tools} (Sentry, Azure Monitor, Kibana) to monitor metrics, triage errors, and support incident response on Azure.}
+\resumeItem{Fixed cross-stack bugs and shipped \textbf{features} with Jest/Mocha tests on Azure, documenting workflows and cutting deployment time \textbf{50\%}.}
+\resumeItemListEnd
+\resumeSubheading{LST Capitals}{India}{Web Developer Intern}{November 2022 -- January 2023}
+\resumeItemListStart
+\resumeItem{Troubleshot \textbf{production issues} via logging across 50K+ records, performing root-cause analysis and reducing manual handling \textbf{70\%}.}
+\resumeItem{Documented \textbf{architecture and issue resolutions} for client and engineering teams, linking operations and engineering for faster resolution.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}: Python, JavaScript/TypeScript, Java, SQL, Bash \\
+\textbf{Observability}: Splunk, Log Analysis, Sentry, Kibana (ELK), Azure Monitor, CloudWatch, Application Monitoring \\
+\textbf{Cloud \& DevOps}: AWS, Azure, GCP, Docker, Kubernetes, CI/CD, Git \\
+\textbf{Development}: Bug Fixing, Issue Triage, Root Cause Analysis, Automated Testing (PyTest, Jest), Documentation \\
+\textbf{Databases \& Domain}: PostgreSQL, MySQL, SQL Server, MongoDB, Healthcare Technology, Agile
+}}
+\end{itemize}
+\vspace{-6pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{HMIS} {\href{https://hims-rouge.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{MERN, Sentry, Healthcare}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{healthcare platform} (MERN) with Sentry monitoring and consent-based access in a regulated clinical domain.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{Linguistix} $|$ \emph{Python, AWS (ECS/Fargate), Docker, CI/CD}}
+\resumeProjItemListStart
+\resumeItem{Deployed a \textbf{production API on AWS} (ECS/Fargate) with CI/CD, validation checks, and operational monitoring at production-grade reliability.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{FinNexus} {\href{https://fin-nexus.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{Next.js, TypeScript, Kubernetes, MongoDB}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{cloud platform} on Kubernetes for 50K+ users and 1M+ transactions with real-time updates and operational workflows.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

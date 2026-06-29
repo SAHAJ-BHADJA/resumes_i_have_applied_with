@@ -1,0 +1,119 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-3pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto: bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Software Engineer with 2+ years in \textbf{distributed systems}, \textbf{async pipelines}, and \textbf{ETL} on PostgreSQL, Kubernetes, and AWS/GCP; MSCS at USC focused on reliability and low latency.}}
+\end{itemize}
+\vspace{-6pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Algorithms, Database Systems, Operating Systems, Advanced NLP}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Software Engineering, OOP, Operating Systems, Data Retrieval}
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Built \textbf{ETL pipelines} with FastAPI and \textbf{PostgreSQL}, processing 5K+ monthly jobs with incremental loads and \textbf{CI/CD} at 99\%+ reliability.}
+\resumeItem{Restructured \textbf{async orchestration} with background workers and job-state transitions, processing 1K+ jobs and increasing throughput \textbf{3x} under concurrent load.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Engineer Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Designed \textbf{concurrent batch-processing} with multithreading and REST APIs, handling 10K+ daily requests and 1K+ files per batch with fault-tolerant execution.}
+\resumeItem{Shipped AWS RDS backend for 150+ users, cutting turnaround \textbf{60\%} while maintaining stable API performance during peak load through pragmatic tradeoffs.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Engineered a \textbf{data-sharing platform} with microservices and \textbf{ETL} on AWS Glue and S3, improving response times \textbf{30\%} and pipeline efficiency \textbf{68\%}.}
+\resumeItem{Built 20+ test suites and CI/CD across Windows, Linux, and macOS, cutting technical debt \textbf{20\%} while optimizing APIs for high-volume replication workloads.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Full Stack Developer Intern - (VibrantChem)}{May 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Built microservices with WebSockets and REST APIs, \textbf{syncing 2M+ records} with real-time updates on relational and document databases.}
+\resumeItem{Automated \textbf{Docker} and Jenkins \textbf{CI/CD} with validation gates, cutting release time \textbf{50\%} through incremental rollout and automated testing.}
+\resumeItemListEnd
+\resumeSubheading{LST Capitals}{India}{Web Developer Intern}{November 2022 -- January 2023}
+\resumeItemListStart
+\resumeItem{Engineered \textbf{data pipelines} with Databricks and Spark on 50K+ events in hourly micro-batches, enabling real-time analytics and sub-200ms API responses.}
+\resumeItem{Troubleshot production issues via logging and idempotent webhooks, reducing manual payment handling \textbf{70\%} while documenting architecture for teams.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}: Python, Java, TypeScript, JavaScript, SQL, C++ \\
+\textbf{Data \& Backend}: PostgreSQL, Redis, ETL Pipelines, FastAPI, Flask, REST APIs, Microservices \\
+\textbf{Infra \& Cloud}: Kubernetes, Docker, Terraform, AWS, GCP, CI/CD, Jenkins, Git \\
+\textbf{Practices}: Distributed Systems, Async Systems, Data Integration, React.js, Next.js, Linux, MongoDB, System Design
+}}
+\end{itemize}
+\vspace{-6pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{Linguistix} {\href{https://github.com/SAHAJ-BHADJA/Linguistix}{\textcolor{red}{\underline{Code}}}} $|$ \emph{Python, AWS, Docker}}
+\resumeProjItemListStart
+\resumeItem{Deployed a containerized \textbf{data processing API} on AWS ECS/Fargate with CI/CD for high-volume ingestion workloads.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{FinNexus} {\href{https://fin-nexus.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{Kubernetes, MongoDB, WebSockets}}
+\resumeProjItemListStart
+\resumeItem{Built a platform on \textbf{Kubernetes} for 50K+ users and 1M+ transactions with \textbf{real-time sync} and low-latency updates.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{Big-Brain} {\href{https://big-brain-pied.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{GCP, PostgreSQL, React}}
+\resumeProjItemListStart
+\resumeItem{Built a cloud \textbf{data ingestion pipeline} over 50K+ records on \textbf{PostgreSQL} and GCP, cutting retrieval latency \textbf{40\%}.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

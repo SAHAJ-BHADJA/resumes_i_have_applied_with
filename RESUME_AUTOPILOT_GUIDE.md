@@ -93,20 +93,25 @@ Do not stop after drafting. The workflow is only complete after:
 
 All resumes must be saved under:
 
-- `E:\Projects\Random\Resume\COMPANY\<company-lowercase>\<YYYY-MM-DD>\`
+- `E:\Projects\Random\Resume\COMPANY\<company-lowercase>\<YYYY-MM-DD(Position-Name_JobID)>\`
 
 Examples:
 
-- `E:\Projects\Random\Resume\COMPANY\aura\2026-04-23\`
-- `E:\Projects\Random\Resume\COMPANY\salesforce\2026-04-22\`
-- `E:\Projects\Random\Resume\COMPANY\ixl learning\2026-04-22\`
+- `E:\Projects\Random\Resume\COMPANY\seatgeek\2026-06-01(Software-Engineer-New-Grad)\`
+- `E:\Projects\Random\Resume\COMPANY\deloitte-cyber\2026-06-01(Cyber-Full-Stack-Software-Engineer_350393)\`
+- `E:\Projects\Random\Resume\COMPANY\nvidia\2026-06-08(Formal-Verification-Engineer-New-College-Grad-2026_JR2013065)\`
+
+Folder naming:
+
+- `Position-Name` = sanitized JD title (hyphens, no special chars)
+- `JobID` = requisition / JR code when available; omit `_JobID` if not in posting
 
 Rules:
 
 - company folder name must be lowercase
 - spaces in company names are allowed
-- no `.tex` files should remain in the company output folder
-- final deliverable in the folder is the PDF
+- after compile, delete `*.tex`, `*.aux`, `*.log`, `*.out` from the company output folder
+- final deliverable in the folder is **only** the PDF
 
 ## File Naming Rules
 

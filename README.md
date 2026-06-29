@@ -17,7 +17,7 @@ This folder contains the reusable resume framework for JD-tailored one-page resu
 
 Generated PDFs must go to:
 
-`E:\Projects\Random\Resume\COMPANY\<company-lowercase>\<YYYY-MM-DD>\`
+`E:\Projects\Random\Resume\COMPANY\<company-lowercase>\<YYYY-MM-DD(Position-Name_JobID)>\`
 
 Filename pattern:
 

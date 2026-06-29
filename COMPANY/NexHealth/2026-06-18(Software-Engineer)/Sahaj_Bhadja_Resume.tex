@@ -1,0 +1,121 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-3pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto: bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Backend Software Engineer pursuing an MSCS at USC with 2+ years building data ingestion pipelines, scaled storage, and low-latency APIs across distributed systems, with healthcare-integration and third-party API experience, strong CS fundamentals, and clean, well-tested production code.}}
+\end{itemize}
+\vspace{-6pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Analysis of Algorithms, Database Systems, Web Technologies, Advanced NLP}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Object-Oriented Programming, Software Engineering, Operating Systems, Data Retrieval}
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Built \textbf{high-throughput data ingestion pipelines} and scaled multi-tenant storage on SQL and cloud services for 500+ users, optimizing queries for low-latency serving from 1.2s to 350ms.}
+\resumeItem{Debugged \textbf{distributed async orchestration} with explicit job-state transitions and failure isolation, processing 5K+ monthly jobs with CI/CD at 99\%+ production reliability.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Engineer Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Built and shipped \textbf{backend features and REST APIs} handling 10K+ daily requests for 150+ users, writing clean, well-tested production code with concurrent processing.}
+\resumeItem{Participated in \textbf{code reviews and architecture discussions} in a senior team, debugging performance issues and reducing turnaround \textbf{60\%} under high load.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Engineered \textbf{large-scale API integrations and ETL pipelines} (AWS Glue, S3) with OOP fundamentals and 20+ test suites, improving response times \textbf{30\%} and pipeline efficiency \textbf{68\%}.}
+\resumeItem{Built distributed \textbf{CI/CD and integration testing} across three platforms, collaborating with external stakeholders in Agile sprints to ship reliable production software.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Full Stack Developer Intern - (VibrantChem)}{May 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Developed a \textbf{microservice platform} with MongoDB and REST APIs across eight services, integrating third-party payment and \textbf{webhook} workflows syncing 2M+ records.}
+\resumeItem{Automated \textbf{Docker/Jenkins CI/CD} on Azure with monitoring and real-time WebSockets, cutting deployment time \textbf{50\%} and improving scalability.}
+\resumeItemListEnd
+\resumeSubheading{LST Capitals}{India}{Web Developer Intern}{November 2022 -- January 2023}
+\resumeItemListStart
+\resumeItem{Built \textbf{Flask backend APIs and third-party integrations} (payments, webhooks) for a healthcare-adjacent booking platform across 50K+ records with sub-200ms responses.}
+\resumeItem{Integrated \textbf{Firebase real-time data serving} and analytics pipelines, performing root cause analysis to reduce manual handling \textbf{70\%}.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}: Python, Java, SQL, JavaScript/TypeScript, C++, Bash \\
+\textbf{Backend \& APIs}: FastAPI, Flask, Spring Boot, Node.js, REST APIs, Webhooks, Microservices \\
+\textbf{Core CS}: Data Structures, Algorithms, OOP, Functional Programming, System Design, Distributed Systems \\
+\textbf{Databases}: PostgreSQL, MySQL, SQL Server, MongoDB, Query Optimization, Data Modeling \\
+\textbf{Data \& Pipelines}: ETL, Data Ingestion, Scaled Storage, Low-Latency Serving, Caching, Async Processing \\
+\textbf{Cloud \& Practices}: AWS, Azure, GCP, Docker, Kubernetes, CI/CD, Code Reviews, Healthcare Integrations
+}}
+\end{itemize}
+\vspace{-6pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{HMIS} {\href{https://hims-rouge.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{MERN, ABDM EHR APIs, Microservices}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{healthcare integration platform} (MERN) connecting India's ABDM EHR APIs with consent-based record access and microservices, managing 100+ daily clinical workflows.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{FinNexus} {\href{https://fin-nexus.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{Plaid, Webhooks, Kubernetes, MongoDB}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{third-party integration platform} (Plaid, webhooks) on Kubernetes serving 50K+ users and 1M+ transactions with real-time, low-latency data serving.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{Big-Brain} {\href{https://big-brain-pied.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{GCP, PostgreSQL, REST APIs, FAISS}}
+\resumeProjItemListStart
+\resumeItem{Built a \textbf{data ingestion and indexing pipeline} on GCP processing 50K+ records with scaled storage, incremental updates, and tuning that cut retrieval latency \textbf{40\%}.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

@@ -1,0 +1,119 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-3pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto: bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Full Stack Engineer pursuing an MSCS at USC with 2+ years building \textbf{TypeScript/React/Next.js} frontends and \textbf{Python} backends on \textbf{PostgreSQL}, shipping production \textbf{LLM-powered} platforms with strong UX, performance, and security focus in early-stage environments.}}
+\end{itemize}
+\vspace{-6pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Web Technologies, Database Systems, Advanced NLP, Analysis of Algorithms}
+\vspace{-9pt}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Software Engineering, OOP, Operating Systems, Data Retrieval}
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Built full-stack features for an AI platform on \textbf{PostgreSQL} and FastAPI for 500+ users, optimizing query performance and cutting dashboard latency from 1.2s to 350ms for a responsive enterprise UX.}
+\resumeItem{Restructured async \textbf{LLM orchestration} with Python background workers and job-state transitions, processing 1K+ AI jobs and increasing throughput \textbf{3x} while maintaining production reliability and security controls.}
+\resumeItemListEnd
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Engineer Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Engineered a full-stack \textbf{LLM-powered} platform (\textbf{React}, \textbf{TypeScript}, Python/Flask) applying multimodal models to 10K+ daily requests for 150+ users with stable production performance.}
+\resumeItem{Iterated with stakeholders on UX improvements, documentation, and code reviews, reducing feedback turnaround \textbf{60\%} while shipping secure file ingestion and rapid feature enhancements.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Built \textbf{REST API} services and integrations with automated testing and CI/CD, improving response times \textbf{30\%} while collaborating with cross-functional teams in fast-paced Agile sprints.}
+\resumeItem{Troubleshot production defects independently, boosting pipeline efficiency \textbf{68\%} and documenting fixes to improve platform reliability for enterprise customers.}
+\resumeItemListEnd
+\resumeSubheading{Aasma Technology Solutions}{India}{Full Stack Developer Intern - (VibrantChem)}{May 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Developed full-stack \textbf{React/Node.js} features with REST APIs and \textbf{PostgreSQL}-style relational schemas on Azure SQL, syncing 2M+ records across eight enterprise microservices.}
+\resumeItem{Shipped Docker and Jenkins CI/CD releases with validation gates, cutting deployment time \textbf{50\%} while improving UI responsiveness and operational dashboards for business users.}
+\resumeItemListEnd
+\resumeSubheading{LST Capitals}{India}{Web Developer Intern}{November 2022 -- January 2023}
+\resumeItemListStart
+\resumeItem{Built \textbf{React/TypeScript} interfaces with Python Flask APIs for 50K+ records, translating user requirements into shipped features with sub-200ms responses and polished end-user workflows.}
+\resumeItem{Resolved production bugs via logging and validation, reducing manual handling \textbf{70\%} while documenting architecture for rapid iteration with internal stakeholders.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Frontend}: TypeScript, JavaScript, React.js, Next.js, HTML, CSS, TailwindCSS, Responsive UI \\
+\textbf{Backend}: Python, FastAPI, Flask, Node.js, Express.js, REST APIs, Microservices \\
+\textbf{Data \& AI}: PostgreSQL, SQL, LLM Systems, NLP, ETL Pipelines, Schema Design, Query Tuning \\
+\textbf{Cloud \& Tools}: AWS, Docker, Kubernetes, CI/CD, Git, JIRA, Agile, Security, Performance Optimization
+}}
+\end{itemize}
+\vspace{-6pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\textbf{Big-Brain} {\href{https://big-brain-pied.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{React, PostgreSQL, LLM, Semantic Search}}
+\resumeProjItemListStart
+\resumeItem{Built an \textbf{LLM-powered SaaS platform} for secure document upload, semantic search, and collaborative Q\&A over 50K+ records on \textbf{PostgreSQL} with sub-second retrieval latency.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{FinNexus} {\href{https://fin-nexus.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{Next.js, TypeScript, MongoDB, Kubernetes}}
+\resumeProjItemListStart
+\resumeItem{Built a full-stack \textbf{Next.js/TypeScript} platform for 50K+ users and 1M+ transactions with real-time updates, secure access, and performance-tuned UI components.}
+\resumeProjItemListEnd
+\vspace{3pt}
+\resumeProjectHeading{\textbf{HMIS} {\href{https://hims-rouge.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{MERN, TypeScript, REST APIs, TailwindCSS}}
+\resumeProjItemListStart
+\resumeItem{Built an enterprise \textbf{web application} with role-based workflows, REST integrations, and operational dashboards, reducing administrative workload \textbf{30\%} for daily users.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

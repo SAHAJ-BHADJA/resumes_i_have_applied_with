@@ -92,10 +92,16 @@ Recommended folder structure:
 ```
 OUTPUT/
 └── CompanyName/
-    └── YYYY-MM-DD/
-        ├── resume.tex
-        └── resume.pdf
+    └── YYYY-MM-DD(Position-Name_JobID)/
+        └── Sahaj_Bhadja_Resume.pdf
 ```
+
+After compile, delete all LaTeX source and build files from the output folder. Keep PDF only.
+```
+
+- Sanitize position title (spaces → hyphens)
+- Append `_JobID` when the posting includes a requisition / JR code
+- If no job ID, use `YYYY-MM-DD(Position-Name)` only
 
 ## Drift Check
 

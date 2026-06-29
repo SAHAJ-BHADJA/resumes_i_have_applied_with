@@ -25,6 +25,9 @@ Locked spacing values:
 
 Formatting notes:
 
+- Section headers must be unnumbered (`Summary`, `Education`, etc.). Always include `\setcounter{secnumdepth}{0}` immediately after `\usepackage{titlesec}`.
+- **Locked experience headers:** company name, job title, dates, and location come from `master_resume_data.json` and must not be renamed to match the target JD. Only bullets change per role.
+- **Dated output folders:** use today's actual date in `YYYY-MM-DD(Position-Name_JobID)` — e.g. `mlb\2026-06-11(Associate-Software-Engineer-Web-Platform-Architecture)\` when generated on June 11, 2026.
 - Keep locations consistent, e.g. `Los Angeles, CA`
 - Keep bullets dense but readable; shorten wording before compressing spacing further
 - Use `firmpilot_reference_sample.tex` as the visual truth source if a future template drifts

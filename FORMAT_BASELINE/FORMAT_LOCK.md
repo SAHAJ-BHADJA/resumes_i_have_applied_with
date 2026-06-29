@@ -4,11 +4,13 @@ This file records the locked spacing and formatting values from the currently ac
 
 ## Locked spacing values
 
-- Header to Summary: `\vspace{-18pt}`
-- Summary bottom spacing: `\vspace{-16pt}`
-- Education to Experience: `\vspace{-14pt}`
-- Experience to Skills: `\vspace{-14pt}`
-- Skills to Projects: `\vspace{-16pt}`
+- Section header rule: full-width `\rule{\linewidth}{0.4pt}` on its own line below each title via `[\color{black}\vspace{-3pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]` — **never use `\titlerule`** (causes line-through text overlap)
+- Section spacing: `\titlespacing*{\section}{0pt}{6pt}{0pt}` — breathing room between prior section content and the next header
+- Header to Summary: `\vspace{-16pt}`
+- Summary bottom spacing: `\vspace{-6pt}`
+- Education to Experience: `\vspace{-6pt}`
+- Experience to Skills: `\vspace{-6pt}` (never exceed `-8pt`; overlap occurs at `-10pt` or tighter)
+- Skills to Projects: `\vspace{-6pt}`
 - `\resumeSubheading` tail spacing: `\vspace{-2pt}`
 - `\resumeEduSubheading` tail spacing: `\vspace{-4pt}`
 - `\resumeProjectHeading` tail spacing: `\vspace{-2pt}`
@@ -40,7 +42,7 @@ This file records the locked spacing and formatting values from the currently ac
 - Keep bullets dense but readable
 - Shorten wording before increasing compression
 - Preserve the current header/link structure
-- Use the same visual style for section rules and typography
+- Section headers must never overlap prior content; if overlap appears, reduce negative `\vspace` before `\section{}` before trimming content
 
 ## Content rules that pair with this format
 
