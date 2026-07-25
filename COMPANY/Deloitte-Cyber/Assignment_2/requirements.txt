@@ -1,0 +1,13 @@
+# The core investigation pipeline uses the Python standard library ONLY.
+# `python -m siem_investigator` runs the full reconstruction, prints the report,
+# and writes the interactive HTML with zero third-party packages installed.
+#
+# The two optional layers below degrade gracefully when absent (the tool prints
+# a one-line notice and continues on the deterministic path):
+
+anthropic>=0.40   # optional: --llm  (Claude-narrated, citation-verified brief)
+requests>=2.31    # optional: --refresh-attack  (reconcile ATT&CK vs live STIX feed)
+
+# Tests use pytest if present, but each tests/test_*.py also runs standalone:
+#   python tests/test_detectors.py
+pytest>=8.0       # optional: test runner

@@ -1,0 +1,127 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-3pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\begin{document}
+
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahaj-bhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Software engineer with 2+ years building full-stack applications, backend services, and testing workflows. Strong in Python, JavaScript/TypeScript, React-style UI, Linux, CI/CD, and production debugging.}}
+\end{itemize}
+
+\vspace{-6pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Analysis of Algorithms, Database Systems, Web Technologies, Advanced NLP}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Software Engineering, Operating Systems, Object-Oriented Programming, Data Retrieval}
+\resumeSubHeadingListEnd
+
+\vspace{-6pt}
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading{Grad8}{Los Angeles, CA}{Software Engineer Intern}{June 2025 -- August 2025}
+\resumeItemListStart
+\resumeItem{Developed React interfaces and Flask APIs for an AI grading product handling 10,000+ daily requests, integrating uploads, grading history, and secure file-processing workflows across customer-facing operational surfaces.}
+\resumeItem{Integrated multimodal services, concurrent batch processing, and backend workflows on AWS, reducing feedback turnaround by 60\% while maintaining stable APIs, dependable execution, and consistent behavior under peak usage.}
+\resumeItem{Worked across frontend state, backend logic, and testing workflows to ship polished features quickly, debug issues early, and incorporate collaborative code-review feedback throughout fast release cycles consistently.}
+\resumeItemListEnd
+
+\resumeSubheading{Aasma Technology Solutions}{India}{Full Stack Developer Intern - (VibrantChem)}{May 2023 -- August 2023}
+\resumeItemListStart
+\resumeItem{Built MERN platform features with REST APIs, WebSockets, and responsive interfaces, supporting synchronized records across modular workflows while translating requirements into reliable end-to-end behavior for customer-facing applications.}
+\resumeItem{Automated Docker-based build and test workflows with Jenkins, cutting release time by 50\% while improving deployment consistency, troubleshooting discipline, and shared engineering practices across distributed team environments.}
+\resumeItemListEnd
+
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Engineered cross-platform data-sharing software with a microservice architecture, supporting scalable service communication, distributed validation workflows, and maintainable backend components across Windows, Linux, and macOS production environments reliably.}
+\resumeItem{Maintained 20+ automated tests and CI pipelines with Jenkins, PyTest, and Mockito, increasing release reliability by 68\% while improving debugging, deployment consistency, and defect tracking across distributed builds.}
+\resumeItem{Executed multi-platform build and validation workflows across Windows, Linux, and macOS, surfacing defects earlier, verifying service behavior consistently, and supporting repeatable releases for operational software components teams.}
+\resumeItemListEnd
+
+\resumeSubheading{LST Capitals}{India}{Web Developer Intern}{May 2022 -- August 2022}
+\resumeItemListStart
+\resumeItem{Built backend APIs for a cross-platform service-booking application covering reservations, time-slot selection, and payment status workflows across 50K+ booking records, emphasizing reliable operational behavior and maintainable interfaces.}
+\resumeItem{Designed the system architecture and mapped 12+ backend integration points, collaborating with stakeholders to align requirements before implementation and support iterative improvements across mobile and web software surfaces.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-6pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}: Python, JavaScript, TypeScript, SQL, Java, C++, Bash \\
+\textbf{Frontend}: React, Next.js, HTML, CSS, TailwindCSS, responsive UI, state management \\
+\textbf{Backend \& APIs}: Flask, FastAPI, Node.js, Express, REST APIs, WebSockets, microservices \\
+\textbf{Testing \& DevOps}: PyTest, Mockito, unit testing, integration testing, Git, GitHub, GitHub Actions, Jenkins, Docker, CI/CD \\
+\textbf{Platforms}: Linux, Windows, macOS, Android familiarity, cross-platform development, CLI tooling, debugging, OOP, data structures, algorithms
+}}
+\end{itemize}
+
+\vspace{-6pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{2pt}
+
+\resumeProjectHeading{\textbf{Selected Projects} $|$ \emph{C++, MERN, TypeScript, Python}}
+\resumeProjItemListStart
+\resumeItem{Implemented FCFS, SJF, SRT, RR, priority scheduling, and MLQ with C++ logic, dynamic metrics, and Gantt visualization across 1K+ simulated process combinations for repeatable operating-systems experimentation analysis.}
+\resumeItem{Implemented consent-based patient-history access, Twilio appointment alerts, Sentry monitoring, and scalable TypeScript-backed workflows to reduce administrative workload by 30\%, emphasizing reliable state transitions and operational systems visibility.}
+\resumeItem{Built a scalable fintech platform supporting 50,000+ users and 1M+ transactions, combining real-time updates, secure APIs, and deployment automation to maintain responsive behavior under high-volume workloads reliably.}
+\resumeProjItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}

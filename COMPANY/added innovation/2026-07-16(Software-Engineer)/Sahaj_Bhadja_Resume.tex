@@ -1,0 +1,129 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-3pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=2pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\begin{document}
+
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:(213) 284-4651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahaj-bhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Software engineer with 2+ years building and maintaining web applications, SQL-backed services, and API integrations across production environments. Strong in debugging, legacy code navigation, relational databases, client-facing communication, and reliable delivery across multiple concurrent projects.}}
+\end{itemize}
+
+\vspace{-6pt}
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Analysis of Algorithms, Database Systems, Web Technologies, Advanced NLP}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Software Engineering, Operating Systems, Object-Oriented Programming, Data Retrieval}
+\resumeSubHeadingListEnd
+
+\vspace{-6pt}
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading{USC Dornsife}{Los Angeles, CA}{Software Engineer}{September 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Maintained SQL-backed platform services for 500+ users, tuning indexed queries, background workers, and validation flows across FastAPI workflows to improve dashboard latency from 1.2 seconds to 350 milliseconds.}
+\resumeItem{Troubleshot issues across development and production workflows, translating stakeholder requests into maintainable backend changes while documenting debugging paths that made recurring platform issues faster to isolate and resolve.}
+\resumeItem{Supported concurrent releases, data fixes, and integration updates across multiple requests at once, balancing reliability, delivery speed, and communication with internal stakeholders during recurring production support cycles.}
+\resumeItem{Worked within an established platform codebase and evolving requirements, independently implementing defined backend fixes while coordinating with teammates to keep user-facing workflows stable across repeated operational requests.}
+\resumeItem{Supported high-volume application workflows and backend integrations, strengthening asynchronous processing, issue triage, and release stability while adapting quickly to shifting priorities across overlapping implementation requests daily effectively.}
+\resumeItemListEnd
+
+\resumeSubheading{Aasma Technology Solutions}{India}{Software Developer Engineer - (SecureSync)}{August 2023 -- July 2024}
+\resumeItemListStart
+\resumeItem{Engineered API and ETL integrations using Python, SQL, AWS Glue, and S3, improving response time by 30\% while supporting scalable service integrations, data collection workflows, and maintainable backend components.}
+\resumeItem{Maintained 20+ automated tests and CI pipelines with Jenkins, PyTest, and Mockito, increasing release reliability by 68\% and strengthening debugging discipline across validation checks, deployments, and multi-environment builds.}
+\resumeItem{Worked within an existing microservice codebase spanning multiple operating systems, supporting executable builds, nightly validation runs, and cross-environment troubleshooting for production-style workflows with strict reliability and uptime expectations.}
+\resumeItem{Collaborated across multiple workstreams in a fast-paced delivery environment, clarifying requirements, resolving defects, and supporting maintainable integrations while adapting quickly to shifting priorities across shared client-facing systems.}
+\resumeItem{Balanced delivery across parallel tasks and environments, coordinating fixes, validation, and deployment support so shared application changes stayed consistent while multiple stakeholders depended on the same underlying systems.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-6pt}
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}: Python, JavaScript, TypeScript, SQL, Java, C++, Bash \\
+\textbf{Web \& Application Dev}: React, Next.js, HTML5, CSS3, TailwindCSS, Flask, FastAPI, Node.js, Express, REST APIs, WebSockets \\
+\textbf{Data \& Databases}: PostgreSQL, MySQL, MongoDB, SQL Server, Azure SQL, relational modeling, query tuning, indexing, ETL pipelines \\
+\textbf{Tooling \& Delivery}: Git, GitHub Actions, Jenkins, Docker, CI/CD, PyTest, Mockito, Visual Studio familiarity, source control workflows \\
+\textbf{Engineering}: debugging, legacy code maintenance, production support, API integration, unit testing, Agile/Scrum, stakeholder communication, client-facing collaboration
+}}
+\end{itemize}
+
+\vspace{-6pt}
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{2pt}
+
+\resumeProjectHeading{\textbf{HMIS} {\href{https://hims-rouge.vercel.app/}{\textcolor{red}{\underline{Live}}}} $|$ \emph{MERN, TypeScript, ABDM APIs, Twilio, Sentry}}
+\resumeProjItemListStart
+\resumeItem{Built a healthcare workflow platform with TypeScript, MERN, ABDM APIs, Twilio alerts, and Sentry monitoring, reducing administrative workload by 30\% through responsive scheduling, consent-aware access, and operational dashboards.}
+\resumeProjItemListEnd
+
+\vspace{3pt}
+\resumeProjectHeading{\textbf{Chat2SQL} {\href{https://github.com/SAHAJ-BHADJA/Chat2SQL}{\textcolor{red}{\underline{Code}}}} $|$ \emph{Java, TypeScript, SQL, Docker, Maven}}
+\resumeProjItemListStart
+\resumeItem{Built an AI-powered SQL workspace across Java and TypeScript services, supporting 10+ databases and accelerating query authoring, schema exploration, and validation through a unified developer interface and local workflows.}
+\resumeProjItemListEnd
+
+\vspace{3pt}
+\resumeProjectHeading{\textbf{Linguistix} $|$ \emph{Python, AWS, Docker, CI/CD}}
+\resumeProjItemListStart
+\resumeItem{Developed a containerized Python REST API on AWS with automated CI/CD, validation checks, and reproducible releases, achieving 87\% classification accuracy while supporting reliable data-processing workflows in production-style environments.}
+\resumeProjItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}

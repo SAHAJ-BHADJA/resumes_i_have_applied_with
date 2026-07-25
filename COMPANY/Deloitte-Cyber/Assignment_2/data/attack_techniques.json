@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "description": "Curated offline subset of the MITRE ATT&CK Enterprise catalogue, limited to the techniques this investigation maps. Ships locally so the tool runs with no network dependency; `python -m siem_investigator --refresh-attack` reconciles these entries against the live STIX feed (https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json).",
+    "attack_version_reference": "ATT&CK Enterprise v15+",
+    "verified_against_live_site": ["T1530", "T1567.002", "T1027.010", "T1021.002"]
+  },
+  "tactics_order": [
+    "Initial Access", "Execution", "Persistence", "Privilege Escalation",
+    "Defense Evasion", "Credential Access", "Discovery", "Lateral Movement",
+    "Collection", "Command and Control", "Exfiltration", "Impact"
+  ],
+  "techniques": {
+    "T1566.001": {"name": "Phishing: Spearphishing Attachment", "tactic": "Initial Access", "tactic_id": "TA0001", "url": "https://attack.mitre.org/techniques/T1566/001/", "summary": "Adversaries send emails with a malicious attachment to gain execution on a victim endpoint."},
+    "T1204.002": {"name": "User Execution: Malicious File", "tactic": "Execution", "tactic_id": "TA0002", "url": "https://attack.mitre.org/techniques/T1204/002/", "summary": "A user is induced to open a malicious file (e.g. an Office document), causing code execution."},
+    "T1059.001": {"name": "Command and Scripting Interpreter: PowerShell", "tactic": "Execution", "tactic_id": "TA0002", "url": "https://attack.mitre.org/techniques/T1059/001/", "summary": "Adversaries abuse PowerShell to execute commands, scripts, and payloads."},
+    "T1027.010": {"name": "Obfuscated Files or Information: Command Obfuscation", "tactic": "Defense Evasion", "tactic_id": "TA0005", "url": "https://attack.mitre.org/techniques/T1027/010/", "summary": "Adversaries obfuscate command content (e.g. base64/-enc, string tricks) to evade detection."},
+    "T1053.005": {"name": "Scheduled Task/Job: Scheduled Task", "tactic": "Persistence", "tactic_id": "TA0003", "url": "https://attack.mitre.org/techniques/T1053/005/", "summary": "Adversaries create a Windows scheduled task to gain persistence or recurring execution."},
+    "T1071.001": {"name": "Application Layer Protocol: Web Protocols", "tactic": "Command and Control", "tactic_id": "TA0011", "url": "https://attack.mitre.org/techniques/T1071/001/", "summary": "Adversaries use web protocols (HTTP/HTTPS) to blend C2 traffic with normal web traffic."},
+    "T1033": {"name": "System Owner/User Discovery", "tactic": "Discovery", "tactic_id": "TA0007", "url": "https://attack.mitre.org/techniques/T1033/", "summary": "Adversaries identify the primary user or logged-on accounts (e.g. whoami)."},
+    "T1087.002": {"name": "Account Discovery: Domain Account", "tactic": "Discovery", "tactic_id": "TA0007", "url": "https://attack.mitre.org/techniques/T1087/002/", "summary": "Adversaries enumerate domain accounts and groups (e.g. net group \"Domain Admins\" /domain)."},
+    "T1018": {"name": "Remote System Discovery", "tactic": "Discovery", "tactic_id": "TA0007", "url": "https://attack.mitre.org/techniques/T1018/", "summary": "Adversaries enumerate other hosts/domain controllers on the network (e.g. nltest /dclist)."},
+    "T1016": {"name": "System Network Configuration Discovery", "tactic": "Discovery", "tactic_id": "TA0007", "url": "https://attack.mitre.org/techniques/T1016/", "summary": "Adversaries collect network configuration details (e.g. ipconfig /all)."},
+    "T1082": {"name": "System Information Discovery", "tactic": "Discovery", "tactic_id": "TA0007", "url": "https://attack.mitre.org/techniques/T1082/", "summary": "Adversaries gather host OS/hardware information (e.g. systeminfo)."},
+    "T1003.001": {"name": "OS Credential Dumping: LSASS Memory", "tactic": "Credential Access", "tactic_id": "TA0006", "url": "https://attack.mitre.org/techniques/T1003/001/", "summary": "Adversaries dump LSASS memory to extract credentials (e.g. comsvcs.dll MiniDump)."},
+    "T1569.002": {"name": "System Services: Service Execution", "tactic": "Execution", "tactic_id": "TA0002", "url": "https://attack.mitre.org/techniques/T1569/002/", "summary": "Adversaries execute commands by creating/starting a Windows service (e.g. PsExec / PSEXESVC)."},
+    "T1021.002": {"name": "Remote Services: SMB/Windows Admin Shares", "tactic": "Lateral Movement", "tactic_id": "TA0008", "url": "https://attack.mitre.org/techniques/T1021/002/", "summary": "Adversaries use valid credentials over SMB to admin shares (C$, ADMIN$, IPC$) to move laterally."},
+    "T1078.002": {"name": "Valid Accounts: Domain Accounts", "tactic": "Privilege Escalation", "tactic_id": "TA0004", "url": "https://attack.mitre.org/techniques/T1078/002/", "summary": "Adversaries use compromised domain-account credentials to access and escalate across the domain."},
+    "T1560.001": {"name": "Archive Collected Data: Archive via Utility", "tactic": "Collection", "tactic_id": "TA0009", "url": "https://attack.mitre.org/techniques/T1560/001/", "summary": "Adversaries archive collected data with a utility (e.g. 7z/rar) before exfiltration."},
+    "T1039": {"name": "Data from Network Shared Drive", "tactic": "Collection", "tactic_id": "TA0009", "url": "https://attack.mitre.org/techniques/T1039/", "summary": "Adversaries collect data from network file shares (e.g. \\\\host\\PHI$)."},
+    "T1530": {"name": "Data from Cloud Storage", "tactic": "Collection", "tactic_id": "TA0009", "url": "https://attack.mitre.org/techniques/T1530/", "summary": "Adversaries access sensitive data in cloud object stores such as Amazon S3."},
+    "T1567.002": {"name": "Exfiltration Over Web Service: Exfiltration to Cloud Storage", "tactic": "Exfiltration", "tactic_id": "TA0010", "url": "https://attack.mitre.org/techniques/T1567/002/", "summary": "Adversaries exfiltrate data to a cloud storage service they control."},
+    "T1562.001": {"name": "Impair Defenses: Disable or Modify Tools", "tactic": "Defense Evasion", "tactic_id": "TA0005", "url": "https://attack.mitre.org/techniques/T1562/001/", "summary": "Adversaries disable or modify security tools (e.g. turning off Defender real-time protection)."},
+    "T1070.001": {"name": "Indicator Removal: Clear Windows Event Logs", "tactic": "Defense Evasion", "tactic_id": "TA0005", "url": "https://attack.mitre.org/techniques/T1070/001/", "summary": "Adversaries clear Windows event logs (e.g. wevtutil cl) to remove evidence of activity."}
+  }
+}

@@ -1,0 +1,13 @@
+# Sample IOC test list from the assignment brief - one indicator per line.
+# Lines starting with '#' are ignored. Defanged indicators are fine: the agent refangs them.
+
+185.220.101.45
+8.8.8.8
+emotet-c2-update.xyz
+microsoft.com
+
+# The URL below is intentionally defanged (hxxp / [.]) to show refanging:
+hxxp://194.165.16[.]11/bins/tsunami.arm7
+
+44d88612fea8a8f36de82e1278abb02f
+a3d5a6d5e4e2b8f1c9c4e2b8f1c9d4e5

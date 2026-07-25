@@ -1,0 +1,8 @@
+# Core (live feed lookups + pretty terminal output).
+# The tool degrades gracefully: --demo mode runs on a bare Python install
+# with no third-party packages at all (plain-text rendering, no network).
+requests>=2.31
+rich>=13.7
+
+# Optional: only needed for the --llm Claude analyst-brief layer.
+anthropic>=0.40

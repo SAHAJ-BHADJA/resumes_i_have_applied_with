@@ -1,0 +1,1284 @@
+{
+  "summary_stats": {
+    "events_ingested": 305,
+    "events_by_source": {
+      "auth": 75,
+      "cloud_storage": 77,
+      "endpoint": 56,
+      "network": 97
+    },
+    "findings": 14,
+    "techniques_count": 21,
+    "tactics_covered": 11,
+    "first_malicious_activity": "2026-07-19T09:14:03Z",
+    "last_malicious_activity": "2026-07-21T01:41:03Z",
+    "attack_duration_hours": 40.5,
+    "confirmed_findings": 13,
+    "suspected_findings": 0,
+    "uncertain_findings": 1
+  },
+  "findings": [
+    {
+      "id": "F-001",
+      "title": "Malicious document detonation \u2014 Office spawned a script interpreter",
+      "phase": "Initial Access",
+      "technique_ids": [
+        "T1566.001",
+        "T1204.002",
+        "T1059.001"
+      ],
+      "severity": "high",
+      "confidence": "CONFIRMED",
+      "rationale": "WKS-2471: winword.exe spawned powershell.exe \u2014 the canonical malicious-macro lineage. A user opened a weaponised document that executed code.",
+      "hosts": [
+        "WKS-2471"
+      ],
+      "accounts": [
+        "j.reyes"
+      ],
+      "timestamp": "2026-07-19T09:14:03Z",
+      "evidence": [
+        "EP-0004",
+        "EP-0005"
+      ],
+      "caveats": "The phishing email itself is not in scope of the provided logs (no email/proxy source), so the delivery vector is inferred from on-host process lineage, not observed directly.",
+      "techniques": [
+        {
+          "id": "T1566.001",
+          "name": "Phishing: Spearphishing Attachment",
+          "tactic": "Initial Access",
+          "url": "https://attack.mitre.org/techniques/T1566/001/"
+        },
+        {
+          "id": "T1204.002",
+          "name": "User Execution: Malicious File",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1204/002/"
+        },
+        {
+          "id": "T1059.001",
+          "name": "Command and Scripting Interpreter: PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        }
+      ]
+    },
+    {
+      "id": "F-002",
+      "title": "Obfuscated PowerShell execution",
+      "phase": "Execution",
+      "technique_ids": [
+        "T1059.001",
+        "T1027.010"
+      ],
+      "severity": "high",
+      "confidence": "CONFIRMED",
+      "rationale": "WKS-2471: PowerShell launched with an encoded command and evasion flags. Encoding + hidden window + bypassed execution policy is a hallmark of implant staging, not administration. Decoded payload references: http://45.83.140.77/a",
+      "hosts": [
+        "WKS-2471"
+      ],
+      "accounts": [
+        "j.reyes"
+      ],
+      "timestamp": "2026-07-19T09:14:31Z",
+      "evidence": [
+        "EP-0005"
+      ],
+      "caveats": "",
+      "techniques": [
+        {
+          "id": "T1059.001",
+          "name": "Command and Scripting Interpreter: PowerShell",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        },
+        {
+          "id": "T1027.010",
+          "name": "Obfuscated Files or Information: Command Obfuscation",
+          "tactic": "Defense Evasion",
+          "url": "https://attack.mitre.org/techniques/T1027/010/"
+        }
+      ]
+    },
+    {
+      "id": "F-003",
+      "title": "C2 beaconing \u2014 regular outbound connections to a single external host",
+      "phase": "Command and Control",
+      "technique_ids": [
+        "T1071.001"
+      ],
+      "severity": "high",
+      "confidence": "CONFIRMED",
+      "rationale": "WKS-2471 -> 45.83.140.77:443 made 42 outbound TLS connections at a near-constant ~59-minute interval (jitter 8%) over 40h. Automated periodicity to one external IP is beaconing, not human browsing.",
+      "hosts": [
+        "WKS-2471"
+      ],
+      "accounts": [],
+      "timestamp": "2026-07-19T09:14:48Z",
+      "evidence": [
+        "NW-0005",
+        "NW-0006",
+        "NW-0008",
+        "NW-0010",
+        "NW-0015",
+        "NW-0016",
+        "NW-0018",
+        "NW-0020",
+        "NW-0022",
+        "NW-0024",
+        "NW-0026",
+        "NW-0028",
+        "NW-0029",
+        "NW-0030",
+        "NW-0031",
+        "NW-0033",
+        "NW-0035",
+        "NW-0037",
+        "NW-0039",
+        "NW-0040",
+        "NW-0041",
+        "NW-0042",
+        "NW-0043",
+        "NW-0044",
+        "NW-0046",
+        "NW-0048",
+        "NW-0050",
+        "NW-0052",
+        "NW-0053",
+        "NW-0055",
+        "NW-0056",
+        "NW-0059",
+        "NW-0062",
+        "NW-0064",
+        "NW-0065",
+        "NW-0066",
+        "NW-0067",
+        "NW-0068",
+        "NW-0069",
+        "NW-0070",
+        "NW-0071",
+        "NW-0072"
+      ],
+      "caveats": "No DNS or web-proxy logs are collected, so the C2 domain and URL path cannot be resolved from these flows \u2014 only the destination IP and periodicity are established.",
+      "techniques": [
+        {
+          "id": "T1071.001",
+          "name": "Application Layer Protocol: Web Protocols",
+          "tactic": "Command and Control",
+          "url": "https://attack.mitre.org/techniques/T1071/001/"
+        }
+      ]
+    },
+    {
+      "id": "F-004",
+      "title": "Persistence established \u2014 scheduled task created",
+      "phase": "Persistence",
+      "technique_ids": [
+        "T1053.005"
+      ],
+      "severity": "high",
+      "confidence": "CONFIRMED",
+      "rationale": "WKS-2471: a scheduled task was created to relaunch a hidden PowerShell payload on an interval (masquerading as a benign sync task). This survives reboot and re-establishes C2.",
+      "hosts": [
+        "WKS-2471"
+      ],
+      "accounts": [
+        "j.reyes"
+      ],
+      "timestamp": "2026-07-19T09:22:10Z",
+      "evidence": [
+        "EP-0006"
+      ],
+      "caveats": "",
+      "techniques": [
+        {
+          "id": "T1053.005",
+          "name": "Scheduled Task/Job: Scheduled Task",
+          "tactic": "Persistence",
+          "url": "https://attack.mitre.org/techniques/T1053/005/"
+        }
+      ]
+    },
+    {
+      "id": "F-005",
+      "title": "Host & domain reconnaissance",
+      "phase": "Discovery",
+      "technique_ids": [
+        "T1016",
+        "T1018",
+        "T1033",
+        "T1082",
+        "T1087.002"
+      ],
+      "severity": "medium",
+      "confidence": "CONFIRMED",
+      "rationale": "WKS-2471: 4 discovery commands in quick succession (user/domain-admin enumeration, DC listing, host and network config). Consistent with hands-on-keyboard orientation after foothold.",
+      "hosts": [
+        "WKS-2471"
+      ],
+      "accounts": [
+        "j.reyes"
+      ],
+      "timestamp": "2026-07-19T09:31:05Z",
+      "evidence": [
+        "EP-0007",
+        "EP-0008",
+        "EP-0009",
+        "EP-0010"
+      ],
+      "caveats": "",
+      "techniques": [
+        {
+          "id": "T1016",
+          "name": "System Network Configuration Discovery",
+          "tactic": "Discovery",
+          "url": "https://attack.mitre.org/techniques/T1016/"
+        },
+        {
+          "id": "T1018",
+          "name": "Remote System Discovery",
+          "tactic": "Discovery",
+          "url": "https://attack.mitre.org/techniques/T1018/"
+        },
+        {
+          "id": "T1033",
+          "name": "System Owner/User Discovery",
+          "tactic": "Discovery",
+          "url": "https://attack.mitre.org/techniques/T1033/"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery",
+          "tactic": "Discovery",
+          "url": "https://attack.mitre.org/techniques/T1082/"
+        },
+        {
+          "id": "T1087.002",
+          "name": "Account Discovery: Domain Account",
+          "tactic": "Discovery",
+          "url": "https://attack.mitre.org/techniques/T1087/002/"
+        }
+      ]
+    },
+    {
+      "id": "F-006",
+      "title": "Credential theft \u2014 LSASS memory dumped",
+      "phase": "Credential Access",
+      "technique_ids": [
+        "T1003.001"
+      ],
+      "severity": "critical",
+      "confidence": "CONFIRMED",
+      "rationale": "WKS-2471: LSASS process memory was dumped via comsvcs.dll MiniDump. This harvests plaintext/NTLM credentials and Kerberos tickets for every account cached on the host \u2014 the pivot enabler.",
+      "hosts": [
+        "WKS-2471"
+      ],
+      "accounts": [
+        "j.reyes"
+      ],
+      "timestamp": "2026-07-19T14:05:22Z",
+      "evidence": [
+        "EP-0017"
+      ],
+      "caveats": "The dump file is created locally; whether it was successfully exfiltrated or parsed is inferred from the subsequent use of a service account, not directly observed.",
+      "techniques": [
+        {
+          "id": "T1003.001",
+          "name": "OS Credential Dumping: LSASS Memory",
+          "tactic": "Credential Access",
+          "url": "https://attack.mitre.org/techniques/T1003/001/"
+        }
+      ]
+    },
+    {
+      "id": "F-007",
+      "title": "Lateral movement to SRV-FILES01",
+      "phase": "Lateral Movement",
+      "technique_ids": [
+        "T1021.002",
+        "T1078.002",
+        "T1569.002"
+      ],
+      "severity": "critical",
+      "confidence": "CONFIRMED",
+      "rationale": "svc_backup authenticated to SRV-FILES01 over the network (logon type 3) from WKS-2471, corroborated by an SMB flow to 10.20.8.12:445 and remote service execution on the target. Three independent sources agreeing on one event is exactly the lateral-movement signal a single-source tool misses.",
+      "hosts": [
+        "SRV-FILES01",
+        "WKS-2471"
+      ],
+      "accounts": [
+        "svc_backup"
+      ],
+      "timestamp": "2026-07-20T02:17:04Z",
+      "evidence": [
+        "AU-0018",
+        "EP-0026",
+        "NW-0038"
+      ],
+      "caveats": "",
+      "techniques": [
+        {
+          "id": "T1021.002",
+          "name": "Remote Services: SMB/Windows Admin Shares",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/002/"
+        },
+        {
+          "id": "T1078.002",
+          "name": "Valid Accounts: Domain Accounts",
+          "tactic": "Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1078/002/"
+        },
+        {
+          "id": "T1569.002",
+          "name": "System Services: Service Execution",
+          "tactic": "Execution",
+          "url": "https://attack.mitre.org/techniques/T1569/002/"
+        }
+      ]
+    },
+    {
+      "id": "F-008",
+      "title": "Privilege escalation \u2014 domain-admin logon to the Domain Controller",
+      "phase": "Privilege Escalation",
+      "technique_ids": [
+        "T1078.002"
+      ],
+      "severity": "critical",
+      "confidence": "CONFIRMED",
+      "rationale": "a.novak logged on to the domain controller DC01 from SRV-FILES01 with elevated privileges (Event 4672) at 2026-07-20T02:41:33Z (outside business hours). A domain-admin session originating from a freshly-compromised server is a domain takeover, not routine administration.",
+      "hosts": [
+        "DC01"
+      ],
+      "accounts": [
+        "a.novak"
+      ],
+      "timestamp": "2026-07-20T02:41:33Z",
+      "evidence": [
+        "AU-0019",
+        "AU-0020"
+      ],
+      "caveats": "Domain-admin control implies the attacker could access or alter any domain-joined system; the logs confirm the logon, not the full extent of what was touched.",
+      "techniques": [
+        {
+          "id": "T1078.002",
+          "name": "Valid Accounts: Domain Accounts",
+          "tactic": "Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1078/002/"
+        }
+      ]
+    },
+    {
+      "id": "F-009",
+      "title": "Lateral movement to SRV-SQL01",
+      "phase": "Lateral Movement",
+      "technique_ids": [
+        "T1021.002",
+        "T1078.002"
+      ],
+      "severity": "high",
+      "confidence": "UNCERTAIN",
+      "rationale": "svc_backup authenticated to SRV-SQL01 over the network from SRV-FILES01 (off-hours: 2026-07-20T03:05:08Z). Access is confirmed, but SRV-SQL01 has no EDR agent, so what the attacker did there cannot be observed.",
+      "hosts": [
+        "SRV-FILES01",
+        "SRV-SQL01"
+      ],
+      "accounts": [
+        "svc_backup"
+      ],
+      "timestamp": "2026-07-20T03:05:08Z",
+      "evidence": [
+        "AU-0021"
+      ],
+      "caveats": "No endpoint telemetry exists for SRV-SQL01. Treat as accessed-but-unexplained: the account reached it, actions on it are a blind spot.",
+      "techniques": [
+        {
+          "id": "T1021.002",
+          "name": "Remote Services: SMB/Windows Admin Shares",
+          "tactic": "Lateral Movement",
+          "url": "https://attack.mitre.org/techniques/T1021/002/"
+        },
+        {
+          "id": "T1078.002",
+          "name": "Valid Accounts: Domain Accounts",
+          "tactic": "Privilege Escalation",
+          "url": "https://attack.mitre.org/techniques/T1078/002/"
+        }
+      ]
+    },
+    {
+      "id": "F-010",
+      "title": "Data collection \u2014 PHI staged into an archive",
+      "phase": "Collection",
+      "technique_ids": [
+        "T1560.001",
+        "T1039"
+      ],
+      "severity": "high",
+      "confidence": "CONFIRMED",
+      "rationale": "SRV-FILES01: an archiving utility compressed a network file share (PHI$) into a single password-protected archive (~5.1 GB archive). Staging data into one encrypted blob is the standard pre-exfiltration step.",
+      "hosts": [
+        "SRV-FILES01"
+      ],
+      "accounts": [
+        "svc_backup"
+      ],
+      "timestamp": "2026-07-20T03:20:41Z",
+      "evidence": [
+        "EP-0027",
+        "EP-0028"
+      ],
+      "caveats": "",
+      "techniques": [
+        {
+          "id": "T1560.001",
+          "name": "Archive Collected Data: Archive via Utility",
+          "tactic": "Collection",
+          "url": "https://attack.mitre.org/techniques/T1560/001/"
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "tactic": "Collection",
+          "url": "https://attack.mitre.org/techniques/T1039/"
+        }
+      ]
+    },
+    {
+      "id": "F-011",
+      "title": "Mass access to PHI cloud storage from an external IP",
+      "phase": "Collection",
+      "technique_ids": [
+        "T1530"
+      ],
+      "severity": "critical",
+      "confidence": "CONFIRMED",
+      "rationale": "Principal 'svc_backup' performed 19 read operations across 18 PHI objects in bucket 'northwind-phi-records-prod' from external IP(s) 45.83.140.77. A service identity reading patient records from outside the AWS estate is not normal application behaviour.",
+      "hosts": [],
+      "accounts": [
+        "svc_backup"
+      ],
+      "timestamp": "2026-07-21T01:12:02Z",
+      "evidence": [
+        "CS-0037",
+        "CS-0038",
+        "CS-0039",
+        "CS-0040",
+        "CS-0041",
+        "CS-0042",
+        "CS-0043",
+        "CS-0044",
+        "CS-0045",
+        "CS-0046",
+        "CS-0047",
+        "CS-0048",
+        "CS-0049",
+        "CS-0050",
+        "CS-0051",
+        "CS-0052",
+        "CS-0053",
+        "CS-0054",
+        "CS-0055"
+      ],
+      "caveats": "Per-object size logging is only partially enabled, so the exact volume of data read cannot be computed from these events \u2014 the record *count* is a floor, not a total.",
+      "techniques": [
+        {
+          "id": "T1530",
+          "name": "Data from Cloud Storage",
+          "tactic": "Collection",
+          "url": "https://attack.mitre.org/techniques/T1530/"
+        }
+      ]
+    },
+    {
+      "id": "F-012",
+      "title": "Data exfiltration to attacker-controlled cloud storage",
+      "phase": "Exfiltration",
+      "technique_ids": [
+        "T1567.002"
+      ],
+      "severity": "critical",
+      "confidence": "CONFIRMED",
+      "rationale": "6 PHI objects were copied from the internal PHI bucket to external bucket(s) exfil-stage-4d2a by principal(s) svc_backup. A cross-account copy to a bucket the organisation does not own is confirmed data exfiltration.",
+      "hosts": [],
+      "accounts": [
+        "svc_backup"
+      ],
+      "timestamp": "2026-07-21T01:18:30Z",
+      "evidence": [
+        "CS-0056",
+        "CS-0057",
+        "CS-0058",
+        "CS-0059",
+        "CS-0060",
+        "CS-0061"
+      ],
+      "caveats": "This confirms exfiltration of the copied objects. Total exfiltrated volume across all channels (this copy + the bulk reads + any C2 upload) cannot be precisely bounded from the available logs.",
+      "techniques": [
+        {
+          "id": "T1567.002",
+          "name": "Exfiltration Over Web Service: Exfiltration to Cloud Storage",
+          "tactic": "Exfiltration",
+          "url": "https://attack.mitre.org/techniques/T1567/002/"
+        }
+      ]
+    },
+    {
+      "id": "F-013",
+      "title": "Defense evasion \u2014 endpoint protection disabled",
+      "phase": "Defense Evasion",
+      "technique_ids": [
+        "T1562.001"
+      ],
+      "severity": "high",
+      "confidence": "CONFIRMED",
+      "rationale": "WKS-2471: Windows Defender real-time monitoring was disabled via Set-MpPreference \u2014 clearing the way for tooling to run unimpeded.",
+      "hosts": [
+        "WKS-2471"
+      ],
+      "accounts": [
+        "j.reyes"
+      ],
+      "timestamp": "2026-07-21T01:40:12Z",
+      "evidence": [
+        "EP-0042"
+      ],
+      "caveats": "",
+      "techniques": [
+        {
+          "id": "T1562.001",
+          "name": "Impair Defenses: Disable or Modify Tools",
+          "tactic": "Defense Evasion",
+          "url": "https://attack.mitre.org/techniques/T1562/001/"
+        }
+      ]
+    },
+    {
+      "id": "F-014",
+      "title": "Anti-forensics \u2014 Windows event logs cleared",
+      "phase": "Defense Evasion",
+      "technique_ids": [
+        "T1070.001"
+      ],
+      "severity": "high",
+      "confidence": "CONFIRMED",
+      "rationale": "WKS-2471: the Security event log was cleared (wevtutil cl). This destroys local evidence and is itself a strong indicator of hands-on compromise.",
+      "hosts": [
+        "WKS-2471"
+      ],
+      "accounts": [
+        "j.reyes"
+      ],
+      "timestamp": "2026-07-21T01:41:03Z",
+      "evidence": [
+        "EP-0043"
+      ],
+      "caveats": "Log clearing means some on-host evidence for this window is permanently gone; absence of later local events on this host is not evidence of absence of activity.",
+      "techniques": [
+        {
+          "id": "T1070.001",
+          "name": "Indicator Removal: Clear Windows Event Logs",
+          "tactic": "Defense Evasion",
+          "url": "https://attack.mitre.org/techniques/T1070/001/"
+        }
+      ]
+    }
+  ],
+  "attack_techniques": [
+    "T1003.001",
+    "T1016",
+    "T1018",
+    "T1021.002",
+    "T1027.010",
+    "T1033",
+    "T1039",
+    "T1053.005",
+    "T1059.001",
+    "T1070.001",
+    "T1071.001",
+    "T1078.002",
+    "T1082",
+    "T1087.002",
+    "T1204.002",
+    "T1530",
+    "T1560.001",
+    "T1562.001",
+    "T1566.001",
+    "T1567.002",
+    "T1569.002"
+  ],
+  "attack_by_tactic": [
+    {
+      "tactic": "Initial Access",
+      "techniques": [
+        {
+          "id": "T1566.001",
+          "name": "Phishing: Spearphishing Attachment",
+          "url": "https://attack.mitre.org/techniques/T1566/001/",
+          "findings": [
+            "F-001"
+          ]
+        }
+      ]
+    },
+    {
+      "tactic": "Execution",
+      "techniques": [
+        {
+          "id": "T1204.002",
+          "name": "User Execution: Malicious File",
+          "url": "https://attack.mitre.org/techniques/T1204/002/",
+          "findings": [
+            "F-001"
+          ]
+        },
+        {
+          "id": "T1059.001",
+          "name": "Command and Scripting Interpreter: PowerShell",
+          "url": "https://attack.mitre.org/techniques/T1059/001/",
+          "findings": [
+            "F-001",
+            "F-002"
+          ]
+        },
+        {
+          "id": "T1569.002",
+          "name": "System Services: Service Execution",
+          "url": "https://attack.mitre.org/techniques/T1569/002/",
+          "findings": [
+            "F-007"
+          ]
+        }
+      ]
+    },
+    {
+      "tactic": "Persistence",
+      "techniques": [
+        {
+          "id": "T1053.005",
+          "name": "Scheduled Task/Job: Scheduled Task",
+          "url": "https://attack.mitre.org/techniques/T1053/005/",
+          "findings": [
+            "F-004"
+          ]
+        }
+      ]
+    },
+    {
+      "tactic": "Privilege Escalation",
+      "techniques": [
+        {
+          "id": "T1078.002",
+          "name": "Valid Accounts: Domain Accounts",
+          "url": "https://attack.mitre.org/techniques/T1078/002/",
+          "findings": [
+            "F-007",
+            "F-008",
+            "F-009"
+          ]
+        }
+      ]
+    },
+    {
+      "tactic": "Defense Evasion",
+      "techniques": [
+        {
+          "id": "T1027.010",
+          "name": "Obfuscated Files or Information: Command Obfuscation",
+          "url": "https://attack.mitre.org/techniques/T1027/010/",
+          "findings": [
+            "F-002"
+          ]
+        },
+        {
+          "id": "T1562.001",
+          "name": "Impair Defenses: Disable or Modify Tools",
+          "url": "https://attack.mitre.org/techniques/T1562/001/",
+          "findings": [
+            "F-013"
+          ]
+        },
+        {
+          "id": "T1070.001",
+          "name": "Indicator Removal: Clear Windows Event Logs",
+          "url": "https://attack.mitre.org/techniques/T1070/001/",
+          "findings": [
+            "F-014"
+          ]
+        }
+      ]
+    },
+    {
+      "tactic": "Credential Access",
+      "techniques": [
+        {
+          "id": "T1003.001",
+          "name": "OS Credential Dumping: LSASS Memory",
+          "url": "https://attack.mitre.org/techniques/T1003/001/",
+          "findings": [
+            "F-006"
+          ]
+        }
+      ]
+    },
+    {
+      "tactic": "Discovery",
+      "techniques": [
+        {
+          "id": "T1016",
+          "name": "System Network Configuration Discovery",
+          "url": "https://attack.mitre.org/techniques/T1016/",
+          "findings": [
+            "F-005"
+          ]
+        },
+        {
+          "id": "T1018",
+          "name": "Remote System Discovery",
+          "url": "https://attack.mitre.org/techniques/T1018/",
+          "findings": [
+            "F-005"
+          ]
+        },
+        {
+          "id": "T1033",
+          "name": "System Owner/User Discovery",
+          "url": "https://attack.mitre.org/techniques/T1033/",
+          "findings": [
+            "F-005"
+          ]
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery",
+          "url": "https://attack.mitre.org/techniques/T1082/",
+          "findings": [
+            "F-005"
+          ]
+        },
+        {
+          "id": "T1087.002",
+          "name": "Account Discovery: Domain Account",
+          "url": "https://attack.mitre.org/techniques/T1087/002/",
+          "findings": [
+            "F-005"
+          ]
+        }
+      ]
+    },
+    {
+      "tactic": "Lateral Movement",
+      "techniques": [
+        {
+          "id": "T1021.002",
+          "name": "Remote Services: SMB/Windows Admin Shares",
+          "url": "https://attack.mitre.org/techniques/T1021/002/",
+          "findings": [
+            "F-007",
+            "F-009"
+          ]
+        }
+      ]
+    },
+    {
+      "tactic": "Collection",
+      "techniques": [
+        {
+          "id": "T1560.001",
+          "name": "Archive Collected Data: Archive via Utility",
+          "url": "https://attack.mitre.org/techniques/T1560/001/",
+          "findings": [
+            "F-010"
+          ]
+        },
+        {
+          "id": "T1039",
+          "name": "Data from Network Shared Drive",
+          "url": "https://attack.mitre.org/techniques/T1039/",
+          "findings": [
+            "F-010"
+          ]
+        },
+        {
+          "id": "T1530",
+          "name": "Data from Cloud Storage",
+          "url": "https://attack.mitre.org/techniques/T1530/",
+          "findings": [
+            "F-011"
+          ]
+        }
+      ]
+    },
+    {
+      "tactic": "Command and Control",
+      "techniques": [
+        {
+          "id": "T1071.001",
+          "name": "Application Layer Protocol: Web Protocols",
+          "url": "https://attack.mitre.org/techniques/T1071/001/",
+          "findings": [
+            "F-003"
+          ]
+        }
+      ]
+    },
+    {
+      "tactic": "Exfiltration",
+      "techniques": [
+        {
+          "id": "T1567.002",
+          "name": "Exfiltration Over Web Service: Exfiltration to Cloud Storage",
+          "url": "https://attack.mitre.org/techniques/T1567/002/",
+          "findings": [
+            "F-012"
+          ]
+        }
+      ]
+    }
+  ],
+  "attack_path": [
+    {
+      "from": "WKS-2471",
+      "to": "SRV-FILES01",
+      "via": "smb/rce",
+      "finding": "F-007",
+      "confidence": "CONFIRMED",
+      "when": "2026-07-20T02:17:04Z"
+    },
+    {
+      "from": "SRV-FILES01",
+      "to": "DC01",
+      "via": "admin-logon",
+      "finding": "F-008",
+      "confidence": "CONFIRMED",
+      "when": "2026-07-20T02:41:33Z"
+    },
+    {
+      "from": "SRV-FILES01",
+      "to": "SRV-SQL01",
+      "via": "smb/rce",
+      "finding": "F-009",
+      "confidence": "UNCERTAIN",
+      "when": "2026-07-20T03:05:08Z"
+    }
+  ],
+  "blast_radius": {
+    "hosts": {
+      "DC01": {
+        "status": "CONFIRMED",
+        "role": "Domain controller (domain compromise)",
+        "findings": [
+          "F-008"
+        ],
+        "techniques": [
+          "T1078.002"
+        ],
+        "first_seen": "2026-07-20T02:41:33Z",
+        "evidence": [
+          "AU-0019",
+          "AU-0020"
+        ],
+        "note": "Compromise confirmed by direct, multi-source evidence."
+      },
+      "SRV-FILES01": {
+        "status": "CONFIRMED",
+        "role": "Data source (PHI staged here)",
+        "findings": [
+          "F-007",
+          "F-009",
+          "F-010"
+        ],
+        "techniques": [
+          "T1021.002",
+          "T1039",
+          "T1078.002",
+          "T1560.001",
+          "T1569.002"
+        ],
+        "first_seen": "2026-07-20T02:17:04Z",
+        "evidence": [
+          "AU-0018",
+          "AU-0021",
+          "EP-0026",
+          "EP-0027",
+          "EP-0028",
+          "NW-0038"
+        ],
+        "note": "Compromise confirmed by direct, multi-source evidence."
+      },
+      "SRV-SQL01": {
+        "status": "UNCERTAIN",
+        "role": "Lateral-movement target",
+        "findings": [
+          "F-009"
+        ],
+        "techniques": [
+          "T1021.002",
+          "T1078.002"
+        ],
+        "first_seen": "2026-07-20T03:05:08Z",
+        "evidence": [
+          "AU-0021"
+        ],
+        "note": "Access confirmed but actions unobservable \u2014 see coverage gaps. In the blast radius, but the depth of compromise is unknown."
+      },
+      "WKS-2471": {
+        "status": "CONFIRMED",
+        "role": "Patient zero (initial foothold)",
+        "findings": [
+          "F-001",
+          "F-002",
+          "F-003",
+          "F-004",
+          "F-005",
+          "F-006",
+          "F-007",
+          "F-013",
+          "F-014"
+        ],
+        "techniques": [
+          "T1003.001",
+          "T1016",
+          "T1018",
+          "T1021.002",
+          "T1027.010",
+          "T1033",
+          "T1053.005",
+          "T1059.001",
+          "T1070.001",
+          "T1071.001",
+          "T1078.002",
+          "T1082",
+          "T1087.002",
+          "T1204.002",
+          "T1562.001",
+          "T1566.001",
+          "T1569.002"
+        ],
+        "first_seen": "2026-07-19T09:14:03Z",
+        "evidence": [
+          "AU-0018",
+          "EP-0004",
+          "EP-0005",
+          "EP-0006",
+          "EP-0007",
+          "EP-0008",
+          "EP-0009",
+          "EP-0010",
+          "EP-0017",
+          "EP-0026",
+          "EP-0042",
+          "EP-0043"
+        ],
+        "note": "Compromise confirmed by direct, multi-source evidence."
+      }
+    },
+    "accounts": {
+      "a.novak": {
+        "status": "CONFIRMED",
+        "usage": "Domain-admin credentials abused for domain takeover",
+        "findings": [
+          "F-008"
+        ],
+        "seen_on_hosts": [
+          "DC01"
+        ],
+        "evidence": [
+          "AU-0019",
+          "AU-0020"
+        ]
+      },
+      "j.reyes": {
+        "status": "CONFIRMED",
+        "usage": "Phished \u2014 the user whose session executed the initial payload",
+        "findings": [
+          "F-001",
+          "F-002",
+          "F-004",
+          "F-005",
+          "F-006",
+          "F-013",
+          "F-014"
+        ],
+        "seen_on_hosts": [
+          "WKS-2471"
+        ],
+        "evidence": [
+          "EP-0004",
+          "EP-0005",
+          "EP-0006",
+          "EP-0007",
+          "EP-0008",
+          "EP-0009",
+          "EP-0010",
+          "EP-0017",
+          "EP-0042",
+          "EP-0043"
+        ]
+      },
+      "svc_backup": {
+        "status": "CONFIRMED",
+        "usage": "Harvested credentials used for lateral movement / data theft",
+        "findings": [
+          "F-007",
+          "F-009",
+          "F-010",
+          "F-011",
+          "F-012"
+        ],
+        "seen_on_hosts": [
+          "SRV-FILES01",
+          "SRV-SQL01",
+          "WKS-2471"
+        ],
+        "evidence": [
+          "AU-0018",
+          "AU-0021",
+          "CS-0037",
+          "CS-0038",
+          "CS-0039",
+          "CS-0040",
+          "CS-0041",
+          "CS-0042",
+          "CS-0043",
+          "CS-0044"
+        ]
+      }
+    },
+    "cloud": {
+      "northwind-phi-records-prod": {
+        "type": "S3 bucket (source)",
+        "status": "CONFIRMED",
+        "actions": [
+          "CopyObject",
+          "GetObject",
+          "ListBucket"
+        ],
+        "findings": [
+          "F-011",
+          "F-012"
+        ],
+        "external_ips": [
+          "45.83.140.77"
+        ]
+      },
+      "exfil-stage-4d2a": {
+        "type": "S3 bucket (external / attacker-controlled destination)",
+        "status": "CONFIRMED",
+        "actions": [
+          "CopyObject"
+        ],
+        "findings": [
+          "F-012"
+        ],
+        "external_ips": []
+      }
+    }
+  },
+  "coverage_gaps": [
+    {
+      "gap": "No EDR agent is deployed on SRV-SQL01 (known gap).",
+      "source": "endpoint metadata",
+      "impact": "Actions on that host are a blind spot; its compromise depth is UNCERTAIN."
+    },
+    {
+      "gap": "No DNS query logs and no web-proxy/URL logs are collected (known gap).",
+      "source": "network metadata",
+      "impact": "C2/exfil destinations cannot be resolved to domains or URLs."
+    },
+    {
+      "gap": "Per-object size logging is only partially enabled; some rows have bytes=null.",
+      "source": "cloud_storage metadata",
+      "impact": "Exact exfiltrated data volume cannot be computed; object counts are a floor, not a total."
+    },
+    {
+      "gap": "No email/messaging logs are collected.",
+      "source": "source inventory",
+      "impact": "The spear-phishing email that delivered initial access cannot be examined directly."
+    },
+    {
+      "gap": "No endpoint telemetry on SRV-SQL01 despite confirmed authenticated access.",
+      "source": "correlation (SRV-SQL01 UNCERTAIN)",
+      "impact": "Cannot determine what the attacker did on SRV-SQL01; scoped as accessed-but-unexplained."
+    },
+    {
+      "gap": "The attacker cleared the Security event log on at least one host.",
+      "source": "finding (T1070.001)",
+      "impact": "Local evidence after the clear is destroyed; absence of later events on that host is not proof of inactivity."
+    }
+  ],
+  "reviewed_benign": [
+    {
+      "activity": "6 failed logons for m.chen on WKS-1180",
+      "verdict": "BENIGN \u2014 account lockout, not an attack",
+      "why": "All failures and the subsequent success originate from the user's own workstation (WKS-1180); this is a forgotten-password lockout, not a remote brute-force.",
+      "evidence": [
+        "AU-0022",
+        "AU-0023",
+        "AU-0024",
+        "AU-0025",
+        "AU-0026",
+        "AU-0071",
+        "AU-0027"
+      ]
+    },
+    {
+      "activity": "Remote service execution on WKS-3322 by t.walsh",
+      "verdict": "BENIGN \u2014 routine software deployment",
+      "why": "Business-hours PsExec-style push of a signed MSI to a workstation by an IT admin account; the target is not a sensitive server and the source is an admin host. Superficially resembles lateral movement, but the pattern is administrative.",
+      "evidence": [
+        "EP-0018",
+        "AU-0008"
+      ]
+    }
+  ],
+  "technique_catalogue": {
+    "T1003.001": {
+      "name": "OS Credential Dumping: LSASS Memory",
+      "tactic": "Credential Access",
+      "tactic_id": "TA0006",
+      "url": "https://attack.mitre.org/techniques/T1003/001/",
+      "summary": "Adversaries dump LSASS memory to extract credentials (e.g. comsvcs.dll MiniDump)."
+    },
+    "T1016": {
+      "name": "System Network Configuration Discovery",
+      "tactic": "Discovery",
+      "tactic_id": "TA0007",
+      "url": "https://attack.mitre.org/techniques/T1016/",
+      "summary": "Adversaries collect network configuration details (e.g. ipconfig /all)."
+    },
+    "T1018": {
+      "name": "Remote System Discovery",
+      "tactic": "Discovery",
+      "tactic_id": "TA0007",
+      "url": "https://attack.mitre.org/techniques/T1018/",
+      "summary": "Adversaries enumerate other hosts/domain controllers on the network (e.g. nltest /dclist)."
+    },
+    "T1021.002": {
+      "name": "Remote Services: SMB/Windows Admin Shares",
+      "tactic": "Lateral Movement",
+      "tactic_id": "TA0008",
+      "url": "https://attack.mitre.org/techniques/T1021/002/",
+      "summary": "Adversaries use valid credentials over SMB to admin shares (C$, ADMIN$, IPC$) to move laterally."
+    },
+    "T1027.010": {
+      "name": "Obfuscated Files or Information: Command Obfuscation",
+      "tactic": "Defense Evasion",
+      "tactic_id": "TA0005",
+      "url": "https://attack.mitre.org/techniques/T1027/010/",
+      "summary": "Adversaries obfuscate command content (e.g. base64/-enc, string tricks) to evade detection."
+    },
+    "T1033": {
+      "name": "System Owner/User Discovery",
+      "tactic": "Discovery",
+      "tactic_id": "TA0007",
+      "url": "https://attack.mitre.org/techniques/T1033/",
+      "summary": "Adversaries identify the primary user or logged-on accounts (e.g. whoami)."
+    },
+    "T1039": {
+      "name": "Data from Network Shared Drive",
+      "tactic": "Collection",
+      "tactic_id": "TA0009",
+      "url": "https://attack.mitre.org/techniques/T1039/",
+      "summary": "Adversaries collect data from network file shares (e.g. \\\\host\\PHI$)."
+    },
+    "T1053.005": {
+      "name": "Scheduled Task/Job: Scheduled Task",
+      "tactic": "Persistence",
+      "tactic_id": "TA0003",
+      "url": "https://attack.mitre.org/techniques/T1053/005/",
+      "summary": "Adversaries create a Windows scheduled task to gain persistence or recurring execution."
+    },
+    "T1059.001": {
+      "name": "Command and Scripting Interpreter: PowerShell",
+      "tactic": "Execution",
+      "tactic_id": "TA0002",
+      "url": "https://attack.mitre.org/techniques/T1059/001/",
+      "summary": "Adversaries abuse PowerShell to execute commands, scripts, and payloads."
+    },
+    "T1070.001": {
+      "name": "Indicator Removal: Clear Windows Event Logs",
+      "tactic": "Defense Evasion",
+      "tactic_id": "TA0005",
+      "url": "https://attack.mitre.org/techniques/T1070/001/",
+      "summary": "Adversaries clear Windows event logs (e.g. wevtutil cl) to remove evidence of activity."
+    },
+    "T1071.001": {
+      "name": "Application Layer Protocol: Web Protocols",
+      "tactic": "Command and Control",
+      "tactic_id": "TA0011",
+      "url": "https://attack.mitre.org/techniques/T1071/001/",
+      "summary": "Adversaries use web protocols (HTTP/HTTPS) to blend C2 traffic with normal web traffic."
+    },
+    "T1078.002": {
+      "name": "Valid Accounts: Domain Accounts",
+      "tactic": "Privilege Escalation",
+      "tactic_id": "TA0004",
+      "url": "https://attack.mitre.org/techniques/T1078/002/",
+      "summary": "Adversaries use compromised domain-account credentials to access and escalate across the domain."
+    },
+    "T1082": {
+      "name": "System Information Discovery",
+      "tactic": "Discovery",
+      "tactic_id": "TA0007",
+      "url": "https://attack.mitre.org/techniques/T1082/",
+      "summary": "Adversaries gather host OS/hardware information (e.g. systeminfo)."
+    },
+    "T1087.002": {
+      "name": "Account Discovery: Domain Account",
+      "tactic": "Discovery",
+      "tactic_id": "TA0007",
+      "url": "https://attack.mitre.org/techniques/T1087/002/",
+      "summary": "Adversaries enumerate domain accounts and groups (e.g. net group \"Domain Admins\" /domain)."
+    },
+    "T1204.002": {
+      "name": "User Execution: Malicious File",
+      "tactic": "Execution",
+      "tactic_id": "TA0002",
+      "url": "https://attack.mitre.org/techniques/T1204/002/",
+      "summary": "A user is induced to open a malicious file (e.g. an Office document), causing code execution."
+    },
+    "T1530": {
+      "name": "Data from Cloud Storage",
+      "tactic": "Collection",
+      "tactic_id": "TA0009",
+      "url": "https://attack.mitre.org/techniques/T1530/",
+      "summary": "Adversaries access sensitive data in cloud object stores such as Amazon S3."
+    },
+    "T1560.001": {
+      "name": "Archive Collected Data: Archive via Utility",
+      "tactic": "Collection",
+      "tactic_id": "TA0009",
+      "url": "https://attack.mitre.org/techniques/T1560/001/",
+      "summary": "Adversaries archive collected data with a utility (e.g. 7z/rar) before exfiltration."
+    },
+    "T1562.001": {
+      "name": "Impair Defenses: Disable or Modify Tools",
+      "tactic": "Defense Evasion",
+      "tactic_id": "TA0005",
+      "url": "https://attack.mitre.org/techniques/T1562/001/",
+      "summary": "Adversaries disable or modify security tools (e.g. turning off Defender real-time protection)."
+    },
+    "T1566.001": {
+      "name": "Phishing: Spearphishing Attachment",
+      "tactic": "Initial Access",
+      "tactic_id": "TA0001",
+      "url": "https://attack.mitre.org/techniques/T1566/001/",
+      "summary": "Adversaries send emails with a malicious attachment to gain execution on a victim endpoint."
+    },
+    "T1567.002": {
+      "name": "Exfiltration Over Web Service: Exfiltration to Cloud Storage",
+      "tactic": "Exfiltration",
+      "tactic_id": "TA0010",
+      "url": "https://attack.mitre.org/techniques/T1567/002/",
+      "summary": "Adversaries exfiltrate data to a cloud storage service they control."
+    },
+    "T1569.002": {
+      "name": "System Services: Service Execution",
+      "tactic": "Execution",
+      "tactic_id": "TA0002",
+      "url": "https://attack.mitre.org/techniques/T1569/002/",
+      "summary": "Adversaries execute commands by creating/starting a Windows service (e.g. PsExec / PSEXESVC)."
+    }
+  }
+}
