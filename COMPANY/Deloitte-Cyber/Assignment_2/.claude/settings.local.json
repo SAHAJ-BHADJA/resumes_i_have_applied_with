@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"E:/Projects/Random/Resume/COMPANY/Deloitte-Cyber/Assignment_2\" 2>/dev/null; echo \"---PARENT---\"; ls -la \"E:/Projects/Random/Resume/COMPANY/Deloitte-Cyber\")"
+    ]
+  }
+}

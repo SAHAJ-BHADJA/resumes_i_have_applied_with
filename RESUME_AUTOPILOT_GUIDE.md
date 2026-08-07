@@ -66,21 +66,22 @@ For every new resume request:
 
 1. Read the JD carefully.
 2. Identify the role family and infer the likely team/product area from JD clues.
-3. Research team-specific stack, responsibilities, and recent initiatives where available.
-4. Research company priorities, current products, and recent news/engineering direction.
-5. Select the best 5 experiences using JD + external research context.
-6. Select the best 3 projects using JD + external research context.
-7. Rewrite summary, coursework, bullets (`27-32` words each), and skills (minimum `30` terms).
-8. Provide explicit rationale for selected experiences/projects and why they were chosen over non-selected options.
-9. If gaps remain, create a short list of unverified enhancement bullets and get explicit user confirmation.
-10. Update `master_resume_data.json` with confirmed enhancements only.
-11. Create a temporary `.tex` file in the Resume root.
-12. Compile it with the renderer.
-13. Verify it is exactly one page.
-14. Render a preview image and visually inspect layout quality.
-15. Fix any layout or chronology issues.
-16. Delete the temporary `.tex` and preview image.
-17. Return the PDF path to the user.
+3. Extract the JD location details and determine whether the posting has one clear city/state.
+4. Research team-specific stack, responsibilities, and recent initiatives where available.
+5. Research company priorities, current products, and recent news/engineering direction.
+6. Select the best 5 experiences using JD + external research context.
+7. Select the best 3 projects using JD + external research context.
+8. Rewrite summary, coursework, bullets (`27-32` words each), and skills (minimum `30` terms).
+9. Provide explicit rationale for selected experiences/projects and why they were chosen over non-selected options.
+10. If gaps remain, create a short list of unverified enhancement bullets and get explicit user confirmation.
+11. Update `master_resume_data.json` with confirmed enhancements only.
+12. Create a temporary `.tex` file in the Resume root.
+13. Compile it with the renderer.
+14. Verify it is exactly one page.
+15. Render a preview image and visually inspect layout quality.
+16. Fix any layout or chronology issues.
+17. Delete the temporary `.tex` and preview image.
+18. Return the PDF path to the user.
 
 Do not stop after drafting. The workflow is only complete after:
 
@@ -194,6 +195,7 @@ Always render a preview image and visually inspect:
 - uneven whitespace distribution
 - chronology mistakes
 - education/location lines running out of page bounds
+- incorrect or mixed visible location text for a single-location JD
 - obviously over-compressed sections
 
 Preview generation pattern:
@@ -308,6 +310,24 @@ Example of correct ordering:
 5. Aasma VibrantChem
 
 If a later-dated research role exists, it must not be placed after older industry roles.
+
+## Visible Location Rules
+
+For generated resumes in this repository:
+
+- If the JD provides **one clear city/state**, use that **exact JD city/state** as the visible location shown in the resume.
+- Apply that visible location consistently across the resume instead of mixing historical per-role locations.
+- This is a **display rule only**. Do not modify the underlying company names, titles, or dates stored in `master_resume_data.json`.
+- If the JD is **multi-location**, **remote-only**, or does **not** provide one clear city/state, infer the **main location** from JD team clues, product context, org context, or company/team research.
+- If no single main location can be inferred from team/JD context, use the company's **main listed location**.
+- When multiple locations are listed and there is no stronger signal, default to the **first listed location** as the visible location.
+- Only ask the user if there is still no defensible main location after those steps.
+
+Examples:
+
+- Single-location JD: use `Minneapolis, MN` consistently in the generated resume.
+- Multi-location JD: infer the main location from team/company context; otherwise use the first listed location.
+- Remote JD: infer the main location from team/company context; otherwise use the company's main listed location.
 
 ## Bullet Count Rules
 
@@ -451,6 +471,7 @@ These are hard requirements.
 - no text may overflow off the page
 - spacing should feel balanced across sections
 - the page should look intentional, not randomly compressed
+- when the JD has one clear city/state, the visible resume location should match it consistently
 
 ### Readability Preference
 
@@ -919,6 +940,7 @@ Before returning the PDF to the user, confirm all of the following:
 - preview image deleted
 - header contains phone, email, LinkedIn, GitHub, portfolio
 - `USC Annenberg Media` does not appear
+- visible location matches the JD city/state when the JD has one clear location
 - experience count is `4` or `5`
 - work experiences each have `2` bullets
 - experience order is strict reverse chronological

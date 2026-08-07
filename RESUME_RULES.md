@@ -120,6 +120,16 @@ For every JD, perform targeted external research before finalizing selection and
 - Other roles should keep their stored titles unless there is a compelling reason and the change stays truthful.
 - Entire roles may be dropped if irrelevant.
 
+### Visible Location Rules
+
+- If the JD provides **one clear city/state**, use that **exact JD city/state** as the visible location shown in the resume.
+- Apply that visible location consistently across the resume instead of mixing historical per-role locations.
+- This location override affects only the **displayed resume location text**; it does not change the stored company names, titles, or dates in `master_resume_data.json`.
+- If the JD is **multi-location**, **remote-only**, or does **not** provide one clear city/state, infer the **main location** from JD team clues, product context, org context, or company/team research.
+- If no single main location can be inferred from team/JD context, use the company's **main listed location**.
+- When multiple locations are listed and there is no stronger signal, default to the **first listed location** as the visible location.
+- Only ask the user if there is still no defensible main location after those steps.
+
 ### Experience Bullet Rules
 
 - Bullets may be rewritten, merged, split, compressed, or expanded.
@@ -199,7 +209,7 @@ For every JD, perform targeted external research before finalizing selection and
   - cramped experience bullets
   - cramped project bullets
   - inconsistent whitespace distribution between sections
-  - long right-column locations/dates pushing layout out of balance
+  - long right-column JD locations/dates pushing layout out of balance
 - Reverse-chronological ordering must also remain visually obvious; entries should never appear out of timeline order because of spacing or grouping decisions.
 
 ## Role/Project Fit Heuristics

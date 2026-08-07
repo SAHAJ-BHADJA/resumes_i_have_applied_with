@@ -37,7 +37,9 @@ This file records the locked spacing and formatting values from the currently ac
 
 ## Formatting rules
 
-- Keep locations consistent, e.g. `Los Angeles, CA`
+- Keep visible locations consistent with the JD city/state, e.g. `Los Angeles, CA`
+- If the JD is multi-location, remote-only, or lacks one clear city/state, infer the main location from JD/team/company context when possible
+- If no stronger signal exists, use the main listed company location, defaulting to the first listed location when necessary
 - Keep the template on exactly one page
 - Keep bullets dense but readable
 - Shorten wording before increasing compression
@@ -64,5 +66,5 @@ If a future resume looks off:
 1. Compare against `firmpilot_reference_sample.tex`
 2. Check section gaps first
 3. Check project-title-to-bullet spacing
-4. Check location consistency
+4. Check JD-location consistency
 5. Only then tweak spacing macros

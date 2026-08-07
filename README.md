@@ -39,3 +39,9 @@ Experience entries must always be listed in strict reverse-chronological order:
 
 - newest role first
 - then older roles in date order
+
+## Visible Location Rule
+
+- If a JD provides one clear city/state, use that JD city/state as the visible location in the generated resume.
+- If a JD is multi-location, remote-only, or unclear, infer the main location from JD/team/company context when possible.
+- If no stronger signal exists, use the company's main listed location, defaulting to the first listed location when necessary.

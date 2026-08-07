@@ -11,6 +11,7 @@ Extract:
 - responsibilities
 - level
 - domain keywords
+- job location details (city/state, remote, or multi-location)
 
 ## 2. Do company and team research first
 
@@ -98,14 +99,23 @@ Rewrite:
 
 - experience **company names**
 - experience **job titles** (e.g. USC Dornsife stays `Software Engineer`, not the target JD title)
-- experience **dates** and **locations** unless correcting a factual error in master data
+- experience **dates** unless correcting a factual error in master data
+
+### Visible location rule
+
+- If the JD provides **one clear city/state**, use that **exact JD city/state** as the visible location shown in the resume.
+- Apply that visible location consistently across the resume instead of mixing historical per-role locations.
+- If the JD is **multi-location**, **remote-only**, or does **not** provide one clear city/state, try to infer the **main location** from JD team clues, product context, org context, or company/team research.
+- If no single main location can be inferred from team/JD context, use the company's **main listed location**.
+- When multiple locations are listed and there is no stronger signal, default to the **first listed location** as the visible location.
+- Only ask the user if there is still no defensible main location after those steps.
 
 Tailor JD fit through bullet wording, summary, skills, coursework, and project selection only.
 
 Keep:
 
 - one page
-- location consistency
+- location consistency using the selected primary JD/company location
 - readable spacing
 - strong JD keyword coverage
 
