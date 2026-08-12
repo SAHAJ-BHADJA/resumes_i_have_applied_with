@@ -152,6 +152,7 @@ For every JD, perform targeted external research before finalizing selection and
 
 ### Skills
 
+- Put each skills category on a separate line for readability and ATS parsing.
 - Build the `Skills` section from the **full company research package**, not from the JD or master data alone.
 - Use the same research inputs as experience/project selection: JD, company product/domain, recent news, likely stack, and team context.
 - Include a **minimum of 30 skills** in the `Skills` section on every resume.

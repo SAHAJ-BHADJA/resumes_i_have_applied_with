@@ -92,7 +92,7 @@ Rewrite:
 - summary
 - coursework
 - experience bullets (`27-32` words each)
-- skills section (minimum `30` individual skill terms, built from full company/team research)
+- skills section (minimum `30` individual skill terms, built from full company/team research); place each skill category on its own line
 - project bullets (`27-32` words each)
 
 **Never change (locked from `master_resume_data.json`):**

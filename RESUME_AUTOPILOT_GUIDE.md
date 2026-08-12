@@ -418,6 +418,7 @@ Then:
 ### Minimum Skills Count
 
 - Include a **minimum of 30 skills** in the `Skills` section on every resume.
+- Start every skill category on a new line; do not run multiple category headers together in one paragraph.
 - Count individual skill terms (languages, frameworks, tools, platforms, practices), not category headers.
 - Do not pad with nonsense or unrelated buzzwords just to hit 30.
 
