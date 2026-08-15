@@ -71,17 +71,18 @@ For every new resume request:
 5. Research company priorities, current products, and recent news/engineering direction.
 6. Select the best 5 experiences using JD + external research context.
 7. Select the best 3 projects using JD + external research context.
-8. Rewrite summary, coursework, bullets (`27-32` words each), and skills (minimum `30` terms).
-9. Provide explicit rationale for selected experiences/projects and why they were chosen over non-selected options.
-10. If gaps remain, create a short list of unverified enhancement bullets and get explicit user confirmation.
-11. Update `master_resume_data.json` with confirmed enhancements only.
-12. Create a temporary `.tex` file in the Resume root.
-13. Compile it with the renderer.
-14. Verify it is exactly one page.
-15. Render a preview image and visually inspect layout quality.
-16. Fix any layout or chronology issues.
-17. Delete the temporary `.tex` and preview image.
-18. Return the PDF path to the user.
+8. Make every project title clickable and add a clickable red, underlined `Live` or `Code` label beside it using the same verified project URL.
+9. Rewrite summary, coursework, bullets (`27-32` words each), and skills (minimum `30` terms).
+10. Provide explicit rationale for selected experiences/projects and why they were chosen over non-selected options.
+11. If gaps remain, create a short list of unverified enhancement bullets and get explicit user confirmation.
+12. Update `master_resume_data.json` with confirmed enhancements only.
+13. Create a temporary `.tex` file in the Resume root.
+14. Compile it with the renderer.
+15. Verify it is exactly one page.
+16. Render a preview image and visually inspect layout quality.
+17. Fix any layout or chronology issues.
+18. Delete the temporary `.tex` and preview image.
+19. Return the PDF path to the user.
 
 Do not stop after drafting. The workflow is only complete after:
 

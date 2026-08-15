@@ -178,6 +178,15 @@ For every JD, perform targeted external research before finalizing selection and
   - swapping weaker items for stronger JD-relevant items
   - appending adjacent JD terms when justified
 - Do not compress the skills section so far that major core categories disappear unless the user explicitly asks for a minimal skills section.
+
+### Project Links
+
+- Every listed project title must itself be clickable in the PDF.
+- Place a clickable `Live` or `Code` label immediately beside every project title.
+- Render that label in red with an underline using `\resumeProjectLink{<verified-url>}{Live}` or `\resumeProjectLink{<verified-url>}{Code}`.
+- Use `Live` only for deployed application URLs and `Code` for repository-only URLs.
+- Keep the project title clickable in addition to the visible label.
+- Project URLs must come from verified fields in `master_resume_data.json`; never invent or infer a URL.
 - When a JD explicitly accepts similar or alternative technologies, adjacent stack terms may be surfaced in `Skills` even if the exact wording is not present in the master data, as long as they map credibly from the candidate's actual experience.
 - Typical examples:
   - event-driven workflows or streaming systems can justify `Kafka`-adjacent targeting

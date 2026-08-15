@@ -95,6 +95,14 @@ Rewrite:
 - skills section (minimum `30` individual skill terms, built from full company/team research); place each skill category on its own line
 - project bullets (`27-32` words each)
 
+Project links:
+
+- Make the **project title itself clickable** with `\href{<verified-url>}{\textbf{<project-name>}}`.
+- Add a clickable `Live` or `Code` label immediately beside the project title using `\resumeProjectLink{<verified-url>}{Live}` or `\resumeProjectLink{<verified-url>}{Code}`.
+- The `Live` or `Code` label must render **red and underlined**.
+- Use `Live` for a verified deployed application URL and `Code` for a verified repository-only URL.
+- Use only project URLs verified in `master_resume_data.json`.
+
 **Never change (locked from `master_resume_data.json`):**
 
 - experience **company names**
