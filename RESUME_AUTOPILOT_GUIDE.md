@@ -73,7 +73,7 @@ For every new resume request:
 7. Select the best 3 projects using JD + external research context.
 8. Make every project title clickable and add a clickable red, underlined `Live` or `Code` label beside it using the same verified project URL.
 9. Rewrite summary, coursework, bullets (`27-32` words each), and skills (minimum `30` terms).
-10. Provide explicit rationale for selected experiences/projects and why they were chosen over non-selected options.
+10. Provide the mandatory comparison report: why every selected experience/project was chosen and why every credible non-selected alternative ranked lower.
 11. If gaps remain, create a short list of unverified enhancement bullets and get explicit user confirmation.
 12. Update `master_resume_data.json` with confirmed enhancements only.
 13. Create a temporary `.tex` file in the Resume root.
@@ -90,6 +90,16 @@ Do not stop after drafting. The workflow is only complete after:
 - page count is `1`
 - layout is visually checked
 - temp artifacts are cleaned up
+- the selected-versus-not-selected rationale has been delivered
+
+## Mandatory Selection Report
+
+After generating each resume, return two short comparison groups:
+
+1. **Experience selection:** list every included role with its JD-specific reason, then list credible excluded roles with the exact reason each lost to an included role.
+2. **Project selection:** list every included project with the gap it covers, then list credible excluded projects with the exact weaker overlap, duplication, evidence, or link issue.
+
+Base comparisons on stack overlap, responsibility overlap, domain/product similarity, production evidence, measurable impact, recency, chronology, duplication, and verified `Live`/`Code` links. Do not place this report inside the PDF.
 
 ## Required Output Location
 

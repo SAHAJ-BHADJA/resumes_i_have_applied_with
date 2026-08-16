@@ -72,6 +72,17 @@ Rules:
 - choose the strongest fit from `E:\Projects\Random\master_resume_data.json`
 - use projects to patch fit gaps and strengthen stack/domain alignment
 
+### Mandatory selection rationale
+
+For every generated resume, provide a concise post-generation selection report in chat. The report must:
+
+- name every selected experience and state the JD-specific evidence that earned its place
+- name every selected project and state the stack, domain, responsibility, or evidence gap it covers
+- identify each credible non-selected experience and project and explain why it ranked below the selected alternatives
+- compare alternatives directly; do not use generic explanations such as "less relevant"
+- mention constraints that affected selection, including recency, strict chronology, evidence strength, duplication, link availability, and the fixed `5` experience / `3` project target
+- keep all reasoning outside the resume PDF unless the user explicitly requests it inside the document
+
 ## 4. Start from the locked baseline
 
 Files:
@@ -109,14 +120,11 @@ Project links:
 - experience **job titles** (e.g. USC Dornsife stays `Software Engineer`, not the target JD title)
 - experience **dates** unless correcting a factual error in master data
 
-### Visible location rule
+### Location rule
 
-- If the JD provides **one clear city/state**, use that **exact JD city/state** as the visible location shown in the resume.
-- Apply that visible location consistently across the resume instead of mixing historical per-role locations.
-- If the JD is **multi-location**, **remote-only**, or does **not** provide one clear city/state, try to infer the **main location** from JD team clues, product context, org context, or company/team research.
-- If no single main location can be inferred from team/JD context, use the company's **main listed location**.
-- When multiple locations are listed and there is no stronger signal, default to the **first listed location** as the visible location.
-- Only ask the user if there is still no defensible main location after those steps.
+- Preserve every experience and education location exactly as supported by `master_resume_data.json`.
+- Never replace historical work-experience locations with the JD location.
+- Use the JD location only for job-targeting decisions and optional application metadata, not as an experience-location override.
 
 Tailor JD fit through bullet wording, summary, skills, coursework, and project selection only.
 
@@ -196,6 +204,7 @@ Return:
 
 - final PDF path using the folder pattern above
 - confirm the output folder contains **only** the PDF
+- provide the mandatory selected-versus-not-selected experience and project rationale
 
 ## Baseline rule
 

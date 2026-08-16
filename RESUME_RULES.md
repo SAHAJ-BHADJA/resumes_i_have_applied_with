@@ -120,15 +120,20 @@ For every JD, perform targeted external research before finalizing selection and
 - Other roles should keep their stored titles unless there is a compelling reason and the change stays truthful.
 - Entire roles may be dropped if irrelevant.
 
+### Mandatory Selection Rationale
+
+- After every resume generation, report why each included experience and project was selected for that specific JD.
+- Also report why each credible excluded alternative ranked below the selected items.
+- Use direct comparisons based on JD stack overlap, responsibility overlap, domain fit, evidence strength, measurable impact, recency, duplication, and project-link availability.
+- Do not say only "less relevant"; identify the exact missing or weaker signal.
+- State when the one-page `5` experience / `3` project limit affected the decision.
+- Keep this rationale in the delivery message, not in the resume PDF, unless the user explicitly requests otherwise.
+
 ### Visible Location Rules
 
-- If the JD provides **one clear city/state**, use that **exact JD city/state** as the visible location shown in the resume.
-- Apply that visible location consistently across the resume instead of mixing historical per-role locations.
-- This location override affects only the **displayed resume location text**; it does not change the stored company names, titles, or dates in `master_resume_data.json`.
-- If the JD is **multi-location**, **remote-only**, or does **not** provide one clear city/state, infer the **main location** from JD team clues, product context, org context, or company/team research.
-- If no single main location can be inferred from team/JD context, use the company's **main listed location**.
-- When multiple locations are listed and there is no stronger signal, default to the **first listed location** as the visible location.
-- Only ask the user if there is still no defensible main location after those steps.
+- Preserve the historical location of every experience and education entry from `master_resume_data.json`.
+- Never replace work-experience locations with the location in the target JD.
+- Use the JD location for application targeting and folder/context decisions only, not as a visible historical-location override.
 
 ### Experience Bullet Rules
 

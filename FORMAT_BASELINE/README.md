@@ -32,11 +32,16 @@ Content targets (every resume):
 - Project bullets: `27-32` words each (`1` per project)
 - Skills section: minimum `30` individual skill terms, selected from full company/team research
 
-Visible location rule:
+Selection-report rule:
 
-- If the JD has one clear city/state, use that JD city/state as the visible location throughout the generated resume.
-- If the JD is multi-location, remote-only, or unclear, infer the main location from JD/team/company context when possible.
-- If no stronger signal exists, use the company's main listed location, defaulting to the first listed location when necessary.
+- Every generated resume must include a chat explanation for each selected experience and project.
+- The explanation must also compare credible excluded alternatives and state exactly why they ranked lower.
+- Keep this report outside the resume PDF.
+
+Location rule:
+
+- Preserve historical experience and education locations from `master_resume_data.json`.
+- Never replace work-experience locations with the target JD location.
 
 Location:
 
