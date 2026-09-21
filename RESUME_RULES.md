@@ -1,319 +1,121 @@
 # Resume Rules
 
-This file is the strict operating guide for generating Sahaj Bhadja's resumes from `E:\Projects\Random\master_resume_data.json`.
+Single source of truth for generating Sahaj Bhadja's JD-tailored one-page resumes. Input: a company name and a job description. The agent makes every selection and layout decision itself; it asks the user only where this file says to.
 
-## Output Rules
+## Files
 
-- Output root: `E:\Projects\Random\Resume\COMPANY`
-- Company folder name must be lowercase.
-- Folder pattern:
-  - `E:\Projects\Random\Resume\COMPANY\<company-name>\<YYYY-MM-DD(Position-Name_JobID)>\`
-  - Sanitize position title: spaces → hyphens, drop special characters
-  - Use requisition / job / JR code as `JobID` when present (e.g. `_350393`, `_JR2013065`)
-  - If no job ID in the JD, use `YYYY-MM-DD(Position-Name)` only
-- Examples:
-  - `SeatGeek\2026-06-01(Software-Engineer-New-Grad)\`
-  - `Deloitte-Cyber\2026-06-01(Cyber-Full-Stack-Software-Engineer_350393)\`
-- If multiple resumes are generated for the same company, date, position, and job ID, create versioned PDFs:
-  - `Sahaj_Bhavesh_Bhadja.pdf`
-  - `Sahaj_Bhavesh_Bhadja_v2.pdf`
-  - `Sahaj_Bhavesh_Bhadja_v3.pdf`
-- Company output folders are **PDF-only**.
-- After `pdflatex` succeeds, delete `*.tex`, `*.aux`, `*.log`, `*.out`, and any other build artifacts.
-- Final output for each JD run is only `Sahaj_Bhadja_Resume.pdf` (or `_v2`, `_v3`, etc.).
+| Path | Role |
+|---|---|
+| `E:\Projects\Random\master_resume_data.json` | All candidate facts. Nothing goes on a resume that is not here, except the new project built for that specific resume (step 3). |
+| `FORMAT_BASELINE/resume_template.tex` | Locked template: preamble, macros, header, `%%PLACEHOLDER%%` slots. |
+| `FORMAT_BASELINE/FORMAT_LOCK.md` | Locked spacing values and the fit ladder. |
+| `scripts/render_pdf_only.py` | Compile (tectonic), lint, page-count check, versioned PDF output, optional preview. |
+| `.work/<company>/<folder>.tex` | Source for each generated resume. Kept so later fixes edit it instead of rebuilding. |
+| `COMPANY/<company>/<folder>/` | Deliverables. PDF only. |
 
-## Immutable Template Constraints
+## Flow
 
-The generated resume must preserve the current template's visual identity unless explicitly overridden by the user:
+### 1. Parse the JD
 
-- LaTeX class: `article`
-- Page size: `letterpaper`
-- Font size: `10pt`
-- Font family: preserve the template defaults exactly
-- One page only
-- Keep the existing section style, macro system, and overall visual language
-- Every section header must use a full-width rule **on its own line below the title** via `[\color{black}\vspace{-3pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]` and `\titlespacing*{\section}{0pt}{6pt}{0pt}` — **never use `\titlerule`** (renders through title text)
-- Prior-section content must sit clearly above the next section header; follow inter-section `\vspace` caps in `FORMAT_LOCK.md`
-- Header links must remain present:
-  - phone
-  - email
-  - LinkedIn
-  - GitHub
-  - portfolio
-- Default resume email: `bhadja@usc.edu`
+Extract: role family, required vs. preferred stack, responsibilities, level, domain terms, location, work mode, job/requisition ID.
 
-## Allowed Layout Adjustments
+### 2. Research (mandatory, before any selection)
 
-- `\vspace` values may be adjusted as needed.
-- Section ordering may be changed per JD.
-- Minor spacing changes are allowed if needed to keep the resume at exactly one page.
-- Font family and `10pt` size must not change.
-- Bullet marker must always render as `•` (not `-`). Use explicit list labels such as `label=\textbullet` in itemize macros instead of relying on default markers.
+Web-search the company and team: product and customers, domain, recent news/launches, likely engineering stack beyond the JD, and what the specific team owns. Record 3-6 findings in the delivery message. Use them to order skills, choose emphasis, and phrase bullets. Research never becomes a personal claim.
 
-## Candidate Identity Rules
+### 3. Fit analysis and new project
 
-- Filename base must always be `Sahaj_Bhavesh_Bhadja`.
-- Display name in header remains `Sahaj Bhadja`.
-- `USC Annenberg Media` must never appear on any resume.
+List the JD's must-have hard skills (languages, frameworks, platforms, practices). Fit = share of them evidenced by an existing experience or project in master data. Report the fit and the uncovered skills in the delivery message.
 
-## JD Tailoring Priorities
+Every resume gets exactly one new project, built for this JD. Its stack is the uncovered must-haves; if nothing is uncovered, it targets the JD's core product domain and most differentiating stack instead.
 
-Primary optimization order:
+**New project**, scoped so it can be built and demoed:
 
-1. ATS keyword match
-2. Recruiter readability
-3. Hiring-manager technical depth
-4. Team/context-specific fit based on external research
+1. Post the spec in chat: name, stack, what it does, the two resume bullets it will support.
+2. Build it for real as a new git repo at `E:\Projects\<ProjectName>`: working code, tests, README with run instructions. The resume bullets may only claim what the repo actually does.
+3. Ask before pushing to GitHub (`SAHAJ-BHADJA`), since that is public. Once pushed, the repo URL is the project's `Code` link.
+4. The project belongs to this one resume only. Do not add it to master data, and do not reuse it for other JDs; each JD gets its own new project. Its only record is the repo and the resume's `.work/` source.
 
-For weak or vague JDs:
+### 4. Select content
 
-- Optimize based on the role responsibilities and company context.
-- Prefer the role track that best matches the candidate profile.
+**Experience (5; minimum 4)**
 
-## External Research Requirements
+- Strict reverse-chronological order by actual dates. If dates overlap, the later start date goes first. Never reorder for relevance.
+- Company names, titles, dates, and locations are copied from master data. The only permitted title rewording is truthful alternate phrasing for USC AD Labs and the PDEU research role.
+- Locations are the historical ones from master data, never the JD's city.
 
-For every JD, perform targeted external research before finalizing selection and bullet tailoring:
+**Projects (exactly 3)**
 
-1. Team-level research:
-   - Infer which specific team/product area the role belongs to from the JD.
-   - Research likely team stack, platform conventions, and recent team-facing initiatives when available.
-2. Company-level research:
-   - Research what the company is currently building, recent launches/news, engineering priorities, and relevant strategic direction.
-3. Tailoring use:
-   - Use this research to refine keyword targeting, emphasis, and role/project selection.
-   - Do not add unverified personal claims; all candidate claims must still remain truthful and consistent with known data.
+- 1 new project (step 3), listed first, plus 2 projects from master data. Never more than one new project, never fewer than 3 projects in total.
+- Choose the 2 master-data projects to patch the stack/domain gaps that experience and the new project leave open.
+- A project with a URL in master data gets a clickable title plus a red, underlined `Live` (deployed app) or `Code` (repo) label via `\resumeProjectLink`. A project without a URL is shown as a plain title. Prefer linked projects when fit is equal.
+- Never invent or infer a URL.
 
-## Section Selection Rules
+**Education**: both entries, always with GPA and coursework; coursework reordered/swapped toward the JD.
 
-### Summary
+### 5. Write
 
-- Always include a summary.
-- Summary length: 1 to 2 lines only.
-- Tailor summary to:
-  - role family
-  - years of experience
-  - strongest domain fit
-  - 3 to 5 high-value JD keywords
-- Avoid generic filler and obvious statements.
+- **Summary**: 1-2 lines. Role family, years of experience (2+), strongest JD stack, 3-5 bolded keywords. No filler.
+- **Bullets**: 2 per role, 1 per project (2 allowed for the new project; cut it to 1 before cutting anything else when space is tight). 27-32 words each. Impact-first, JD-critical terms bolded. Rewrite, merge, or reframe freely, but facts and metrics must come from master data.
+- **Skills**: each category on its own line, >= 30 terms. Order: JD must-haves, then credible adjacent terms, then remaining defensible skills. Baseline categories (rename/reorder/drop per JD): Languages, Backend & APIs, Frontend, Databases, Cloud & Infrastructure, AI/ML, Engineering Practices.
 
-### Education
+### 6. Truthfulness gate
 
-- Always include both education entries.
-- Always show GPA.
-- Always show coursework.
-- Coursework should be tailored to the JD where possible.
+Allowed: reframing emphasis, compressing real tasks into sharper bullets, bolding, choosing among real metrics.
 
-### Experience
+Not allowed without the user's confirmation:
 
-- Use at least 4 experience entries when the page is already full with relevant content.
-- There is no strict 4-experience cap; add a 5th relevant role when space remains and it improves JD alignment.
-- Fill the page as effectively as possible without spilling past 1 page or adding low-signal filler.
-- Maximum recommended experience entries: 5.
-- Default target: select 5 experiences for each JD unless page-fit constraints force otherwise.
-- Always order work experience in strict reverse-chronological order (newest first, then older roles) with no exceptions.
-- Chronology must be evaluated by actual date ranges only, not by role type, domain fit, section preference, or perceived relevance.
-- If two roles overlap, the role with the more recent start date must appear first.
-- Prioritize `USC Dornsife` and `Grad8` for backend, AI, platform, and applied-ML roles unless the JD strongly suggests otherwise.
-- Allowed title changes:
-  - `USC AD Labs`: alternate truthful ML/research phrasing is allowed
-  - `Pandit Deendayal Energy University` research/data role: alternate truthful phrasing is allowed
-- Other roles should keep their stored titles unless there is a compelling reason and the change stays truthful.
-- Entire roles may be dropped if irrelevant.
+- a technology, company, role, or collaboration that master data does not support
+- an adjacent skill, unless the JD itself says "X or similar" and the candidate's real work maps to it credibly
 
-### Mandatory Selection Rationale
+If a true-but-unrecorded detail about existing work would improve fit, propose it as an unverified enhancement, get Yes/No, and write confirmed details into master data before using them. This applies to real past work only; new projects never go into master data.
 
-- After every resume generation, report why each included experience and project was selected for that specific JD.
-- Also report why each credible excluded alternative ranked below the selected items.
-- Use direct comparisons based on JD stack overlap, responsibility overlap, domain fit, evidence strength, measurable impact, recency, duplication, and project-link availability.
-- Do not say only "less relevant"; identify the exact missing or weaker signal.
-- State when the one-page `5` experience / `3` project limit affected the decision.
-- Keep this rationale in the delivery message, not in the resume PDF, unless the user explicitly requests otherwise.
+### 7. Build
 
-### Visible Location Rules
+1. Copy `FORMAT_BASELINE/resume_template.tex` to `.work/<company>/<folder>.tex` and fill every `%%...%%` slot. Put `\roleGap` before each role after the first and `\projGap` before each project after the first.
+2. Render:
+   ```
+   python scripts/render_pdf_only.py --tex ".work/<company>/<folder>.tex" --company "<company>" --folder "<folder>" --preview
+   ```
+   The script lints (27-32 words per bullet, >= 30 skills, banned content, leftover placeholders), compiles with `tectonic-bin/tectonic.exe`, checks for exactly 1 page, and writes the next free `Sahaj_Bhadja_Resume[_vN].pdf`. Use `--overwrite` to replace the latest PDF while iterating on the same version. Non-zero exit means something must be fixed.
+3. Open the preview PNG and check: right-edge overflow, long education rows, bullets visually merging, cramped vs. loose sections, chronology.
+4. If it overflows, fix wording first, then walk the fit ladder in `FORMAT_LOCK.md`. Never go below the locked bullet spacing.
 
-- Preserve the historical location of every experience and education entry from `master_resume_data.json`.
-- Never replace work-experience locations with the location in the target JD.
-- Use the JD location for application targeting and folder/context decisions only, not as a visible historical-location override.
+### 8. Deliver
 
-### Experience Bullet Rules
+- Output: `COMPANY/<company-lowercase>/<YYYY-MM-DD(Position-Name_JobID)>/Sahaj_Bhadja_Resume.pdf`
+  - date = the day it is generated; position title sanitized (spaces to hyphens, special characters dropped); `_JobID` only when the posting has one
+  - regenerations become `_v2`, `_v3`, ...
+  - the folder contains PDFs only; the `.tex` stays in `.work/` and the preview PNG is deleted
+- Message to the user:
+  1. PDF path, confirmed 1 page
+  2. research findings used (3-6 bullets)
+  3. each selected experience/project with its JD-specific reason; each credible excluded alternative with the exact signal it lacked (stack, responsibility, domain, evidence, recency, duplication, missing link); note when the 5/3 limit decided it
+  4. fit before the new project (share of must-haves covered by master data, and what was uncovered)
+  5. anything new: the new project built, enhancements confirmed, adjacent skills added
 
-- Bullets may be rewritten, merged, split, compressed, or expanded.
-- Project idea and factual direction must remain aligned with the master data.
-- Default to 2 bullets for each included work experience.
-- Target bullet length is 27 to 32 words for readability consistency.
-- Bolding should be used strategically for high-signal technologies, impact, metrics, and role-relevant terms.
-- Every finalized resume bullet should include bolded JD-critical keywords (stack, domain terms, impact terms, metrics) where natural and readable.
-- Top roles can use up to 3 bullets.
-- Other roles should typically use 1 to 2 bullets.
-- Metrics may be introduced if needed for tailoring, but should stay coherent with the project/work narrative.
+## Invariants
 
-### Unverified Enhancement Verification Flow
+- One page, `article`, `letterpaper`, `10pt`, template fonts. Section order: Summary, Education, Experience, Skills, Projects (reorder only if the user asks).
+- Header: `Sahaj Bhadja`, phone, `bhadja@usc.edu`, LinkedIn, GitHub, portfolio. Never remove a link.
+- `USC Annenberg Media` never appears.
+- Bullets render as `•`.
 
-- Do not place unverified or fabricated claims directly into the resume.
-- If potentially true-but-unlisted details could improve fit, propose them to the user first as **unverified enhancement bullets**.
-- Ask the user to confirm each proposed enhancement (`Yes/No`).
-- Only confirmed enhancements may be added to the resume.
-- After user confirmation, add the confirmed details into `master_resume_data.json` under the relevant experience/project record so future runs can reuse them safely.
+## Role and project heuristics
 
-### Skills
+Defaults, not constraints. The Projects column lists master-data candidates for the 2 existing-project slots; the new project is designed per JD.
 
-- Put each skills category on a separate line for readability and ATS parsing.
-- Build the `Skills` section from the **full company research package**, not from the JD or master data alone.
-- Use the same research inputs as experience/project selection: JD, company product/domain, recent news, likely stack, and team context.
-- Include a **minimum of 30 skills** in the `Skills` section on every resume.
-- Count individual skill terms (languages, frameworks, tools, platforms, practices), not category headers.
-- Order researched must-have skills first, then credible adjacent skills, then remaining defensible skills from `master_resume_data.json`.
-- Do not pad with nonsense or unrelated buzzwords just to hit 30.
+| Role family | Experience first | Projects | Emphasize |
+|---|---|---|---|
+| Backend / Platform | USC Dornsife, Aasma SecureSync, Grad8 | Chat2SQL, Big-Brain, Linguistix | APIs, SQL, cloud, reliability, scaling |
+| .NET / Azure enterprise | USC Dornsife, Aasma VibrantChem, Aasma SecureSync | FinNexus, Chat2SQL | C#, Azure, SQL Server, microservices, CI/CD |
+| Full-stack product | Grad8, Aasma VibrantChem, LST Capitals | PiXMod, FinNexus, HMIS | React, TypeScript, end-to-end ownership |
+| AI / Applied LLM | USC Dornsife, Grad8, USC AD Labs | Big-Brain, CaptionCraft, PiXMod | LLM workflows, retrieval, multimodal, production AI |
+| Data engineering | USC Dornsife, Aasma SecureSync, LST Capitals | Chat2SQL, Linguistix | ETL, SQL tuning, validation, pipelines |
+| Research / Systems / Autonomy | USC AD Labs, USC Dornsife | CPU-Scheduling Simulator, Chat2SQL | Python, C++, simulation, testing |
+| Support / Solutions / Client-facing | LST Capitals, Aasma SecureSync, USC Dornsife | Chat2SQL, HMIS | triage, debugging, stakeholder communication |
+| Fintech / Payments | LST Capitals | FinNexus | transactions, security, payments |
+| Healthcare | | HMIS | workflows, sensitive-data handling |
+| Blockchain / Web3 | PDEU Research Fellowship, LST Capitals | Blockchain Authentication paper | cryptography, consensus |
 
-- Skills may be fully reordered and trimmed per company/team research fit.
-- Skill category headers may be renamed for better match.
-- Dense one-block presentation is allowed, but restructuring within the same section is also allowed.
-- Prefer high-density keyword coverage without turning the section into noise.
-- Default behavior should preserve the candidate's original dense skills backbone rather than aggressively shrinking it.
-- Start from the baseline categories:
-  - Languages
-  - Backend & APIs
-  - Frontend
-  - Databases
-  - Cloud & Infrastructure
-  - AI/ML
-  - Engineering Practices
-- Then tailor by:
-  - reordering categories
-  - swapping weaker items for stronger JD-relevant items
-  - appending adjacent JD terms when justified
-- Do not compress the skills section so far that major core categories disappear unless the user explicitly asks for a minimal skills section.
-
-### Project Links
-
-- Every listed project title must itself be clickable in the PDF.
-- Place a clickable `Live` or `Code` label immediately beside every project title.
-- Render that label in red with an underline using `\resumeProjectLink{<verified-url>}{Live}` or `\resumeProjectLink{<verified-url>}{Code}`.
-- Use `Live` only for deployed application URLs and `Code` for repository-only URLs.
-- Keep the project title clickable in addition to the visible label.
-- Project URLs must come from verified fields in `master_resume_data.json`; never invent or infer a URL.
-- When a JD explicitly accepts similar or alternative technologies, adjacent stack terms may be surfaced in `Skills` even if the exact wording is not present in the master data, as long as they map credibly from the candidate's actual experience.
-- Typical examples:
-  - event-driven workflows or streaming systems can justify `Kafka`-adjacent targeting
-  - large-scale data pipelines can justify `Apache Flink`-adjacent targeting
-  - backend/distributed systems experience can justify `Golang`-adjacent targeting
-
-### Projects
-
-- Project count is flexible, but experience must remain at a minimum of 4 entries.
-- Projects should be selected to maximize JD fit.
-- Use 0 to 3 projects depending on space and relevance.
-- Default target: select 3 projects for each JD unless page-fit constraints force otherwise.
-- Default to 1 bullet per selected project when space is constrained or when using concise one-page formatting.
-- Target project bullet length is 27 to 32 words.
-- Include bolded JD-critical keywords in project bullets where natural and readable.
-- Projects may be rewritten aggressively as long as the underlying idea remains consistent.
-- If a completely new project is created for fit, the user must be told in chat.
-- If the experience section becomes visually cramped while the projects section has spare space, rebalance spacing and/or content so the page looks intentionally distributed rather than bottom-light and middle-dense.
-
-## Layout Quality Rules
-
-- No text may overflow past the right page boundary.
-- Education rows must be checked specifically for long institution/location combinations and adjusted using wrapping, abbreviations, or spacing changes as needed.
-- When space is available in lower sections, do not over-compress experience entries; rebalance vertical spacing so the page reads evenly.
-- Do not allow one section to be visually cramped while another has noticeably loose spacing; spacing should feel intentionally balanced across the full page.
-- Default preference is readability over maximal compression once ATS coverage and one-page fit are satisfied.
-- If experience bullets are wrapping too tightly line-to-line, shorten bullet wording before collapsing vertical spacing further.
-- If projects appear jammed together, add breathing room between project entries and reclaim space elsewhere by tightening wording, not by removing structure.
-- Before finalizing any resume, visually inspect for:
-  - cramped experience bullets
-  - cramped project bullets
-  - inconsistent whitespace distribution between sections
-  - long right-column JD locations/dates pushing layout out of balance
-- Reverse-chronological ordering must also remain visually obvious; entries should never appear out of timeline order because of spacing or grouping decisions.
-
-## Role/Project Fit Heuristics
-
-These are default heuristics, not hard constraints:
-
-- Backend / Platform:
-  - USC Dornsife
-  - Aasma SecureSync
-  - Big-Brain
-  - Chat2SQL
-  - Linguistix
-- AI / ML / Applied AI:
-  - Grad8
-  - USC Dornsife
-  - USC AD Labs
-  - CaptionCraft
-  - Big-Brain
-- Data Engineering:
-  - USC Dornsife
-  - Aasma SecureSync
-  - LST Capitals
-  - Chat2SQL
-  - Linguistix
-- Fintech / Payments:
-  - LST Capitals
-  - FinNexus
-- Healthcare:
-  - HMIS
-- Blockchain / Web3:
-  - PDEU Research Fellowship
-  - Comprehensive Analysis of Blockchain for User Authentication
-  - LST Capitals
-
-## Banned and Sensitive Content Rules
-
-- Never include `USC Annenberg Media`.
-- Do not weaken the resume with filler bullets that add no selection advantage.
-- Do not exceed one page.
-- Do not remove phone, email, LinkedIn, GitHub, or portfolio from the header.
-- Do not include unverified claims that have not been confirmed by the user.
-
-## Template Section Intent
-
-### Header
-
-- Must be compact, link-rich, and ATS-readable.
-- Must preserve the current icon + underline style.
-
-### Summary
-
-- Should position the candidate immediately for the target role.
-- Must not consume excessive vertical space.
-
-### Education
-
-- Signals academic strength, current USC status, and relevant coursework.
-- Coursework should be customized to the role family.
-
-### Experience
-
-- Main decision section.
-- Should carry the strongest JD match and most recruiter value.
-- Prefer concise impact-first bullets with technologies and outcomes.
-
-### Skills
-
-- High-density ATS compression zone.
-- Must be tailored from full company/team research, not generic keyword dumping.
-- Must include at least 30 individual skill terms per resume.
-- Must reflect the researched role family and stack rather than every possible skill.
-
-### Projects
-
-- Used to patch fit gaps or strengthen domain alignment.
-- Should be highly relevant and compact.
-
-## Future Run Workflow
-
-For each JD:
-
-1. Analyze the JD deeply.
-2. Identify target role family, team context, and likely product area.
-3. Perform external research on the team stack/recent activity and company-level priorities/news.
-4. Select best 5 experiences using JD + research context.
-5. Select best 3 projects using JD + research context.
-6. Tailor coursework, skills (minimum 30 terms), summary, titles, and bullets (27-32 words each).
-7. Provide explicit rationale for each selected experience/project and why it was chosen over non-selected options.
-8. If needed, propose unverified enhancement bullets and get explicit user confirmation before inclusion.
-9. Persist confirmed new details to `master_resume_data.json`.
-10. Ensure the result is exactly one page.
-11. Render a PDF only to the company/date folder with versioning.
+Coursework defaults: backend/data use Database Systems, Analysis of Algorithms, Web Technologies; systems use Operating Systems, Analysis of Algorithms, Software Engineering; AI keeps Advanced NLP.

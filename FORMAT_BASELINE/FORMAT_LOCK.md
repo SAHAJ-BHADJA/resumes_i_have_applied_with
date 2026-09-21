@@ -1,70 +1,39 @@
 # Format Lock
 
-This file records the locked spacing and formatting values from the currently accepted baseline.
+Locked visual values for `resume_template.tex`. These are the values Sahaj approved after review (Mitratech / U.S. Bank, 2026-09). Do not change them except through the fit ladder below.
 
-## Locked spacing values
+## Invariants
 
-- Section header rule: full-width `\rule{\linewidth}{0.4pt}` on its own line below each title via `[\color{black}\vspace{-3pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]` — **never use `\titlerule`** (causes line-through text overlap)
-- Section spacing: `\titlespacing*{\section}{0pt}{6pt}{0pt}` — breathing room between prior section content and the next header
-- Header to Summary: `\vspace{-16pt}`
-- Summary bottom spacing: `\vspace{-6pt}`
-- Education to Experience: `\vspace{-6pt}`
-- Experience to Skills: `\vspace{-6pt}` (never exceed `-8pt`; overlap occurs at `-10pt` or tighter)
-- Skills to Projects: `\vspace{-6pt}`
-- `\resumeSubheading` tail spacing: `\vspace{-2pt}`
-- `\resumeEduSubheading` tail spacing: `\vspace{-4pt}`
-- `\resumeProjectHeading` tail spacing: `\vspace{-2pt}`
-- `\resumeItemListEnd`: `\vspace{-4pt}`
-- `\resumeProjItemListEnd`: `\vspace{-4pt}`
-- Between project entries: `\vspace{3pt}`
+- `article`, `letterpaper`, `10pt`, default font family. One page.
+- Header: name + phone, email (`bhadja@usc.edu`), LinkedIn, GitHub, portfolio, with icons and underlines.
+- Section order: Summary, Education, Experience, Skills, Projects.
+- Section rule sits on its own line under the title: `[\color{black}\vspace{-6pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]`. Never use `\titlerule`.
+- Bullets render as `•` via explicit `label=\textbullet`.
+- No `\input{glyphtounicode}` / `\pdfgentounicode`: the compiler is tectonic (XeTeX), where they fail.
 
-## Locked list settings
+## Locked spacing
 
-- `\resumeItemListStart`
-  - `leftmargin=0.15in`
-  - `label=\textbullet`
-  - `itemsep=2pt`
-  - `topsep=0pt`
-  - `parsep=0pt`
-  - `partopsep=0pt`
-- `\resumeProjItemListStart`
-  - `leftmargin=0.15in`
-  - `label=\textbullet`
-  - `itemsep=0pt`
-  - `topsep=0pt`
-  - `parsep=0pt`
-  - `partopsep=0pt`
+| Knob | Value | Where |
+|---|---|---|
+| Bullet-to-bullet (experience and projects) | `itemsep=3pt` | `\resumeItemListStart`, `\resumeProjItemListStart` |
+| Bullet tail | `\itemTail` = `-4pt` | `\resumeItem` |
+| Between roles | `\roleGap` = `2pt` | before every role after the first |
+| Between projects | `\projGap` = `3pt` | before every project after the first |
+| Between sections | `\sectionGap` = `-8pt` | after each section |
+| Header to Summary | `-16pt` | fixed |
 
-## Formatting rules
+## Fit ladder (only if the page overflows)
 
-- Keep visible locations consistent with the JD city/state, e.g. `Los Angeles, CA`
-- If the JD is multi-location, remote-only, or lacks one clear city/state, infer the main location from JD/team/company context when possible
-- If no stronger signal exists, use the main listed company location, defaulting to the first listed location when necessary
-- Keep the template on exactly one page
-- Keep bullets dense but readable
-- Shorten wording before increasing compression
-- Preserve the current header/link structure
-- Section headers must never overlap prior content; if overlap appears, reduce negative `\vspace` before `\section{}` before trimming content
+Apply in order and re-render after each step. Stop as soon as the page count is 1.
 
-## Content rules that pair with this format
+1. Shorten wording (stay within 27-32 words per bullet), trim a skill line that wraps.
+2. Cut the new project from 2 bullets to 1.
+3. `\itemTail` -> `-5pt`, then `-6pt`.
+4. `\roleGap` -> `0pt`; `\projGap` -> `1pt`.
+5. Swap the weakest master-data project for one with a shorter bullet, or drop the fifth experience (minimum 4). The project count always stays at 3.
 
-- Default target: `Summary + Education + 5 Experiences + Skills + 3 Projects`
-- Experience order must be strict reverse chronological
-- Default bullets:
-  - `2` bullets per experience
-  - `1` bullet per project
-- Bullet target length:
-  - `27-32` words for every experience and project bullet
-- Skills section:
-  - minimum `30` individual skill terms (not counting category headers)
-  - terms selected and ordered from full company/team research, not JD-only
+Never:
 
-## Drift check
-
-If a future resume looks off:
-
-1. Compare against `firmpilot_reference_sample.tex`
-2. Check section gaps first
-3. Check project-title-to-bullet spacing
-4. Check JD-location consistency
-5. Only then tweak spacing macros
+- reduce `itemsep` below `3pt` (bullets visibly merge; rejected twice)
+- push `\sectionGap` past `-8pt` (the next header collides with prior content)
+- change font, font size, or margins
