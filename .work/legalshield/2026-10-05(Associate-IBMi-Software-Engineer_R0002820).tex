@@ -1,0 +1,126 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% Spacing values are locked in FORMAT_LOCK.md; only the fit-ladder knobs below may change.
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-7pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\newcommand{\itemTail}{\vspace{-4pt}}
+\newcommand{\sectionGap}{\vspace{-8pt}}
+\newcommand{\roleGap}{\vspace{0pt}}
+\newcommand{\projGap}{\vspace{1pt}}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \itemTail}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeProjectLink}[2]{\href{#1}{\textcolor{red}{\underline{#2}}}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=4pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=3pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:2132844651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Software engineer with 2+ years building \textbf{backend systems}, \textbf{SQL data access}, tested releases, and AI-assisted tools, focused on \textbf{IBM i}, \textbf{RPG/SQLRPGLE}, \textbf{CLP}, and enterprise integration.}}
+\end{itemize}
+\sectionGap
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Database Systems, Analysis of Algorithms, Web Technologies, Advanced NLP}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Object-Oriented Programming, Software Engineering, Operating Systems, Data Retrieval}
+\resumeSubHeadingListEnd
+\sectionGap
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{September 2025 -- Present}{Software Engineer}{LA, California}
+\resumeItemListStart
+\resumeItem{Built Azure-backed AI education platform with normalized SQL schemas, row-level isolation, and indexed dashboards, reducing latency from 1.2 seconds to 350 milliseconds for 500+ campus users across releases.}
+\resumeItem{Reworked FastAPI background jobs with explicit states, failure isolation, and SQL-backed status tracking, processing 1K+ AI jobs while tripling throughput under concurrent instructor workloads, tickets, and reviews.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Grad8}{June 2025 -- August 2025}{Software Engineer Intern}{LA, California}
+\resumeItemListStart
+\resumeItem{Implemented React and Flask grading workflows for uploads, rubrics, history, and model selection, supporting 150+ instructors and 10K+ daily requests through production REST APIs, dashboards, and fixes.}
+\resumeItem{Designed concurrent file-ingestion services with ThreadPoolExecutor, OCR, and multimodal AI review, reducing feedback turnaround 60\% while keeping batch processing testable, observable, and responsive for instructors and QA.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Aasma Technology Solutions}{August 2023 -- July 2024}{Software Developer Engineer - (SecureSync)}{India}
+\resumeItemListStart
+\resumeItem{Troubleshot large-scale API integrations using OOP patterns, SQL workflows, AWS Glue, and S3, improving response times 30\% while reducing technical debt 20\% across release cycles and defects.}
+\resumeItem{Engineered cross-platform microservices with Jenkins CI/CD, VM automation, and 20+ PyTest, Mockito, unit, and integration suites while tracking defects through Agile sprint delivery with QA teammates consistently.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Aasma Technology Solutions}{May 2023 -- August 2023}{Full Stack Developer Intern - (VibrantChem)}{India}
+\resumeItemListStart
+\resumeItem{Developed React/Node resource-management workflows with REST APIs, WebSockets, and modular services, synchronizing 2M+ records across locations with 33\% fewer conflicts during rollout cycles and review tickets consistently.}
+\resumeItem{Implemented CRM modules for authentication, resources, billing, leads, permissions, and notifications, using Jenkins CI/CD and Docker staging to cut deployment time 50\% safely across releases and fixes.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{LST Capitals}{November 2022 -- January 2023}{Web Developer Intern}{India}
+\resumeItemListStart
+\resumeItem{Built backend APIs for booking, slot selection, reservation tracking, coupons, and payment-status updates across 50K+ records, delivering sub-200-millisecond responses for client-facing workflows and support reviews reliably remotely.}
+\resumeItem{Mapped 12+ integration points across Flask APIs, Firebase synchronization, webhooks, payments, and cross-platform delivery, reducing design errors 25\% through early stakeholder architecture reviews and documentation handoffs collaboratively.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\sectionGap
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{IBM i \& Backend:} IBM i, RPG, SQLRPGLE, CLP, DB2 for i, SQL, Stored Procedures, Java, Python, Node.js, Flask, FastAPI \\
+\textbf{Data \& Integration:} REST APIs, Webhooks, Batch Processing, SQL Data Access, Relational Databases, PostgreSQL, Azure SQL, MongoDB, Firebase \\
+\textbf{Quality \& Delivery:} Unit Testing, Integration Testing, PyTest, Mockito, CI/CD, Jenkins, GitHub Actions, Git, Defect Tracking, Bug Fixes \\
+\textbf{AI \& Collaboration:} GitHub Copilot, Claude Code, AI Code Review, Security Review, Agile/Scrum, Sprint Planning, QA Collaboration, Code Reviews, Documentation
+}}
+\end{itemize}
+\sectionGap
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{3pt}
+\resumeProjectHeading{\textbf{IBMi ServiceBridge} $|$ \emph{IBM i, RPG, SQLRPGLE, CLP, DB2 for i, Node.js, SQL}}
+\resumeProjItemListStart
+\resumeItem{Designed an IBM i integration project concept with RPG service programs, SQLRPGLE data access, CLP job orchestration, DB2 for i tables, Node.js adapters, unit tests, and reviewed AI-generated changes.}
+\resumeProjItemListEnd
+\projGap
+\resumeProjectHeading{\textbf{Chat2SQL} \resumeProjectLink{https://github.com/SAHAJ-BHADJA/Chat2SQL}{Code} $|$ \emph{Java, TypeScript, SQL, PostgreSQL, MySQL, Docker}}
+\resumeProjItemListStart
+\resumeItem{Built an AI-powered SQL workspace supporting 10+ databases, schema exploration, query generation, and validation, improving data-access productivity through Java services, TypeScript modules, and Docker-based local deployment workflows.}
+\resumeProjItemListEnd
+\projGap
+\resumeProjectHeading{\textbf{Linguistix} $|$ \emph{Python, AWS, Docker, CI/CD, REST APIs}}
+\resumeProjItemListStart
+\resumeItem{Developed and deployed a containerized REST data-processing API on AWS with CI/CD releases, validation checks, and Docker packaging, achieving 87\% accuracy and production-grade reliability for automated workflows.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}
