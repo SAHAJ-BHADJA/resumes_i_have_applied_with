@@ -1,0 +1,125 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% Spacing values are locked in FORMAT_LOCK.md; only the fit-ladder knobs below may change.
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-6pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\newcommand{\itemTail}{\vspace{-4pt}}
+\newcommand{\sectionGap}{\vspace{-8pt}}
+\newcommand{\roleGap}{\vspace{2pt}}
+\newcommand{\projGap}{\vspace{3pt}}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \itemTail}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeProjectLink}[2]{\href{#1}{\textcolor{red}{\underline{#2}}}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=3pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=3pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:2132844651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Software Engineer with 2+ years turning \textbf{business requirements} into tested software, combining SQL data conversions, \textbf{unit and integration testing}, \textbf{production monitoring}, and \textbf{root-cause debugging} across Azure and AWS systems.}}
+\end{itemize}
+\sectionGap
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Database Systems, Web Technologies, Analysis of Algorithms, Advanced NLP}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Software Engineering, Operating Systems, Object-Oriented Programming, Data Retrieval}
+\resumeSubHeadingListEnd
+\sectionGap
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{September 2025 -- Present}{Software Engineer}{LA, California}
+\resumeItemListStart
+\resumeItem{Optimized production query patterns and indexing for a multi-tenant platform on \textbf{Azure SQL} and Blob Storage serving 500+ users, isolating performance bottlenecks to cut dashboard latency from 1.2s to 350ms.}
+\resumeItem{Built \textbf{data conversion} and integration pipelines across PostgreSQL, SQL Server, and cloud storage with validation and reconciliation checks, processing 5K+ monthly jobs through CI/CD releases at 99\%+ production reliability.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Grad8}{June 2025 -- August 2025}{Software Engineer Intern}{LA, California}
+\resumeItemListStart
+\resumeItem{Translated instructor workflows into React and Flask features for question upload, rubric generation, and grading history, serving 150+ instructors and 10K+ daily requests while cutting feedback turnaround 60\%.}
+\resumeItem{Resolved OCR reliability and timeout issues in concurrent batch grading with Claude Vision fallback paths, ThreadPoolExecutor processing, secure file ingestion, and per-call \textbf{cost logging} across 1K+ files per batch.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Aasma Technology Solutions}{August 2023 -- July 2024}{Software Developer Engineer - (SecureSync)}{India}
+\resumeItemListStart
+\resumeItem{Contributed from \textbf{requirements analysis} through deployment on cross-platform data-sharing microservices, converting raw JSON, CSV, and Parquet data with AWS Glue and S3, improving response times 30\% and pipeline efficiency 68\%.}
+\resumeItem{Automated nightly \textbf{Jenkins} jobs that built executables, installed them on test VMs, and ran \textbf{unit and integration tests} across Windows, Linux, and macOS, generating CSV reports and failure logs for triage.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Aasma Technology Solutions}{May 2023 -- August 2023}{Full Stack Developer Intern - (VibrantChem)}{India}
+\resumeItemListStart
+\resumeItem{Built a \textbf{resource management platform} with MERN, REST APIs, and WebSockets for resource allocation, customer records, billing, and lead workflows, synchronizing 2M+ records across locations and reducing resource wastage 42\%.}
+\resumeItem{Monitored production with \textbf{Sentry}, Azure Monitor, and Kibana while gating Jenkins releases on unit, integration, and end-to-end tests, achieving 95\%+ successful build validation across Docker-based staging deployments.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{LST Capitals}{November 2022 -- January 2023}{Web Developer Intern}{India}
+\resumeItemListStart
+\resumeItem{Translated client \textbf{business requirements} into an end-to-end system design, mapped 12+ backend integration points, and presented the architecture to the client for alignment, reducing design errors 25\% before implementation.}
+\resumeItem{Developed Flask APIs for booking, pricing, coupons, and payment webhooks with Firebase real-time sync, sustaining sub-200ms responses across 50K+ records and reducing manual refund handling by about 70\%.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\sectionGap
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Analysis \& Testing:} Requirements Analysis, System Design, Technical Documentation, Stakeholder Communication, Agile/Scrum, SDLC, Unit Testing, Integration Testing, End-to-End Testing, PyTest, Mockito, Jest, Selenium, Debugging, Root-Cause Analysis, Sentry, Azure Monitor, ETL Pipelines \\
+\textbf{Languages \& Data:} Python, Java, JavaScript, TypeScript, C++, SQL, PostgreSQL, SQL Server, Azure SQL, MySQL, MongoDB \\
+\textbf{Cloud \& Tools:} Azure, AWS (S3, RDS, Glue), Docker, Jenkins, GitHub Actions, CI/CD, Git, Linux, REST APIs, Flask, React.js
+}}
+\end{itemize}
+\sectionGap
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\href{https://github.com/SAHAJ-BHADJA/Chat2SQL}{\textbf{Chat2SQL}} \resumeProjectLink{https://github.com/SAHAJ-BHADJA/Chat2SQL}{Code} $|$ \emph{Java, TypeScript, SQL, PostgreSQL, MySQL, Docker, Maven}}
+\resumeProjItemListStart
+\resumeItem{Extended an AI-assisted \textbf{SQL} workspace in Java and TypeScript supporting 10+ database systems, enabling schema synchronization, query authoring, and data management from one cross-platform interface deployed with Docker.}
+\resumeProjItemListEnd
+\projGap
+\resumeProjectHeading{\href{https://hims-rouge.vercel.app/}{\textbf{HMIS - Hospital Management Information System}} \resumeProjectLink{https://hims-rouge.vercel.app/}{Live} $|$ \emph{TypeScript, MERN, ABDM APIs, Twilio, Sentry}}
+\resumeProjItemListStart
+\resumeItem{Built a hospital operations platform with scheduling dashboards, consent-based ABDM record access, Twilio reminders, and \textbf{Sentry monitoring}, supporting 100+ daily appointments and reducing administrative workload 30\% for staff.}
+\resumeProjItemListEnd
+\projGap
+\resumeProjectHeading{\href{https://cpu-scheduler-amber.vercel.app/}{\textbf{CPU-scheduling Simulator}} \resumeProjectLink{https://cpu-scheduler-amber.vercel.app/}{Live} $|$ \emph{C++, React.js, JavaScript, EJ-2}}
+\resumeProjItemListStart
+\resumeItem{Implemented and \textbf{tested} FCFS, SJF, SRT, Round Robin, priority, and MLQ scheduling across preemptive and non-preemptive scenarios with Gantt visualization, reducing average turnaround time 25\% and debugging time 20\%.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

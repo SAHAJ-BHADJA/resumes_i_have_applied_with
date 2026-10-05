@@ -1,0 +1,128 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+% Spacing values are locked in FORMAT_LOCK.md; only the fit-ladder knobs below may change.
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-7pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\newcommand{\itemTail}{\vspace{-4pt}}
+\newcommand{\sectionGap}{\vspace{-8pt}}
+\newcommand{\roleGap}{\vspace{0pt}}
+\newcommand{\projGap}{\vspace{1pt}}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \itemTail}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeProjectLink}[2]{\href{#1}{\textcolor{red}{\underline{#2}}}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=4pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=3pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:2132844651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Front-end engineer with 2+ years building \textbf{React/TypeScript} apps, \textbf{WebGL/three.js/GLSL} visualizations, and performance-focused autonomy tooling.}}
+\end{itemize}
+\sectionGap
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Web Technologies, Analysis of Algorithms, Database Systems, Advanced NLP}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Object-Oriented Programming, Operating Systems, Software Engineering, Data Retrieval}
+\resumeSubHeadingListEnd
+\sectionGap
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading{USC Dornsife}{September 2025 -- Present}{Software Engineer}{LA, California}
+\resumeItemListStart
+\resumeItem{Built Azure-backed AI education platform with normalized schemas, row-level isolation, and indexed dashboard queries, cutting latency from 1.2 seconds to 350 milliseconds for 500+ campus users daily.}
+\resumeItem{Reworked asynchronous LLM orchestration with FastAPI workers, job-state transitions, and failure isolation, tripling throughput for 1K+ AI jobs under concurrent instructor-facing web workloads during production release cycles.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Grad8}{June 2025 -- August 2025}{Software Engineer Intern}{LA, California}
+\resumeItemListStart
+\resumeItem{Built React/Flask grading workflows for uploads, rubrics, grading history, and model selection, supporting 150+ instructors and 10K+ daily requests through production REST APIs and instructor dashboards reliably.}
+\resumeItem{Designed concurrent PDF, DOCX, and ZIP ingestion with ThreadPoolExecutor, OCR, and multimodal routing, keeping grading responsive while reducing feedback turnaround 60\% during peak load for instructors daily.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{USC AD Labs}{January 2025 -- May 2025}{ML Research Assistant}{Los Angeles}
+\resumeItemListStart
+\resumeItem{Built a Decision Transformer for autonomous-driving offline RL, improving planning 18\% in simulation while processing 100K+ trajectory logs through reproducible Python evaluation pipelines for autonomy research experiments.}
+\resumeItem{Built a spatial-temporal encoder combining HD-map geometry, lane context, and ego trajectories with multi-head attention, improving closed-loop stability 15\% across simulated driving baselines for planning research workflows.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Aasma Technology Solutions}{May 2023 -- August 2023}{Full Stack Developer Intern - (VibrantChem)}{India}
+\resumeItemListStart
+\resumeItem{Built React/Node resource-management workflows with WebSockets, REST APIs, and modular services for real-time records, synchronizing 2M+ cross-location entries with 33\% fewer conflicts during staged production rollouts safely.}
+\resumeItem{Implemented responsive CRM modules for authentication, resources, billing, leads, permissions, and notifications, using Jenkins CI/CD and Docker staging to cut deployment time 50\% across release cycles safely.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{LST Capitals}{November 2022 -- January 2023}{Web Developer Intern}{India}
+\resumeItemListStart
+\resumeItem{Built React/TypeScript booking flows for time-slot selection, reservation tracking, coupon pricing, and payment-status updates across 50K+ service records with sub-200-millisecond APIs for client demos and reviews successfully.}
+\resumeItem{Designed Figma-led architecture for 12+ integrations, aligning Flask APIs, Firebase synchronization, webhooks, and cross-platform delivery before implementation to reduce design errors 25\% for stakeholder reviews early successfully.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\sectionGap
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Graphics \& Web:} JavaScript, TypeScript, React, Next.js, HTML, CSS, WebGL, OpenGL, Three.js, GLSL, Shaders, 3D Math \\
+\textbf{Visualization:} Linear Algebra, Scene Graphs, Camera Frustums, Trajectories, Browser Performance, Responsive UI, Figma, Debugging \\
+\textbf{Backend \& Data:} Python, C++, SQL, Node.js, Flask, FastAPI, REST APIs, WebSockets, MongoDB, Firebase \\
+\textbf{AI \& Delivery:} PyTorch, Transformers, Offline RL, HD Maps, Autonomous Simulation, Git, CI/CD, Docker, Unit Testing, Agile/Scrum
+}}
+\end{itemize}
+\sectionGap
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{3pt}
+
+\resumeProjectHeading{\textbf{DriveScene Renderer} $|$ \emph{JavaScript, three.js, WebGL, GLSL, React, 3D Math}}
+\resumeProjItemListStart
+\resumeItem{Created a three.js autonomous-scene renderer with WebGL, GLSL shaders, and React controls for lidar-style points, camera frustums, trajectories, and debugging overlays inside browser simulation views locally interactive.}
+\resumeProjItemListEnd
+\projGap
+\resumeProjectHeading{\textbf{PiXMod} \resumeProjectLink{https://pixmod.vercel.app/}{Live} $|$ \emph{Next.js, CLIP, SAM, Stable Diffusion, MongoDB}}
+\resumeProjItemListStart
+\resumeItem{Built a responsive Next.js image platform with CLIP search, SAM segmentation, Stable Diffusion editing, MongoDB storage, and Stripe billing, processing 1K+ edited visual assets across workflows online.}
+\resumeProjItemListEnd
+\projGap
+\resumeProjectHeading{\textbf{CPU-scheduling Simulator} \resumeProjectLink{https://cpu-scheduler-amber.vercel.app/}{Live} $|$ \emph{C++, React, JavaScript, EJ-2}}
+\resumeProjItemListStart
+\resumeItem{Implemented React controls and EJ-2 Gantt visualization for FCFS, SJF, SRT, RR, priority, and MLQ scheduling, calculating turnaround metrics across 1K+ process combinations with dynamic UI updates.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

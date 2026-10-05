@@ -1,0 +1,125 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-6pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\newcommand{\itemTail}{\vspace{-4pt}}
+\newcommand{\sectionGap}{\vspace{-8pt}}
+\newcommand{\roleGap}{\vspace{2pt}}
+\newcommand{\projGap}{\vspace{3pt}}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \itemTail}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeProjectLink}[2]{\href{#1}{\textcolor{red}{\underline{#2}}}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=3pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=3pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:2132844651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Full-Stack Software Engineer with 2+ years building \textbf{React applications}, \textbf{REST APIs}, relational data systems, and automated cloud deployments for reliable, maintainable, user-centered production workflows.}}
+\end{itemize}
+\sectionGap
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Web Technologies, Database Systems, Analysis of Algorithms, Advanced NLP}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Object-Oriented Programming, Software Engineering, Operating Systems, Data Retrieval}
+\resumeSubHeadingListEnd
+\sectionGap
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{September 2025 -- Present}{Software Engineer}{Los Angeles, California}
+\resumeItemListStart
+\resumeItem{Architected a multi-tenant application platform using Azure SQL and Blob Storage for 500+ users, reducing dashboard latency from 1.2 seconds to 350 milliseconds through query and indexing optimization.}
+\resumeItem{Built FastAPI integrations across PostgreSQL, SQL Server, and cloud storage, processing 5K+ monthly jobs with validation, reconciliation, error handling, and CI/CD-backed releases at 99\%+ measured production reliability.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Grad8}{June 2025 -- August 2025}{Software Engineer Intern}{Los Angeles, California}
+\resumeItemListStart
+\resumeItem{Built \textbf{React interfaces} and Python services for uploads, grading history, configuration, and live feedback, reducing user turnaround 60\% while supporting reliable production workflows used by 150+ instructors.}
+\resumeItem{Designed concurrent processing with multithreading, secure file ingestion, AWS RDS, and \textbf{REST APIs}, evaluating 10K+ submissions daily through recoverable execution paths while maintaining 90\%+ grading consistency reliably.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Aasma Technology Solutions}{August 2023 -- July 2024}{Software Developer Engineer, SecureSync}{India}
+\resumeItemListStart
+\resumeItem{Engineered cross-platform microservices with automated VM builds and 20+ unit and integration suites using Jenkins, PyTest, and Mockito across Windows, Linux, and macOS production release environments reliably.}
+\resumeItem{Optimized object-oriented API integrations and AWS data flows, improving response times 30\% and pipeline efficiency 68\% while reducing technical debt 20\% through reusable services and structured reviews.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Aasma Technology Solutions}{May 2023 -- August 2023}{Full Stack Developer Intern, VibrantChem}{India}
+\resumeItemListStart
+\resumeItem{Implemented eight microservices spanning authentication, permissions, billing, resources, customers, leads, and notifications, reliably synchronizing 2M+ records through REST APIs and event-driven WebSocket updates across distributed production workflows.}
+\resumeItem{Built responsive React workflows and automated Docker deployments through Jenkins CI/CD, achieving 95\%+ successful validation and cutting release time 50\% through repeatable configurations, staged testing, and monitoring.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{LST Capitals}{November 2022 -- January 2023}{Web Developer Intern}{India}
+\resumeItemListStart
+\resumeItem{Built backend APIs for a cross-platform service-booking application covering bookings, time-slot selection, reservation tracking, and payment status updates across 50K+ records with consistently reliable sub-200-millisecond response times.}
+\resumeItem{Designed end-to-end system workflows, mapped 12+ backend integration points, and presented technical solutions to client stakeholders, reducing design errors 25\% while supporting effective collaborative cross-functional implementation alignment.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\sectionGap
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages \& Web:} TypeScript, JavaScript, Python, Java, C++, SQL, HTML, CSS, React, Next.js, Angular, TailwindCSS \\
+\textbf{Backend \& APIs:} FastAPI, Flask, Node.js, Express.js, REST APIs, WebSockets, Microservices, OOP, JWT, Webhooks \\
+\textbf{Data \& Cloud:} SQL Server, Azure SQL, PostgreSQL, MySQL, MongoDB, Firebase, AWS, Azure, Docker, Kubernetes \\
+\textbf{Engineering:} Git, Jenkins, CI/CD, Agile/Scrum, Unit Testing, Integration Testing, Code Reviews, Debugging, Monitoring, System Validation
+}}
+\end{itemize}
+\sectionGap
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\href{https://hims-rouge.vercel.app/}{\textbf{HMIS - Hospital Management Information System}} \resumeProjectLink{https://hims-rouge.vercel.app/}{Live} $|$ \emph{TypeScript, MERN, ABDM APIs, Sentry}}
+\resumeProjItemListStart
+\resumeItem{Architected a microservice-based healthcare platform integrating ABDM APIs, supporting 100+ daily appointment workflows and reducing patient-record retrieval by 2x through structured schemas, consent controls, and real-time monitoring.}
+\resumeProjItemListEnd
+\projGap
+\resumeProjectHeading{\href{https://fin-nexus.vercel.app/}{\textbf{FinNexus}} \resumeProjectLink{https://fin-nexus.vercel.app/}{Live} $|$ \emph{Next.js, TypeScript, Kubernetes, MongoDB}}
+\resumeProjItemListStart
+\resumeItem{Built a TypeScript application supporting 50K+ users and 1M+ transactions with responsive interfaces, secure integrations, real-time synchronization, advanced filtering, and reliable containerized deployment workflows at production scale.}
+\resumeProjItemListEnd
+\projGap
+\resumeProjectHeading{\href{https://big-brain-pied.vercel.app/}{\textbf{Big-Brain}} \resumeProjectLink{https://big-brain-pied.vercel.app/}{Live} $|$ \emph{PostgreSQL, GCP, REST APIs, Clerk}}
+\resumeProjItemListStart
+\resumeItem{Built secure document upload, management, and collaborative workflows for 200+ users with Clerk authentication, PostgreSQL-backed metadata, real-time summarization, and optimized retrieval pipelines that reduced review time 60\%.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

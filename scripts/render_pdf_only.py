@@ -22,7 +22,9 @@ COMPANY_ROOT = RESUME_ROOT / "COMPANY"
 TECTONIC_LOCAL = RESUME_ROOT / "tectonic-bin" / "tectonic.exe"
 PDF_BASE = "Sahaj_Bhadja_Resume"
 WORD_MIN, WORD_MAX = 27, 32
-MIN_SKILLS = 30
+MIN_SKILLS = 40
+REQUIRED_EXPERIENCES = 5
+REQUIRED_PROJECTS = 3
 BANNED = ["USC Annenberg Media"]
 
 
@@ -83,8 +85,22 @@ def count_skills(tex: str) -> int:
     return total
 
 
+def section_body(tex: str, section: str, next_section: str | None = None) -> str:
+    end = rf"\\section\{{{re.escape(next_section)}\}}" if next_section else r"\\end\{document\}"
+    match = re.search(rf"\\section\{{{re.escape(section)}\}}(.*?){end}", tex, re.S)
+    return match.group(1) if match else ""
+
+
 def lint(tex: str) -> list[str]:
     problems = []
+    experience_count = len(re.findall(r"\\resumeSubheading\s*\{", section_body(tex, "Experience", "Skills")))
+    project_count = len(re.findall(r"\\resumeProjectHeading\s*\{", section_body(tex, "Projects")))
+    if experience_count != REQUIRED_EXPERIENCES:
+        problems.append(
+            f"experience section has {experience_count} entries (need exactly {REQUIRED_EXPERIENCES})"
+        )
+    if project_count != REQUIRED_PROJECTS:
+        problems.append(f"projects section has {project_count} entries (need exactly {REQUIRED_PROJECTS})")
     bullets = brace_bodies(tex, "resumeItem")
     for body in bullets:
         words = len(plain_text(body).split())
@@ -98,7 +114,10 @@ def lint(tex: str) -> list[str]:
             problems.append(f"banned content present: {phrase}")
     if "%%" in re.sub(r"\\%", "", tex):
         problems.append("unfilled template placeholder (%%...%%) remains")
-    print(f"lint: {len(bullets)} bullets, {skills} skills")
+    print(
+        f"lint: {experience_count} experiences, {project_count} projects, "
+        f"{len(bullets)} bullets, {skills} skills"
+    )
     return problems
 
 

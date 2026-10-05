@@ -1,0 +1,126 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\vspace{-6pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\newcommand{\itemTail}{\vspace{-5pt}}
+\newcommand{\sectionGap}{\vspace{-8pt}}
+\newcommand{\roleGap}{\vspace{2pt}}
+\newcommand{\projGap}{\vspace{3pt}}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \itemTail}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-2pt}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-1pt}\item\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textbf{\small #2} \\\textit{\small #3} & \textit{\small #4} \\\small #5 & \\\end{tabular*}\vspace{-4pt}}
+\newcommand{\resumeProjectHeading}[1]{\item \small #1 \vspace{-2pt}}
+\newcommand{\resumeProjectLink}[2]{\href{#1}{\textcolor{red}{\underline{#2}}}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=3pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeProjItemListStart}{\begin{itemize}[leftmargin=0.15in,label=\textbullet,itemsep=3pt,topsep=0pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeProjItemListEnd}{\end{itemize}\vspace{-4pt}}
+\begin{document}
+\begin{center}
+{\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
+\small \href{tel:2132844651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:bhadja@usc.edu}{\raisebox{-0.2\height}\faEnvelope\ \underline{bhadja@usc.edu}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\end{center}
+\vspace{-16pt}
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{Software Engineer with 2+ years building \textbf{C++} and \textbf{Python} systems, concurrent data-processing workflows, automation, and AI-enabled applications using \textbf{algorithms}, Linux, cloud infrastructure, performance optimization, automated testing, and CI/CD.}}
+\end{itemize}
+\sectionGap
+\section{Education}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Southern California, Los Angeles, CA}{August 2024 -- May 2026}{Master of Science in Computer Science}{GPA: 3.75/4}{Coursework: Analysis of Algorithms, Database Systems, Operating Systems, Software Engineering}
+\resumeEduSubheading{Pandit Deendayal Energy University, Gandhinagar, India}{November 2020 -- May 2024}{Bachelor of Technology in Computer Science and Engineering}{GPA: 3.88/4}{Coursework: Object-Oriented Programming, Operating Systems, Data Retrieval, Software Engineering}
+\resumeSubHeadingListEnd
+\sectionGap
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{USC Dornsife}{September 2025 -- Present}{Software Engineer}{Los Angeles, California}
+\resumeItemListStart
+\resumeItem{Architected a multi-tenant platform using Azure SQL and Blob Storage with row-level security and normalized schemas for 500+ users, reducing dashboard latency from 1.2 seconds to 350 milliseconds.}
+\resumeItem{Built FastAPI integrations across PostgreSQL, SQL Server, and cloud storage, processing 5K+ monthly jobs with validation, reconciliation, error handling, and automated CI/CD releases sustaining 99\%+ production reliability.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Grad8}{June 2025 -- August 2025}{Software Engineer Intern}{Los Angeles, California}
+\resumeItemListStart
+\resumeItem{Designed concurrent processing and secure multi-format ingestion through REST APIs and AWS RDS, executing 1K+ files per batch with fault-tolerant recovery, usage tracking, and stable performance under load.}
+\resumeItem{Built Python services and responsive React interfaces for uploads, history, configuration, and live feedback, reducing user turnaround 60\% while supporting reliable production workflows used by 150+ instructors.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Aasma Technology Solutions}{August 2023 -- July 2024}{Software Developer Engineer, SecureSync}{India}
+\resumeItemListStart
+\resumeItem{Designed object-oriented API integrations and AWS Glue transformations for JSON, CSV, and Parquet data, improving response times 30\% and pipeline efficiency 68\% while reducing technical debt 20\%.}
+\resumeItem{Automated nightly builds, installations, unit tests, integration tests, and reports through Jenkins, validating reliable cross-platform synchronization while collaborating directly with Microsoft and GitHub stakeholders throughout Agile delivery.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{Aasma Technology Solutions}{May 2023 -- August 2023}{Full Stack Developer Intern, VibrantChem}{India}
+\resumeItemListStart
+\resumeItem{Implemented eight MERN microservices for authentication, permissions, billing, resources, customers, leads, and notifications, reliably synchronizing 2M+ records through REST APIs and event-driven WebSocket updates across production workflows.}
+\resumeItem{Built responsive React workflows and automated Docker deployments through Jenkins CI/CD, achieving 95\%+ build validation while integrating operational monitoring and analytics across controlled staging and production environments.}
+\resumeItemListEnd
+\roleGap
+\resumeSubheading{LST Capitals}{November 2022 -- January 2023}{Web Developer Intern}{India}
+\resumeItemListStart
+\resumeItem{Built cross-platform mobile and web booking workflows with Flask APIs, Firebase synchronization, payments, and webhooks, processing hourly Databricks micro-batches across 50K+ records with consistently reliable sub-200-millisecond responses.}
+\resumeItem{Designed end-to-end workflows, mapped 12+ integration points, and presented technical solutions to client stakeholders, reducing design errors 25\% while supporting effective collaborative cross-functional implementation planning and alignment.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\sectionGap
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Programming \& Fundamentals:} C++, Python, Java, Object-Oriented Programming, Data Structures, Algorithms, Operating Systems, Concurrent Processing, Performance Optimization \\
+\textbf{AI \& Automation:} PyTorch, TensorFlow, Transformers, LLM Systems, Feature Engineering, Hyperparameter Tuning, Automation, Scripting \\
+\textbf{Systems \& Cloud:} Linux, Docker, AWS, Azure, GCP, Kubernetes, Distributed Systems, REST APIs, Monitoring, Fault Tolerance \\
+\textbf{Engineering:} Git, GitHub, Jenkins, CI/CD, Unit Testing, Integration Testing, Debugging, Code Reviews, Documentation, Agile/Scrum
+}}
+\end{itemize}
+\sectionGap
+\section{Projects}
+\resumeSubHeadingListStart
+\vspace{-2pt}
+\resumeProjectHeading{\href{https://cpu-scheduler-amber.vercel.app/}{\textbf{CPU Scheduling Simulator}} \resumeProjectLink{https://cpu-scheduler-amber.vercel.app/}{Live} $|$ \emph{C++, Operating Systems, Algorithms, React.js}}
+\resumeProjItemListStart
+\resumeItem{Implemented FCFS, SJF, SRT, Round Robin, priority, and multi-level queue scheduling with interactive controls and Gantt visualization, rigorously testing correctness across 1K+ preemptive and non-preemptive process combinations.}
+\resumeProjItemListEnd
+\projGap
+\resumeProjectHeading{\href{https://imagecaptiongenerator.com/}{\textbf{CaptionCraft - Image Caption Generator}} \resumeProjectLink{https://imagecaptiongenerator.com/}{Live} $|$ \emph{PyTorch, Transformers, Flask, Deep Learning}}
+\resumeProjItemListStart
+\resumeItem{Benchmarked BLIP, GIT, and ViT-GPT-2 transformer architectures across 10K images and 100K captions, improving measured caption accuracy from 81\% to 96\% while building reliable scalable inference APIs.}
+\resumeProjItemListEnd
+\projGap
+\resumeProjectHeading{\textbf{Linguistix} $|$ \emph{Python, AWS, Docker, CodePipeline, ECS Fargate}}
+\resumeProjItemListStart
+\resumeItem{Developed and deployed a containerized RESTful data-processing API on AWS using CodePipeline and ECS Fargate with automated releases, validation checks, 87\% accuracy, and dependable production-grade operational reliability.}
+\resumeProjItemListEnd
+\resumeSubHeadingListEnd
+\end{document}
+

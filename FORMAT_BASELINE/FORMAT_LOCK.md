@@ -7,7 +7,9 @@ Locked visual values for `resume_template.tex`. These are the values Sahaj appro
 - `article`, `letterpaper`, `10pt`, default font family. One page.
 - Header: name + phone, email (`bhadja@usc.edu`), LinkedIn, GitHub, portfolio, with icons and underlines.
 - Section order: Summary, Education, Experience, Skills, Projects.
-- Section rule sits on its own line under the title: `[\color{black}\vspace{-6pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]`. Never use `\titlerule`.
+- Content counts: exactly 5 experience entries and exactly 3 project entries. Never reduce either count for page fit.
+- Section rule sits on its own line under the title: `[\color{black}\vspace{-7pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]`. Never use `\titlerule`.
+- The first project heading must never touch the Projects rule: `\vspace{3pt}` right after `\resumeSubHeadingListStart` in the Projects section (approved 2026-10-02; `-2pt` made them touch).
 - Bullets render as `•` via explicit `label=\textbullet`.
 - No `\input{glyphtounicode}` / `\pdfgentounicode`: the compiler is tectonic (XeTeX), where they fail.
 
@@ -21,19 +23,22 @@ Locked visual values for `resume_template.tex`. These are the values Sahaj appro
 | Between projects | `\projGap` = `3pt` | before every project after the first |
 | Between sections | `\sectionGap` = `-8pt` | after each section |
 | Header to Summary | `-16pt` | fixed |
+| Section title to its rule | `-7pt` | `\titleformat` (was `-6pt`) |
+| Projects rule to first project | `3pt` | after `\resumeSubHeadingListStart` in Projects (was `-2pt`) |
 
 ## Fit ladder (only if the page overflows)
 
 Apply in order and re-render after each step. Stop as soon as the page count is 1.
 
 1. Shorten wording (stay within 27-32 words per bullet), trim a skill line that wraps.
-2. Cut the new project from 2 bullets to 1.
+2. Ensure every project has exactly 1 bullet; shorten or swap the weakest selected project using the reusable portfolio policy.
 3. `\itemTail` -> `-5pt`, then `-6pt`.
 4. `\roleGap` -> `0pt`; `\projGap` -> `1pt`.
-5. Swap the weakest master-data project for one with a shorter bullet, or drop the fifth experience (minimum 4). The project count always stays at 3.
+5. Re-score the entire project and experience pools, then swap a selected entry for a comparably relevant entry whose verified facts can be expressed more compactly. Preserve exactly 5 experiences and exactly 3 projects.
 
 Never:
 
 - reduce `itemsep` below `3pt` (bullets visibly merge; rejected twice)
 - push `\sectionGap` past `-8pt` (the next header collides with prior content)
 - change font, font size, or margins
+- reduce the resume below exactly 5 experiences or exactly 3 projects
