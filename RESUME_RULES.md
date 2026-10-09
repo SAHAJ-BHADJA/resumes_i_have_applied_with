@@ -73,7 +73,7 @@ Before selecting anything, follow `FORMAT_BASELINE/CONTENT_SELECTION_POLICY.md`.
 ### 5. Write
 
 - **Summary**: 1-2 lines. Role family, years of experience (2+), strongest JD stack, 3-5 bolded keywords. No filler.
-- **Bullets**: 2 per role and 1 per project. Each bullet is 27-32 words, impact-first, and may bold JD-critical terms. Rewrite or merge for emphasis. Experience bullets and verified project facts come from master data; JD-specific project concepts must avoid unsupported metrics, links, production scale, or claims the candidate cannot defend.
+- **Bullets**: 2 per role and 1 per project. Each bullet is 27-32 words, impact-first, and must bold the most relevant JD-critical keyword(s) in that bullet using `\textbf{...}`. Bold only truthful technologies, responsibilities, domains, or outcomes supported by master data, company/JD research, or an allowed JD-specific project concept; never bold filler or unsupported keyword stuffing. Rewrite or merge for emphasis. Experience bullets and verified project facts come from master data; JD-specific project concepts must avoid unsupported metrics, links, production scale, or claims the candidate cannot defend.
 - **Skills**: each category on its own line, **at least 40 distinct, evidence-supported terms**. Build the list from the JD, mandatory company/team research, and verified master data; order JD must-haves first, then research-supported role signals, credible adjacent terms, and remaining defensible skills. Never add an unsupported skill merely to reach 40. Baseline categories (rename/reorder/drop per JD): Languages, Backend & APIs, Frontend, Databases, Cloud & Infrastructure, AI/ML, Engineering Practices.
 
 ### 6. Truthfulness gate
