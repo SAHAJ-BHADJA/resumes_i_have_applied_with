@@ -31,9 +31,11 @@ List the JD's must-have hard skills, responsibilities, and domain signals. Fit =
 
 ### 3a. JD-aligned project review
 
-Every resume should carry the strongest possible project section for the JD. First check whether an existing verified project in master data already covers the JD and company research. If one fits well, reuse it and tailor the bullet emphasis.
+Every resume has exactly two **Direct Match Projects**. Both should be the closest possible project-level matches to the JD and company research, and both may be newly drafted realistic real-world project concepts.
 
-If the existing project pool leaves a clear gap, add one realistic, real-world project concept directly to the resume. This is a resume-tailoring step, not an implementation task. Do not build code, create tests, write a README, generate docs, add a repository, or record benchmarks unless the user explicitly asks for that work.
+The two Direct Match Projects may be realistic, real-world JD-specific project concepts added directly to the resume. This is a resume-tailoring step, not an implementation task. Do not build code, create tests, write a README, generate docs, add a repository, or record benchmarks unless the user explicitly asks for that work. Never draft more than two project concepts per resume.
+
+The third project must be the strongest matching project from the existing verified project pool. Tailor it within truthful, interview-defensible facts. Parallel technology adaptations are allowed when technically equivalent and supported by the JD and company research—for example, adapting an AWS implementation to an analogous Azure implementation—but never invent responsibilities, scale, users, metrics, or outcomes.
 
 The added project must:
 
@@ -60,10 +62,11 @@ Before selecting anything, follow `FORMAT_BASELINE/CONTENT_SELECTION_POLICY.md`.
 
 - **Projects (exactly 3)**
 
-- Exactly 3 projects total. Prefer verified projects from master data when they fit.
+- Exactly 3 projects total: two Direct Match Projects, which may both be newly drafted, plus the strongest matching verified project from master data.
 - Score every verified project in master data for each JD according to `FORMAT_BASELINE/PROJECT_PORTFOLIO_POLICY.md`. Never limit consideration to projects used in recent resumes or listed in a role-family heuristic.
-- If no verified project covers an important JD signal, add one JD-aligned real-world project concept directly to the resume and list it first when it is the strongest project match.
-- Choose the remaining projects for complementary evidence (stack, responsibility, domain); avoid three projects that prove the same narrow capability.
+- Designate the first two projects as Direct Match Projects and optimize both as the closest possible JD matches. Either or both may be newly drafted JD-aligned real-world concepts.
+- Select the third project as the strongest suitable project from the verified master-data pool. Preserve truthful scope and outcomes while allowing defensible parallel-technology adaptation based on the JD and company research.
+- Never include more than one resume-only JD-specific project concept, even when multiple JD gaps remain. Report remaining gaps instead of creating or reshaping more projects.
 - Resume-only project concepts do not need implementation, testing, documentation, repository creation, or master-data insertion unless the user explicitly asks.
 - A project with a URL in master data gets a clickable title plus a red, underlined `Live` (deployed app) or `Code` (repo) label via `\resumeProjectLink`. A project without a URL is shown as a plain title. Prefer linked projects when fit is equal.
 - Never invent or infer a URL.
@@ -113,7 +116,7 @@ All projects follow `FORMAT_BASELINE/PROJECT_PORTFOLIO_POLICY.md`. Resume-only p
   2. research findings used (3-6 bullets)
   3. each selected experience/project with its JD-specific reason; each credible excluded alternative with the exact signal it lacked (stack, responsibility, domain, evidence, recency, duplication, missing link); note when the 5/3 limit decided it
   4. fit from verified master data (share of must-haves covered and what remains uncovered)
-  5. the strongest project match: what it solves, why it matches the research, and whether it was reused from master data or added as a JD-specific resume project concept
+  5. both Direct Match Projects: why each strongly matches the JD and whether each was drafted; also identify the third verified project and disclose any parallel-technology adaptation
   6. every stack re-mapping applied to VibrantChem / LST (original stack -> resume stack)
   7. anything new: portfolio additions or extensions verified and added to master data, enhancements confirmed, adjacent skills added
 
@@ -121,7 +124,7 @@ All projects follow `FORMAT_BASELINE/PROJECT_PORTFOLIO_POLICY.md`. Resume-only p
 
 - One page, `article`, `letterpaper`, `10pt`, template fonts. Section order: Summary, Education, Experience, Skills, Projects (reorder only if the user asks).
 - Every resume contains exactly 5 work-experience entries and exactly 3 project entries. Neither count may be reduced to solve layout overflow.
-- Header: `Sahaj Bhadja`, phone, `bhadja@usc.edu`, LinkedIn, GitHub, portfolio. Never remove a link.
+- Header: `Sahaj Bhadja`, phone, `sahajbhadja10@gmail.com`, LinkedIn, GitHub, portfolio. Never remove a link.
 - `USC Annenberg Media` never appears.
 - Bullets render as `•`.
 

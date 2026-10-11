@@ -23,6 +23,10 @@ Locked spacing values:
 - `\resumeProjItemListEnd`: `\vspace{-4pt}`
 - Between projects: `\vspace{3pt}`
 
+Project content rule:
+
+- Keep exactly three projects: two closest-possible Direct Match Projects, both allowed to be newly drafted, and one strongest matching verified project selected under `FORMAT_BASELINE/PROJECT_PORTFOLIO_POLICY.md`. Only truthful, technically equivalent parallel adaptation is allowed for the verified project.
+
 Formatting notes:
 
 - Section headers must be unnumbered (`Summary`, `Education`, etc.). Always include `\setcounter{secnumdepth}{0}` immediately after `\usepackage{titlesec}`.

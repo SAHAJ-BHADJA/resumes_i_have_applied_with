@@ -5,9 +5,10 @@ Locked visual values for `resume_template.tex`. These are the values Sahaj appro
 ## Invariants
 
 - `article`, `letterpaper`, `10pt`, default font family. One page.
-- Header: name + phone, email (`bhadja@usc.edu`), LinkedIn, GitHub, portfolio, with icons and underlines.
+- Header: name + phone, email (`sahajbhadja10@gmail.com`), LinkedIn, GitHub, portfolio, with icons and underlines.
 - Section order: Summary, Education, Experience, Skills, Projects.
 - Content counts: exactly 5 experience entries and exactly 3 project entries. Never reduce either count for page fit.
+- Project composition: exactly two Direct Match Projects, both of which may be newly drafted, plus one strongest matching verified project with only defensible parallel-technology adaptation, as defined in `PROJECT_PORTFOLIO_POLICY.md`.
 - Section rule sits on its own line under the title: `[\color{black}\vspace{-7pt}\rule{\linewidth}{0.4pt}\vspace{-2pt}]`. Never use `\titlerule`.
 - The first project heading must never touch the Projects rule: `\vspace{3pt}` right after `\resumeSubHeadingListStart` in the Projects section (approved 2026-10-02; `-2pt` made them touch).
 - Bullets render as `•` via explicit `label=\textbullet`.

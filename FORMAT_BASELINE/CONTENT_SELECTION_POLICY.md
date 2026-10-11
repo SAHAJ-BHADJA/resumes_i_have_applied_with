@@ -24,7 +24,7 @@ Score every eligible experience and every verified project against:
 - overlap or duplication with other selected entries
 - portfolio breadth and interview value
 
-Select exactly the strongest five experiences and exactly three projects. Prefer verified projects from master data. When the verified project pool leaves a clear JD gap, one realistic JD-aligned resume project concept may be added and counted among the three projects. Both counts are compulsory and have no page-fit, layout, role-family, or relevance-score exception. After selection, place experiences in strict reverse chronology; relevance determines inclusion, never ordering.
+Select exactly the strongest five experiences and exactly three projects. The first two must be **Direct Match Projects** optimized as the closest possible matches to the JD; both may be newly drafted realistic real-world concepts. The third must be the strongest matching project from verified master data. It may use a technically equivalent, interview-defensible parallel technology adaptation when supported by the JD and company research, but its responsibilities, scale, metrics, and outcomes must remain truthful. Never add more than two concepts. Both counts are compulsory and have no page-fit, layout, role-family, or relevance-score exception. After selection, place experiences in strict reverse chronology; relevance determines inclusion, never ordering.
 
 For delivery, provide a concise JD-specific reason for each selection and each credible excluded alternative. When the five-experience or three-project limit decides an exclusion, state that explicitly.
 
@@ -43,6 +43,8 @@ If fewer than 40 relevant verified terms are available, do not fabricate terms. 
 
 - Reusing the same five experiences without rescoring the full pool
 - Considering only projects used in recent resumes
+- Creating, inventing, or heavily JD-rewriting more than one project per resume
+- Drafting all three projects instead of keeping the third as the strongest verified project
 - Treating role-family tables as fixed selections
 - Keeping an entry solely because its source text already fits the template
 - Adding unsupported skills to satisfy the minimum

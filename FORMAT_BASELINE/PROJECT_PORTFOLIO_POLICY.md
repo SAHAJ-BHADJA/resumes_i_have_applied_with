@@ -1,12 +1,18 @@
 # Reusable Project Portfolio Policy
 
-Projects should make the resume stronger for the target JD while staying defensible in interviews. Verified portfolio projects remain preferred, but a JD-specific real-world project concept may be added directly to a resume when the existing pool leaves an important gap. This policy applies to every project considered for the resume project section.
+Projects should make the resume stronger for the target JD while staying defensible in interviews. Each resume uses its first two projects as the closest possible JD matches; both may be newly drafted JD-specific real-world concepts. The third is the strongest matching verified project. This policy applies to every project considered for the resume project section.
 
 ## Core Rule
 
-Every resume includes exactly three projects. Prefer verified portfolio projects from master data. If the verified pool does not strongly cover the JD, add one realistic JD-aligned project concept directly to the resume and use the two strongest complementary projects from the verified pool. This count is compulsory and has no page-fit or layout exception. Do not rename or reshape an existing project to imitate one employer's job description.
+Every resume includes exactly three projects:
 
-Resume tailoring may change which verified facts receive emphasis, but it must not change a verified project's canonical name, capabilities, technologies, metrics, implementation status, or links. A JD-specific project concept may be named and written for the resume, but it must avoid unsupported metrics, public links, production scale, employer-specific claims, or technologies the candidate cannot defend.
+1. One **Primary Direct Match Project**, optimized as a closest possible JD match and allowed to be newly drafted.
+2. One **Secondary Direct Match Project**, also optimized as a closest possible JD match and allowed to be newly drafted.
+3. One strongest matching project selected from the existing verified project pool.
+
+Both Direct Match Projects may be verified projects or realistic JD-aligned project concepts. Never create more than two JD-specific concepts. The third project must remain a verified portfolio selection. The three-project count is compulsory and has no page-fit or layout exception.
+
+Both Direct Match Projects should receive direct JD-optimized positioning. For the third verified project, tailoring may change emphasis and may substitute or add an analogous technology when the implementation effect is technically equivalent and supported by the JD and company research (for example, AWS to Azure). Its product purpose, responsibilities, scale, metrics, implementation status, and outcomes must remain truthful. Drafted concepts must avoid unsupported metrics, public links, production scale, employer-specific claims, or technologies the candidate cannot defend.
 
 ## Portfolio Requirements
 
@@ -27,16 +33,17 @@ Prefer projects with a working deployment or public repository when fit is other
 
 1. Extract the JD's required technical and responsibility signals.
 2. Enumerate and score the entire verified project pool in `master_resume_data.json` against those signals using only canonical master-data evidence. No project may be skipped because it was absent from a previous resume, a role-family heuristic, or a familiar default set.
-3. If the verified pool covers the JD well, select exactly three verified projects.
-4. If the verified pool leaves a clear gap, add one realistic JD-aligned project concept directly to the resume and select the two strongest complementary verified projects.
-5. Prefer complementary evidence: for example, one systems project, one production application, and one domain or infrastructure project when those dimensions matter.
-6. Tailor bullet emphasis to the JD, but preserve every underlying fact for verified projects.
-7. Report important uncovered requirements instead of manufacturing false alignment.
-8. Retain concise selection rationale for all selected projects and every credible excluded alternative so the final choice is auditable.
+3. Choose the Primary Direct Match Project; use a verified project or draft a realistic JD-aligned concept.
+4. Choose the Secondary Direct Match Project; use a verified project or draft a second realistic JD-aligned concept.
+5. Choose the third project as the strongest matching selection from the verified pool.
+6. Do not create a third JD-specific concept. For the verified project, allow only technically equivalent, interview-defensible parallel adaptations supported by the JD and company research.
+7. Tailor all three bullets to the JD while keeping claims defensible. Direct keyword mirroring may be used when technically and factually supported.
+8. Report important uncovered requirements instead of manufacturing false alignment.
+9. Retain concise selection rationale for all selected projects and every credible excluded alternative so the final choice is auditable.
 
 ## JD-Specific Project Concepts
 
-When the JD calls for a capability not covered well by verified projects, create one resume-ready project concept. This is a writing and positioning step only.
+Create up to two resume-ready JD-specific project concepts and use them as the two Direct Match Projects. This is a writing and positioning step only. The third project must come from the verified pool; no third concept may be added for the same resume.
 
 - **Discover from the role.** Base the concept on the target team's real problem, surfaced from the JD and company research.
 - **Keep it general.** Name the project after the engineering problem, not the employer or exact posting language.
@@ -77,7 +84,8 @@ Reject or revise a project when:
 - the repository is a shallow demo with no tests, documentation, or meaningful behavior
 - resume claims exceed what verified work or a defensible JD-specific project concept supports
 - multiple near-duplicate repositories exist for adjacent applications
+- more than two projects have been newly created, the third project is not from the verified pool, or a verified project has been rewritten beyond truthful and technically equivalent adaptation
 
 ## Truthfulness
 
-If no verified project covers a requirement, a realistic JD-specific project concept may cover the project-section gap, but do not infer experience with hardware, protocols, platforms, users, scale, or production deployment from adjacent work. A lower but defensible match is preferable to artificial alignment.
+Up to two realistic JD-specific project concepts may cover the two most important project-section gaps as the Direct Match Projects. The third must be the strongest defensible verified selection. Parallel technology adaptation is allowed only where the engineering effect is genuinely analogous; do not infer unrelated hardware, protocols, users, scale, metrics, or production deployment from adjacent work.
