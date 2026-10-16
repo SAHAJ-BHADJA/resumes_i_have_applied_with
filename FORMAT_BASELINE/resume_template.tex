@@ -10,7 +10,9 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
+\usepackage{graphicx}
+% Header icons are PNG images (FORMAT_BASELINE/icons) so PDF text extraction / ATS parsers never read glyph junk next to contact details.
+\newcommand{\hicon}[2]{\raisebox{-1pt}{\includegraphics[height=#2]{../../FORMAT_BASELINE/icons/#1.png}}}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
@@ -46,9 +48,9 @@
 \begin{document}
 \begin{center}
 {\Huge \scshape \textbf{Sahaj Bhadja}} \\ \vspace{1pt}
-\small \href{tel:2132844651}{\faPhone\ \underline{(213) 284-4651}} ~ \href{mailto:sahajbhadja10@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{sahajbhadja10@gmail.com}} ~
-\href{https://www.linkedin.com/in/sahaj-bhadja/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\raisebox{-0.2\height}\faGithub\ \underline{sahajbhadja}} ~
-\href{https://sahaj-bhadja.vercel.app/}{\raisebox{-0.2\height}\faGlobe\ \underline{sahaj-bhadja}}
+\small \href{tel:2132844651}{\hicon{phone}{8pt}\ \underline{(213) 284-4651}} ~ \href{mailto:sahajbhadja10@gmail.com}{\hicon{envelope}{6.2pt}\ \underline{sahajbhadja10@gmail.com}} ~
+\href{https://www.linkedin.com/in/sahaj-bhadja/}{\hicon{linkedin}{7.4pt}\ \underline{sahaj-bhadja}} ~ \href{https://github.com/SAHAJ-BHADJA}{\hicon{github}{7.8pt}\ \underline{sahajbhadja}} ~
+\href{https://sahaj-bhadja.vercel.app/}{\hicon{globe}{7.8pt}\ \underline{sahaj-bhadja}}
 \end{center}
 \vspace{-16pt}
 \section{Summary}

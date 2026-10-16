@@ -26,6 +26,7 @@ MIN_SKILLS = 40
 REQUIRED_EXPERIENCES = 5
 REQUIRED_PROJECTS = 3
 BANNED = ["USC Annenberg Media"]
+CONTACT_EMAIL = "sahajbhadja10@gmail.com"
 
 
 def find_tectonic() -> str:
@@ -154,9 +155,16 @@ def main() -> int:
             print(result.stdout[-3000:], result.stderr[-3000:], sep="\n")
             raise SystemExit("tectonic failed")
 
-        pages = len(PdfReader(str(built)).pages)
+        reader = PdfReader(str(built))
+        pages = len(reader.pages)
         if pages != 1:
             problems.append(f"PDF has {pages} pages (need exactly 1)")
+        # ATS parsers read the text layer: the email must extract as a standalone token with no glyph junk.
+        header = reader.pages[0].extract_text().split("Summary", 1)[0]
+        if not re.search(rf"(?<!\S){re.escape(CONTACT_EMAIL)}(?!\S)", header):
+            problems.append(f"header text does not contain a clean '{CONTACT_EMAIL}' token: {header!r}")
+        if any(ord(ch) > 127 for ch in header):
+            problems.append(f"header text contains non-ASCII characters (icon glyph leak?): {header!r}")
 
         out_dir = COMPANY_ROOT / args.company.strip().lower() / args.folder
         out_dir.mkdir(parents=True, exist_ok=True)
