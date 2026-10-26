@@ -5,8 +5,8 @@ Locked visual values for `resume_template.tex`. These are the values Sahaj appro
 ## Invariants
 
 - `article`, `letterpaper`, `10pt`, default font family. One page.
-- Header: name + phone, email (`sahajbhadja10@gmail.com`), LinkedIn, GitHub, portfolio, with icons and underlines.
-- Header icons are PNG images (`FORMAT_BASELINE/icons/*.png`, inserted by `\hicon`), never Font Awesome glyphs: glyph icons leak junk characters into the PDF text layer (e.g. `ćsahajbhadja10@gmail.com`), which job-application parsers autofill. `render_pdf_only.py` fails the build if the header text is not clean ASCII or the email is not a standalone token.
+- Header: name + phone, email (`sahaj.bhadja@gmail.com`), LinkedIn, GitHub, portfolio, with icons and underlines.
+- Header icons are PNG images (`FORMAT_BASELINE/icons/*.png`, inserted by `\hicon`), never Font Awesome glyphs: glyph icons can leak junk characters into the PDF text layer next to the email, which job-application parsers autofill. `render_pdf_only.py` fails the build if the header text is not clean ASCII or the email is not a standalone token.
 - Section order: Summary, Education, Experience, Skills, Projects.
 - Content counts: exactly 5 experience entries and exactly 3 project entries. Never reduce either count for page fit.
 - Project composition: exactly two Direct Match Projects, both of which may be newly drafted, plus one strongest matching verified project with only defensible parallel-technology adaptation, as defined in `PROJECT_PORTFOLIO_POLICY.md`.

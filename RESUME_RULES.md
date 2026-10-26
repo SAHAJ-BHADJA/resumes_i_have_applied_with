@@ -124,7 +124,7 @@ All projects follow `FORMAT_BASELINE/PROJECT_PORTFOLIO_POLICY.md`. Resume-only p
 
 - One page, `article`, `letterpaper`, `10pt`, template fonts. Section order: Summary, Education, Experience, Skills, Projects (reorder only if the user asks).
 - Every resume contains exactly 5 work-experience entries and exactly 3 project entries. Neither count may be reduced to solve layout overflow.
-- Header: `Sahaj Bhadja`, phone, `sahajbhadja10@gmail.com`, LinkedIn, GitHub, portfolio. Never remove a link.
+- Header: `Sahaj Bhadja`, phone, `sahaj.bhadja@gmail.com`, LinkedIn, GitHub, portfolio. Never remove a link.
 - `USC Annenberg Media` never appears.
 - Bullets render as `•`.
 
