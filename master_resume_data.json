@@ -1,0 +1,1449 @@
+{
+  "meta": {
+    "document_type": "resume_master_data",
+    "includes_commented_content": true,
+    "notes": [
+      "This file preserves all known resume content and additional extracted details in one master dataset.",
+      "Where a field was omitted but clearly implied by surrounding structure, the inferred value is included and noted.",
+      "When the same experience or project was described differently, the variations are stored together under the same record."
+    ]
+  },
+  "personal": {
+    "name": "Sahaj Bhadja",
+    "phone": "(213) 284-4651",
+    "email": "sahaj.bhadja@gmail.com",
+    "alternate_emails": [
+      "bhadja@usc.edu"
+    ],
+    "linkedin": "https://www.linkedin.com/in/sahaj-bhadja/",
+    "linkedin_handle": "sahaj-bhadja",
+    "github": "https://github.com/SAHAJ-BHADJA",
+    "github_handle": "sahajbhadja",
+    "website": "https://sahaj-bhadja.vercel.app/",
+    "website_handle": "sahaj-bhadja"
+  },
+  "summary": {
+    "active": [
+      "Software Engineer pursuing an MSCS at USC with 2+ years of experience shipping backend systems and AI products, working in distributed systems, ETL workflows, and LLM applications. Seeking backend, platform, or applied AI engineering roles."
+    ],
+    "commented_alternatives": [
+      "Software Engineer pursuing an M.S. in Computer Science at USC with 2+ years of experience building scalable APIs, async pipelines, database-backed systems, and AI-powered platforms. Skilled in Python, Java, JavaScript/TypeScript, FastAPI, Flask, Node.js, SQL, PostgreSQL, AWS, Azure, Docker, and Kubernetes, with experience in distributed systems, ETL workflows, and LLM applications. Seeking backend, platform, or applied AI engineering roles.",
+      "2+ years building production AI/LLM systems, backend infrastructure, and full-stack platforms - shipped systems serving 10K+ daily requests and cut latency by 71% across AWS, Azure, and FastAPI."
+    ]
+  },
+  "education": [
+    {
+      "institution": "University of Southern California",
+      "location": "Los Angeles, CA",
+      "start_date": "August 2024",
+      "end_date": "May 2026",
+      "degree": "Master of Science in Computer Science",
+      "gpa": "3.75/4",
+      "alternate_gpas": [
+        "3.85/4",
+        "3.88/4"
+      ],
+      "coursework": [
+        "Analysis of Algorithms",
+        "Database Systems",
+        "Web Technologies",
+        "Advanced NLP"
+      ]
+    },
+    {
+      "institution": "Pandit Deendayal Energy University",
+      "location": "Gandhinagar, India",
+      "location_variants": [
+        "Gandhinagar, Gujarat"
+      ],
+      "start_date": "November 2020",
+      "end_date": "May 2024",
+      "degree": "Bachelor of Technology in Computer Science and Engineering",
+      "gpa": "3.88/4",
+      "coursework": [
+        "Software Engineering",
+        "Operating Systems",
+        "Object-Oriented Programming",
+        "Data Retrieval"
+      ]
+    }
+  ],
+  "experience": {
+    "active_roles": [
+      {
+        "company": "USC Dornsife",
+        "location": "Los Angeles, CA",
+        "alternate_locations": [
+          "LA, California",
+          "Los Angeles"
+        ],
+        "title": "Software Engineer",
+        "alternate_titles": [
+          "Data Engineer - Student worker",
+          "Forward Deployed Engineer",
+          "Forward Deployed Software Engineer"
+        ],
+        "start_date": "September 2025",
+        "end_date": "Present",
+        "alternate_date_ranges": [
+          {
+            "start_date": "June 2025",
+            "end_date": "Present"
+          }
+        ],
+        "detailed_context": {
+          "overview": "Built backend and data infrastructure for an AI education platform, including multi-tenant storage design, orchestration, ETL-style integrations, and production reliability improvements.",
+          "systems_built": [
+            "Multi-tenant AI education platform with normalized relational schemas and row-level data isolation",
+            "Fault-tolerant async LLM orchestration system with explicit job-state transitions",
+            "ETL-style data integration pipelines across FastAPI services, relational databases, and cloud storage"
+          ],
+          "responsibilities": [
+            "Designed relational schema and storage architecture",
+            "Optimized query patterns, indexing, and dashboard performance",
+            "Built and maintained async job execution and failure isolation flows",
+            "Implemented data validation, reconciliation checks, and production release workflows"
+          ],
+          "technologies_used": [
+            "Azure SQL",
+            "Blob Storage",
+            "PostgreSQL",
+            "SQL Server",
+            "FastAPI",
+            "Supabase",
+            "CI/CD"
+          ],
+          "business_impact": [
+            "Supported 500+ users and 200+ users / 10K+ structured records across documented platform scopes",
+            "Reduced dashboard latency from 1.2s to 350ms",
+            "Reduced latency by 35% in data-integration workflows",
+            "Processed 1K+ AI jobs and 5K+ monthly integration jobs with 99%+ production reliability"
+          ],
+          "notable_challenges": [
+            "Multi-tenant data isolation",
+            "Cross-database SQL transformation workflows",
+            "Concurrent background job execution and failure recovery",
+            "Maintaining production reliability for recurring data pipelines"
+          ],
+          "jd_alignment_keywords": [
+            "backend systems",
+            "data engineering",
+            "ETL",
+            "SQL optimization",
+            "query tuning",
+            "multi-tenant architecture",
+            "distributed systems",
+            "cloud storage",
+            "production reliability"
+          ]
+        },
+        "bullet_bank": [
+          "Architected multi-tenant AI education platform on Azure SQL and Blob Storage with row-level security and normalized schemas for 500+ users, reducing dashboard latency from 1.2s to 350ms through query and indexing optimization.",
+          "Restructured a fault-tolerant async LLM orchestration system using FastAPI background workers, processing 1K+ AI jobs with explicit job-state transitions and failure isolation, increasing throughput by 3x under concurrent load.",
+          "Designed and optimized a multi-tenant PostgreSQL schema aligned with enterprise data warehouse principles, supporting 200+ users and 10K+ structured records; implemented SQL transformations across PostgreSQL and SQL Server environments, indexing, data validation, and query tuning, reducing latency by 35%.",
+          "Built ETL-style data integration pipelines using FastAPI, Supabase, SQL Server, and cloud storage, processing 5K+ monthly jobs with incremental loads, reconciliation checks, error handling, and CI/CD-backed releases, achieving 99%+ reliability in production environments.",
+          "Architected a multi-tenant AI education platform using Azure SQL + Blob Storage with Row-Level Security (RLS) and normalized schemas, supporting 500+ users; optimized indexed queries and access patterns, reducing dashboard latency from ~1.2s to ~350ms.",
+          "Restructured a fault-tolerant asynchronous LLM orchestration system using FastAPI background workers, processing 1K+ AI jobs with structured job-state transitions failure isolation, improving throughput by 3x under concurrent workloads while preventing cascading task failures."
+        ]
+      },
+      {
+        "company": "Grad8",
+        "location": "Los Angeles, CA",
+        "title": "Software Engineer Intern",
+        "start_date": "June 2025",
+        "end_date": "August 2025",
+        "detailed_context": {
+          "overview": "Built a full-stack AI-powered grading platform that automated question upload, rubric generation, student answer evaluation, and feedback delivery using multimodal LLMs and vision models for scalable educational workflows.",
+          "systems_built": [
+            "Web-based AI-powered grading platform for text and handwritten submissions",
+            "React dashboard with file upload, grading history, and question management views",
+            "Modular Flask backend with Blueprint-based MVC structure for auth, dashboard, and grading workflows",
+            "Concurrent batch-processing engine for uploaded assessment files",
+            "Rubric generation and grading workflow infrastructure with token and cost tracking"
+          ],
+          "responsibilities": [
+            "Designed the frontend-backend flow for question upload, rubric generation, grading, and grading history",
+            "Integrated multimodal LLMs and OCR into grading workflows",
+            "Designed secure ingestion for PDF, DOCX, and ZIP files",
+            "Implemented concurrent processing and backend APIs",
+            "Tracked token usage and estimated cost for each model invocation",
+            "Supported deployment and reliability for instructor-facing grading operations"
+          ],
+          "technologies_used": [
+            "Python",
+            "Flask",
+            "React",
+            "GPT-4o",
+            "GPT-4o Mini",
+            "Claude 3.5",
+            "Claude 3.7",
+            "Qwen-VL-Plus",
+            "Qwen-VL-Max",
+            "GPT-4o Vision",
+            "Claude Vision",
+            "OCR",
+            "MySQL",
+            "AWS RDS",
+            "GitHub Actions",
+            "Render",
+            "Vercel",
+            "REST APIs",
+            "multithreading",
+            "ThreadPoolExecutor",
+            "Flask-Login",
+            "CI/CD"
+          ],
+          "business_impact": [
+            "Served 150+ instructors",
+            "Handled 10K+ grading requests per day",
+            "Reduced feedback turnaround time by 60%",
+            "Enabled cost-aware model usage tracking across grading, rubric generation, and OCR workflows"
+          ],
+          "notable_challenges": [
+            "Multimodal grading accuracy",
+            "High-throughput batch execution",
+            "Secure ingestion of multiple academic file formats",
+            "Stable API performance under peak load",
+            "OCR reliability and LLM hallucination during grading",
+            "Controlling token cost on long-form answers"
+          ],
+          "jd_alignment_keywords": [
+            "backend engineering",
+            "full-stack development",
+            "AI systems",
+            "LLMs",
+            "OCR",
+            "concurrent systems",
+            "Flask",
+            "React",
+            "cost optimization",
+            "AWS",
+            "REST APIs",
+            "production reliability"
+          ],
+          "architecture_details": [
+            "React frontend integrated with Flask backend through REST endpoints such as /api/grade and /api/upload",
+            "Modular Flask backend organized with Blueprints including auth.py, dashboard.py, and question_detail.py",
+            "Conditional grading flow handled both text answers and image-based answers with model-specific execution paths",
+            "Batch grading used a multi_grade workflow with ThreadPoolExecutor to process large answer sets without blocking the UI"
+          ],
+          "llm_and_vision_strategy": [
+            "Integrated OpenAI, Anthropic, and Qwen model providers behind a switchable architecture",
+            "Used Qwen-VL-Plus as the default UI model while supporting dynamic model switching",
+            "Used GPT-4o Vision as the primary OCR processor for image-based answer extraction",
+            "Used Claude Vision as a fallback when OCR reliability or timeout handling required it",
+            "Built prompt chains for answer generation, rubric generation, grading, feedback, and reasoning"
+          ],
+          "grading_engine_details": [
+            "Rubric generation triggered automatically after reference answer upload",
+            "Scoring used a direct 0-100 grading scale instead of point bands",
+            "Output format included score, token-level feedback, and grading rationale",
+            "Results were persisted to the database and surfaced back through the frontend"
+          ],
+          "data_and_cost_tracking": [
+            "Maintained model_usage_logs records for model name, feature type, token counts, and estimated cost",
+            "Used static pricing configuration to estimate per-call usage cost",
+            "Kept normalized persistence across users, uploaded questions, answers, and model usage logs"
+          ],
+          "future_roadmap": [
+            "Admin dashboard",
+            "Feedback explanation engine",
+            "Rubric template reuse",
+            "Comparative evaluation against human grading"
+          ]
+        },
+        "bullet_bank": [
+          "Engineered an AI-powered grading platform leveraging multimodal LLMs (GPT-4o, Claude 3.7, Qwen-VL) and OCR to evaluate 10K+ text and handwritten submissions with 90%+ grading consistency at production scale.",
+          "Designed a concurrent batch-processing pipeline using multithreading and secure file ingestion (PDF, DOCX, ZIP) via AWS RDS + REST APIs, processing 1K+ files per batch with fault-tolerant execution.",
+          "Implemented production backend on AWS serving 150+ instructors and handling 10K+ grading requests/day; with CI/CD-driven rubric workflows, reducing feedback turnaround time by 60%, maintaining stable API response during peak load."
+        ]
+      },
+      {
+        "company": "Aasma Technology Solutions",
+        "location": "India",
+        "title": "Software Developer Engineer - (SecureSync)",
+        "start_date": "August 2023",
+        "end_date": "July 2024",
+        "detailed_context": {
+          "overview": "Designed and implemented a cross-platform microservice-based data-sharing solution focused on seamless data flow, reduced manual effort, and operational efficiency, with strong ownership across APIs, ETL, testing, and CI/CD automation.",
+          "systems_built": [
+            "Cross-platform data-sharing software built with a microservice architecture",
+            "Automated VM build and test workflows for executable delivery",
+            "ETL and API integration flows using AWS Glue and S3",
+            "Nightly automation pipeline for build, installation, integration testing, unit testing, and reporting",
+            "Cross-platform validation workflow across Windows, Linux, and macOS environments"
+          ],
+          "responsibilities": [
+            "Contributed from requirement analysis through deployment",
+            "Implemented large-scale API integrations",
+            "Designed and optimized APIs for performance and low-bandwidth users",
+            "Maintained CI/CD and unit/integration testing workflows",
+            "Led ETL pipeline redesign and efficiency improvements",
+            "Built object-oriented modules using Singleton and Factory design patterns",
+            "Collaborated with Microsoft/GitHub stakeholders during Agile sprints"
+          ],
+          "technologies_used": [
+            "Jenkins",
+            "GitHub",
+            "PyTest",
+            "Mockito",
+            "AWS Glue",
+            "S3",
+            "SQL",
+            "OOP",
+            "microservices",
+            "GitHub Actions",
+            "Blue Ocean",
+            "VM-based test automation"
+          ],
+          "business_impact": [
+            "Improved response times by 30%",
+            "Increased pipeline efficiency by 68%",
+            "Reduced technical debt by 20%",
+            "Reduced storage costs by 15%"
+          ],
+          "notable_challenges": [
+            "Cross-platform software delivery",
+            "Large-scale API optimization",
+            "Testing automation for VM/executable workflows",
+            "ETL redesign under production constraints",
+            "Supporting low-bandwidth environments",
+            "Managing multi-region and multi-platform CI validation"
+          ],
+          "jd_alignment_keywords": [
+            "microservices",
+            "CI/CD",
+            "ETL",
+            "AWS",
+            "API optimization",
+            "testing automation",
+            "Agile",
+            "DevOps",
+            "cross-platform systems",
+            "Jenkins",
+            "automation"
+          ],
+          "api_optimization_details": [
+            "Reduced payload sizes for low-bandwidth users through response filtering and pagination",
+            "Added query parameters for page and limit to split large responses into smaller chunks",
+            "Added field filtering so clients could request only the fields they needed",
+            "Improved query performance with indexing and caching of frequently requested data at the API layer"
+          ],
+          "data_pipeline_details": [
+            "Used AWS Glue to transform raw JSON, CSV, and Parquet data into normalized downstream-ready formats",
+            "Automated ETL workflows to reduce repetitive manual data preparation",
+            "Consolidated user activity logs from multiple sources into unified formats for analytics and API consumption",
+            "Used Amazon S3 for raw, intermediate, and final processed data storage"
+          ],
+          "ci_cd_and_test_automation": [
+            "Triggered pipelines from GitHub repository changes with separate feature, development, staging, and production branches",
+            "Validated builds locally in Jenkins before multi-platform execution",
+            "Ran parallel builds on India and USA servers across Windows, Linux, and macOS",
+            "Executed global tests, integration tests, and unit tests with nightly automation jobs",
+            "Generated CSV reports, code coverage summaries, and failure logs through Jenkins email notifications",
+            "Used Jenkins Blue Ocean for visualizing pipeline execution"
+          ],
+          "nightly_vm_test_flow": [
+            "Allocated VMs for automated testing",
+            "Auto-triggered Jenkins jobs nightly at 9 p.m.",
+            "Pulled the latest commits from the Git repository",
+            "Compiled the latest code and built an executable",
+            "Installed the executable on target VMs",
+            "Executed integration tests across end-to-end synchronization flows",
+            "Executed unit tests over isolated components with mocking where required",
+            "Generated CSV reports based on test execution results"
+          ]
+        },
+        "bullet_bank": [
+          "Formulated cross-platform data-sharing software with a microservice architecture and automated VM testing, executable builds, and 20+ unit/integration test suites using Jenkins, PyTest, and Mockito in an Agile Scrum environment with Microsoft/GitHub stakeholders.",
+          "Troubleshot and streamlined large-scale API integrations with OOP, AWS Glue, and S3, improving response times by 30%. Led team for ETL workflows, boosting pipeline efficiency 68% and cutting technical debt 20%.",
+          "Engineered cross-platform data-sharing software with a microservice architecture, leveraging CI/CD pipelines for unit and integration testing across 3 operating systems while collaborating in Sprint meetings with Microsoft/GitHub team.",
+          "Troubleshot and optimized large-scale API integrations using OOP design patterns, AWS Glue, and Amazon S3, improving response times by 30% for low-bandwidth. Led a team scalable ETL workflows, enhancing data pipeline efficiency by 68% and reducing technical debt by 20%, ensuring maintainability and performance.",
+          "Engineered cross-platform data-sharing software with a microservice architecture, ensuring consistent data flow and reducing manual entry by 35%. Employed CI/CD pipelines and quality assurance using Pytest for unit and integrated testing.",
+          "Troubleshoot and optimized API components, improving UX for low-bandwidth users by cutting payload sizes 25% during daily sprint meetings and Agile release cycles.",
+          "Designed and implemented key modules using OOP patterns (Singleton, Factory) for complex API integrations, optimizing algorithms and leveraging AWS Glue for scalable data transformation. Achieved a 30% reduction in response time, 20% reduction in technical debt, and a 68% efficiency boost with S3 storage, reducing costs by 15%."
+        ]
+      },
+      {
+        "company": "Aasma Technology Solutions",
+        "location": "India",
+        "title": "Full Stack Developer Intern - (VibrantChem)",
+        "start_date": "May 2023",
+        "end_date": "August 2023",
+        "detailed_context": {
+          "overview": "Built a scalable MERN-based resource management platform with microservices, real-time updates, CI/CD automation, Azure SQL-backed persistence, and analytics-driven optimization for resource allocation, lead management, and billing workflows.",
+          "systems_built": [
+            "MERN-based resource management platform (CRM)",
+            "Real-time update flows using WebSockets",
+            "Azure SQL-backed analytics and testing-enabled delivery workflows",
+            "Microservice-based platform for authentication, resource allocation, customer records, billing, lead management, role-based access, and notifications",
+            "Jenkins-driven CI/CD and Docker-based packaging pipeline for staged deployment"
+          ],
+          "responsibilities": [
+            "Designed and implemented end-to-end platform features using the MERN stack",
+            "Built CRM features and RESTful APIs",
+            "Implemented WebSocket-based synchronization",
+            "Supported large-scale record syncing across locations",
+            "Defined microservice boundaries and service interactions for modular maintainability",
+            "Automated builds, tests, and deployments through Jenkins pipelines",
+            "Modeled structured data in Azure SQL for users, resources, customers, invoices, payments, leads, notifications, and reporting",
+            "Used Google Analytics and monitoring data to improve delivery outcomes"
+          ],
+          "technologies_used": [
+            "MERN",
+            "MongoDB",
+            "Express.js",
+            "React",
+            "Node.js",
+            "WebSockets",
+            "RESTful APIs",
+            "microservices",
+            "Azure SQL",
+            "Jenkins",
+            "Google Analytics",
+            "Docker",
+            "Azure App Services",
+            "ARM templates",
+            "JWT",
+            "Jest",
+            "Mocha",
+            "Selenium",
+            "Snyk",
+            "OWASP Dependency-Check",
+            "Sentry",
+            "Azure Monitor",
+            "Kibana",
+            "Groovy"
+          ],
+          "business_impact": [
+            "Supported syncing of 2M+ records across locations",
+            "Reduced resource wastage by 42%",
+            "Increased lead conversions by 15%",
+            "Improved scalability and maintainability through modular microservices and automated deployments"
+          ],
+          "notable_challenges": [
+            "Large-scale cross-location synchronization",
+            "Real-time CRM updates",
+            "Balancing analytics, testing, and delivery speed",
+            "Ensuring real-time resource allocation consistency",
+            "Optimizing API performance with caching and lower database latency",
+            "Securing staging and production releases with automated checks"
+          ],
+          "jd_alignment_keywords": [
+            "full-stack development",
+            "MERN",
+            "microservices",
+            "REST APIs",
+            "WebSockets",
+            "Azure SQL",
+            "analytics",
+            "DevOps",
+            "CI/CD",
+            "Docker",
+            "Azure"
+          ],
+          "microservices_breakdown": [
+            "User Authentication Service with JWT-based access and role handling",
+            "Resource Allocation Service for assignment tracking, conflict resolution, and WebSocket updates",
+            "Customer Details Service for centralized profiles and interaction history",
+            "Invoices / Payment / Billing Service with gateway integration and billing-cycle tracking",
+            "Vendor and Client Records Service for monthly transaction and usage reporting",
+            "Lead Management Service with status tracking and analytics integration",
+            "Role-Based Access Service for secure feature permissions",
+            "Notification Service for email and SMS alerts"
+          ],
+          "ci_cd_pipeline": [
+            "Triggered builds from Git pushes and pull requests",
+            "Ran dependency installation, linting, static checks, and build generation in Jenkins",
+            "Executed unit, integration, and end-to-end tests before packaging",
+            "Packaged successful builds as Docker artifacts and deployed them to staging",
+            "Used manual approval gates before production release",
+            "Applied rolling-update or zero-downtime deployment practices for production changes"
+          ],
+          "infrastructure_and_data_model": [
+            "Used Azure App Services for hosting and scaling",
+            "Used ARM templates for repeatable infrastructure provisioning",
+            "Stored structured records for users, sessions, resources, allocations, customers, interactions, invoices, payments, vendors, client records, leads, lead activities, notifications, preferences, usage stats, and performance reports in Azure SQL",
+            "Secured data using Azure SQL encryption, firewalls, and role-based access controls"
+          ],
+          "monitoring_and_analytics": [
+            "Used Google Analytics to analyze feature usage, traffic sources, load times, and drop-off points",
+            "Used Sentry for error tracking, Azure Monitor for performance metrics, and Kibana for log visibility",
+            "Used analytics insights to reduce wastage and improve lead conversion"
+          ]
+        },
+        "inferred_fields": [
+          "Company name was blank in LaTeX for this role and was inferred from the preceding employer block."
+        ],
+        "bullet_bank": [
+          "Developed a MERN-based resource management platform (CRM) with WebSockets, RESTful APIs, and a microservice architecture, addressing large-scale challenges in code review syncing 2M+ records across locations with 33% fewer sync conflicts.",
+          "Developed a MERN-based resource management platform with WebSockets (real-time), RESTful APIs, and a microservices architecture, supporting 6+ core business workflows during code review and rollout.",
+          "Deployed Azure SQL with Jenkins for automated testing, leveraging Google Analytics to reduce resource wastage by 42%, increase lead conversions by 15%, and expand market reach.",
+          "Played a key role in developing a comprehensive resource management platform using the MERN stack, incorporating WebSockets for real-time updates and RESTful APIs for 2M+ synchronized records.",
+          "Implemented a microservices architecture with 8 services for authentication, resource allocation, customer management, billing, lead management, permissions, and notifications to keep the system modular and maintainable.",
+          "Automated deployments using Jenkins CI/CD pipelines and integrated Docker-based packaging and staging deployments, cutting deployment time by 50%.",
+          "Built a comprehensive resource management platform using the MERN stack, incorporating WebSockets for real-time updates and RESTful APIs while reducing code-review turnaround by 25% across release cycles.",
+          "Deployed Azure SQL database with Jenkins for CI/CD pipelines and automated testing, achieving 95%+ successful build validation across release runs.",
+          "Produced production-ready code in fast-paced environments of development life cycle leveraging Google Analytics, reducing resource wastage by 42% and increasing lead conversions by 15%, expanding market reach and profitability."
+        ]
+      },
+      {
+        "company": "LST Capitals",
+        "location": "India",
+        "title": "Web Developer Intern",
+        "start_date": "November 2022",
+        "end_date": "January 2023",
+        "detailed_context": {
+          "overview": "Built backend systems for a cross-platform service-booking application covering booking workflows, payments, real-time sync, analytics, and wallet-based authentication across Android, iOS, and web experiences.",
+          "systems_built": [
+            "Cross-platform booking platform for house-help services such as cleaning, AC repair, car washing, child care, and cooking",
+            "Flask API layer for booking, pricing, coupon validation, payments, and real-time status updates",
+            "Firebase-backed real-time synchronization, storage, image handling, and notification triggers",
+            "Full-stack multi-currency payment infrastructure with fraud, refund, dispute, and webhook handling",
+            "Hourly analytics pipeline over booking and payment events using Databricks and Spark",
+            "Wallet-signature authentication flow for Web3-based login"
+          ],
+          "responsibilities": [
+            "Designed the end-to-end system workflow and presented the architecture to the client",
+            "Built Flask APIs for booking management, payments, pricing, discounts, and real-time updates",
+            "Implemented Firebase-based data sync, storage, and booking-status updates",
+            "Integrated payment workflows across cards, wallets, and PayPal-style payment methods",
+            "Implemented coupon validation and discount recalculation logic",
+            "Supported analytics ingestion, client reporting, and cross-platform compatibility"
+          ],
+          "technologies_used": [
+            "React Native",
+            "React",
+            "TypeScript",
+            "Databricks",
+            "Spark",
+            "Flask API",
+            "Firebase",
+            "Firestore",
+            "Firebase Cloud Messaging",
+            "Web3",
+            "web3.js",
+            "MetaMask",
+            "payment infrastructure",
+            "Figma",
+            "Spring Boot",
+            "JWT",
+            "coupon engine",
+            "version control"
+          ],
+          "business_impact": [
+            "Supported 50K+ booking records",
+            "Delivered API latency below 200ms for core booking flows",
+            "Improved booking confirmation speed by 40% through Firebase real-time sync",
+            "Reduced manual refund handling by about 70% through webhook automation",
+            "Enabled analytics on 50K+ records",
+            "Improved cross-platform compatibility by 15%",
+            "Reduced design errors by 25%",
+            "Streamlined project delivery by 22%"
+          ],
+          "notable_challenges": [
+            "Cross-platform support across mobile and desktop environments",
+            "PCI-compliant payments",
+            "Fraud detection and webhook-driven payment events",
+            "Real-time analytics integration",
+            "Booking conflicts on shared time slots",
+            "Maintaining payment status consistency and idempotent webhook handling",
+            "Handling wallet connectivity issues on mobile platforms"
+          ],
+          "jd_alignment_keywords": [
+            "full-stack engineering",
+            "Flask",
+            "Firebase",
+            "data pipelines",
+            "payments",
+            "real-time analytics",
+            "cross-platform systems",
+            "transaction systems",
+            "webhooks",
+            "booking platforms",
+            "Web3"
+          ],
+          "architecture_details": [
+            "React Native powered Android and iOS clients, while React with TypeScript supported a web dashboard",
+            "Flask served as the primary backend for booking, pricing, coupon, and payment APIs",
+            "Pre-existing AWS-hosted microservices handled selected authentication and geo-data functions",
+            "Firebase managed booking persistence, image storage, real-time sync, notification triggers, and session checks"
+          ],
+          "booking_and_payment_flow": [
+            "User selected a service, time slot, and optional coupon from the mobile client",
+            "Client sent booking requests to Flask, which validated the request and persisted it to Firebase",
+            "Firebase pushed real-time updates back to the client UI for booking state changes",
+            "Payment gateway webhooks updated payment_status and supported refunds, disputes, and chargeback flows",
+            "Coupon validation recomputed price, checked eligibility, expiry, service restrictions, and usage rules"
+          ],
+          "analytics_and_security": [
+            "Databricks and Spark ingested Firebase booking and payment events in hourly micro-batches",
+            "Aggregated peak booking hours, most-used services, daily active users, and revenue summaries for internal dashboards",
+            "Used JWT and wallet-signature-based authentication for secure access patterns",
+            "Used Firebase transactions and locking to avoid double booking of identical time slots"
+          ]
+        },
+        "bullet_bank": [
+          "Engineered cross-platform (MacOS & AndroidOS) data-pipeline framework using Databricks, Flask API, and Firebase to enable real-time analytics on 50K+ records with automated testing and integrated Web3 support.",
+          "Integrated a full-stack, PCI-compliant payment infrastructure supporting multi-currency cards, UPI, wallets, and PayPal with real-time analytics, refund/dispute automation, and 70% less manual payment handling.",
+          "Built backend APIs for a cross-platform house-help service-booking application covering bookings, time-slot selection, reservation tracking, and payment status updates across 50K+ booking records.",
+          "Designed the system architecture and end-to-end workflow, mapped 12+ backend integration points, and presented the solution to the client for alignment before implementation.",
+          "Developed Flask APIs, integrated a UAE-oriented payment flow with webhooks, and built pricing and coupon workflows while managing real-time data synchronization through Firebase for sub-200ms booking APIs.",
+          "Implemented wallet-signature authentication through Web3 integration to support passwordless secure login patterns and eliminate 100% of password storage for wallet users.",
+          "Achieved a 15% boost in cross-platform compatibility, optimizing end-to-end performance and user engagement.",
+          "Designed scalable and fault-tolerant system framework using Figma for data orchestration, reducing design errors by 25% while ensuring version-control and cross-platform development.",
+          "Streamlined project delivery by 22% through a Spring Boot API and Firebase integration, employing unit automation and Web3 features for cross-platform solutions.",
+          "Architected system framework, cutting design errors by 25%, and collaborated with teams and clients. Efficient project management with seamless customer interaction, a cross-functional platform available on both iOS and Android.",
+          "Streamlined project delivery by 22% through developing a Flask API and Firebase cloud systems, having Web3 integration across mobile and web platforms resulting in 15% increase in cross-platform compatibility."
+        ]
+      },
+      {
+        "company": "Pandit Deendayal Energy University",
+        "location": "India",
+        "title": "Research Fellowship",
+        "start_date": "January 2023",
+        "end_date": "May 2024",
+        "detailed_context": {
+          "overview": "Conducted research on quantum-resistant blockchain systems, focusing on lattice-based cryptography, consensus design, and secure decentralized authentication.",
+          "systems_built": [
+            "Quantum-resistant blockchain architecture using lattice-based cryptography",
+            "Novel consensus design to reduce centralized control and quantum risk",
+            "Research output presented as a peer-reviewed technical paper"
+          ],
+          "responsibilities": [
+            "Studied and evaluated existing blockchain consensus mechanisms",
+            "Designed cryptography and consensus improvements for quantum resistance",
+            "Contributed to technical writing and conference/paper presentation"
+          ],
+          "technologies_used": [
+            "blockchain",
+            "lattice-based cryptography",
+            "consensus algorithms",
+            "technical research"
+          ],
+          "business_impact": [
+            "Contributed to a peer-reviewed technical paper",
+            "Presented work at IISc Bengaluru"
+          ],
+          "notable_challenges": [
+            "Reducing quantum vulnerability in blockchain systems",
+            "Balancing decentralization with consensus robustness",
+            "Translating research into publishable technical work"
+          ],
+          "jd_alignment_keywords": [
+            "research",
+            "blockchain",
+            "cryptography",
+            "distributed systems",
+            "consensus algorithms",
+            "security"
+          ]
+        },
+        "bullet_bank": [
+          "Formulated a Quantum-Resistant Blockchain by integrating 5+ lattice-based cryptographic primitives into the protocol design.",
+          "Analyzed existing consensus mechanisms and developed a novel algorithm reducing centralized-control and quantum-risk exposure by 25% in benchmark simulations.",
+          "Contributed to 1 peer-reviewed technical paper and presented the work at IISc Bengaluru as part of an IEEE publication."
+        ]
+      },
+      {
+        "company": "USC AD Labs",
+        "location": "Los Angeles, CA",
+        "title": "ML Research Assistant",
+        "start_date": "January 2025",
+        "end_date": "May 2025",
+        "detailed_context": {
+          "overview": "Worked on transformer-based behavioral planning for autonomous driving, combining offline reinforcement learning with HD-map-aware spatial-temporal encoding to improve long-horizon planning and generalization.",
+          "systems_built": [
+            "GPT-based Decision Transformer for offline reinforcement learning",
+            "End-to-end data pipeline processing 100K+ trajectory logs",
+            "Spatial-temporal encoder combining HD-map geometry with ego-agent trajectory context",
+            "Closed-loop simulation evaluation pipeline for HD-map-aware behavioral planning"
+          ],
+          "responsibilities": [
+            "Built simulation and model-training pipelines",
+            "Designed map-aware encoder architecture for behavioral planning",
+            "Integrated map context and historical trajectory signals into the planner",
+            "Prepared dataset features from trajectory logs and HD map vectors",
+            "Evaluated long-horizon planning performance and closed-loop stability"
+          ],
+          "technologies_used": [
+            "PyTorch",
+            "Hydra",
+            "Weights & Biases",
+            "GPT-based models",
+            "Decision Transformer",
+            "offline reinforcement learning",
+            "multi-head attention",
+            "AdamW",
+            "cosine decay scheduling",
+            "simulation pipelines"
+          ],
+          "business_impact": [
+            "Improved long-horizon trajectory planning by 18% in simulation",
+            "Improved closed-loop planning stability by 15%",
+            "Observed fewer off-road trajectories and stronger semantic map attention in closed-loop evaluation"
+          ],
+          "notable_challenges": [
+            "Long-horizon planning in autonomous driving",
+            "Fusing HD-map geometry with temporal agent context",
+            "Processing large-scale trajectory data",
+            "Sparse reward instability in long-horizon offline RL",
+            "Single-GPU experimentation limits",
+            "Discretization artifacts in continuous action spaces"
+          ],
+          "jd_alignment_keywords": [
+            "machine learning",
+            "research",
+            "transformers",
+            "reinforcement learning",
+            "sequence modeling",
+            "data pipelines",
+            "autonomous driving",
+            "offline RL",
+            "behavioral planning"
+          ],
+          "dataset_and_inputs": [
+            "Worked with roughly 10K autonomous-driving episodes for experimentation from internally collected trajectory logs",
+            "Used raw HD map vectors including road boundaries, lane directions, lane connectivity, and semantic attributes",
+            "Encoded ego state, past 5-second trajectory history at 10Hz, nearby agents, and aligned all features to a global coordinate frame"
+          ],
+          "model_architecture_details": [
+            "Used a Decision Transformer backbone with autoregressive prediction over return-to-go, state, and action token triples",
+            "Customized positional encoding for time-aligned triplets across each timestep",
+            "Built a transformer-compatible spatial-temporal encoder with modality-specific MLP embeddings",
+            "Allowed ego, road, and nearby-agent tokens to attend to each other through learned attention and distance-aware interaction weighting"
+          ],
+          "training_and_evaluation": [
+            "Trained in an offline RL setting without online rollouts",
+            "Used cross-entropy loss over discretized control outputs with AdamW and cosine decay",
+            "Compared against linear-encoder Decision Transformer, Wayformer-style cross-attention, and MotionLM-style encoders",
+            "Evaluated in closed-loop simulation rollouts and inspected qualitative lane-following, semantic attention, and off-road behavior"
+          ],
+          "future_roadmap": [
+            "Joint forecasting and planning encoder-decoder design",
+            "Planning-metric-conditioned training signals beyond return-to-go",
+            "Scaling to larger datasets such as Waymo Open Motion or NuScenes",
+            "Sensor-token integration for LiDAR and vision",
+            "Multi-agent decision making for merge and intersection scenarios"
+          ]
+        },
+        "bullet_bank": [
+          "Built a GPT-based Decision Transformer for offline RL in autonomous driving, improving long-horizon trajectory planning by 18% in simulation and developing end-to-end pipelines processing 100K+ trajectory logs.",
+          "Architected a spatial-temporal encoder integrating HD-map geometry (road layout, lane direction) with ego-agent context (past trajectories) via multi-head attention, improving closed-loop planning stability by 15%."
+        ]
+      },
+      {
+        "company": "Cyber Security and Data Mining: Detecting Malicious URL",
+        "location": "India",
+        "title": "Data Analyst - Research Fellowship",
+        "start_date": "May 2023",
+        "end_date": "August 2023",
+        "detailed_context": {
+          "overview": "Built a malicious URL detection pipeline combining feature engineering, classical machine learning, and deep learning over a large URL dataset.",
+          "systems_built": [
+            "Malicious URL detection system trained on 650K+ URLs",
+            "Feature-engineering pipeline over 21 behavioral URL indicators",
+            "Comparative ML and deep learning evaluation pipeline"
+          ],
+          "responsibilities": [
+            "Designed statistical features for phishing/malware detection",
+            "Trained and evaluated classical ML and sequence/deep learning models",
+            "Generated security insights from model outputs and behavioral patterns"
+          ],
+          "technologies_used": [
+            "Gaussian Naive Bayes",
+            "Random Forest",
+            "RNN",
+            "LSTM",
+            "Bi-LSTM",
+            "GRU",
+            "CNN"
+          ],
+          "business_impact": [
+            "Achieved 96%+ detection accuracy"
+          ],
+          "notable_challenges": [
+            "High-volume URL classification",
+            "Balancing feature engineering with deep learning approaches",
+            "Identifying phishing and malware patterns from behavioral indicators"
+          ],
+          "jd_alignment_keywords": [
+            "data science",
+            "machine learning",
+            "deep learning",
+            "feature engineering",
+            "classification",
+            "security analytics"
+          ]
+        },
+        "bullet_bank": [
+          "Designed and implemented a malicious URL detection system on a dataset of 650K+ URLs, applying advanced statistical feature engineering and machine learning models (Gaussian NB, Random Forest) alongside deep learning architectures (RNN, LSTM, Bi-LSTM, GRU, CNN).",
+          "Achieved 96%+ detection accuracy, building a feature-rich pipeline with 21 behavioral indicators (e.g., IP presence, URL length, suspicious keywords) and generating actionable insights into phishing and malware trends."
+        ]
+      }
+    ],
+    "commented_only_roles": []
+  },
+  "skills": {
+    "active": {
+      "Languages": [
+        "Python",
+        "Java",
+        "C++",
+        "JavaScript/TypeScript",
+        "SQL",
+        "Shell",
+        "Solidity"
+      ],
+      "Backend & APIs": [
+        "Flask",
+        "Django",
+        "Node.js",
+        "Express.js",
+        "REST APIs",
+        "FastAPI",
+        "Spring Boot"
+      ],
+      "Frontend": [
+        "React.js",
+        "Next.js",
+        "TailwindCSS",
+        "Angular.js",
+        "HTML",
+        "CSS"
+      ],
+      "Databases": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "NoSQL",
+        "Firebase",
+        "Hadoop",
+        "Apache"
+      ],
+      "Cloud & Infrastructure": [
+        "AWS (EC2, S3, RDS)",
+        "Microsoft Azure",
+        "Docker",
+        "Kubernetes",
+        "NGINX",
+        "Databricks"
+      ],
+      "AI/ML": [
+        "PyTorch",
+        "TensorFlow",
+        "Transformers",
+        "NLP",
+        "LLM Systems",
+        "Feature Engineering",
+        "Hyperparameter Tuning"
+      ],
+      "Tools & Platforms": [
+        "Git",
+        "Bash",
+        "Linux",
+        "GitHub Actions",
+        "Postman",
+        "JIRA",
+        "Tableau",
+        "Splunk",
+        "Truffle",
+        "Ganache",
+        "Metamask"
+      ],
+      "Protocols & Formats": [
+        "TCP/IP",
+        "JSON",
+        "XML",
+        "YAML"
+      ],
+      "Engineering Practices": [
+        "CI/CD",
+        "Distributed Systems",
+        "ETL Pipelines",
+        "Performance Optimization",
+        "Agile",
+        "System Design"
+      ]
+    },
+    "commented_profiles": [
+      {
+        "Languages": [
+          "C++",
+          "Python",
+          "Java",
+          "JavaScript",
+          "TypeScript",
+          "SQL",
+          "Git",
+          "Bash",
+          "Shell",
+          "Linux"
+        ],
+        "Web tech": [
+          "HTML",
+          "CSS",
+          "Tailwind CSS",
+          "React.js",
+          "Angular.js",
+          "Flask",
+          "Node.js",
+          "Express.js",
+          "Next.js",
+          "jQuery"
+        ],
+        "AI & ML": [
+          "TensorFlow",
+          "PyTorch",
+          "OpenAI API",
+          "Transformers",
+          "LLaMA-2 fine tuning",
+          "MLOps Pipeline and Automation"
+        ],
+        "Database and Cloud Platforms": [
+          "MySQL",
+          "MongoDB",
+          "AWS (S3, Glue, RDS)",
+          "Terraform",
+          "Grafana",
+          "Ansible"
+        ],
+        "Development Practices and Tools": [
+          "Automation",
+          "Testing scripts",
+          "Data pipelines",
+          "Agile Methodology",
+          "Query Optimization & Execution",
+          "Docker",
+          "Jenkins",
+          "GitHub",
+          "Object-oriented design",
+          "Data/ETL Pipeline Development"
+        ]
+      },
+      {
+        "Languages": [
+          "Python",
+          "JavaScript",
+          "TypeScript",
+          "SQL",
+          "Java",
+          "C",
+          "C++",
+          "Git",
+          "Bash",
+          "Linux",
+          "PHP"
+        ],
+        "Frameworks and tools": [
+          "Flask",
+          "Django",
+          "Node.js",
+          "React.js",
+          "Angular.js",
+          "Kubernetes",
+          "Docker",
+          "Next.js",
+          "GitHub",
+          "Spring"
+        ],
+        "Cloud Platforms": [
+          "AWS (EC2, S3, Glue)",
+          "Google Cloud Platform",
+          "Azure SQL"
+        ],
+        "Databases": [
+          "MongoDB",
+          "MySQL",
+          "PostgreSQL"
+        ],
+        "Development Practices": [
+          "RESTful API Development",
+          "Agile Methodology",
+          "CI/CD Pipelines"
+        ]
+      }
+    ],
+    "focused_profiles": {
+      "data_engineering_focus": {
+        "Programming": [
+          "Python",
+          "SQL",
+          "JavaScript"
+        ],
+        "Databases": [
+          "PostgreSQL",
+          "Relational Database Design",
+          "SQL Optimization",
+          "Indexing",
+          "Data Modeling"
+        ],
+        "Data Engineering": [
+          "ETL Pipelines",
+          "Data Integration",
+          "Incremental Loads",
+          "Data Validation",
+          "Reconciliation Checks"
+        ],
+        "Cloud Platforms": [
+          "AWS (S3, Glue, ECS, CodePipeline)",
+          "GCP"
+        ],
+        "DevOps": [
+          "Docker",
+          "Terraform",
+          "Jenkins",
+          "CI/CD",
+          "Production Releases"
+        ],
+        "Methodologies": [
+          "Agile/Scrum",
+          "Cross-functional Collaboration"
+        ]
+      }
+    }
+  },
+  "projects": [
+    {
+      "name": "Big-Brain",
+      "alternate_names": [],
+      "live_url": "https://big-brain-pied.vercel.app/",
+      "subtitles": [
+        "Cloud Data Platform"
+      ],
+      "technologies": [
+        "LLaMA-2",
+        "FAISS",
+        "Pinecone",
+        "PostgreSQL",
+        "GCP",
+        "REST APIs",
+        "Shadcn",
+        "Clerk",
+        "Convex"
+      ],
+      "detailed_context": {
+        "overview": "Built an AI-powered SaaS platform for secure document upload, semantic search, summarization, and collaborative document conversations.",
+        "key_features": [
+          "Secure document upload and management with Clerk-based authentication",
+          "Real-time document summarization for long-form content",
+          "Conversational document QA using semantic search and embeddings",
+          "Real-time multi-user collaboration using Convex",
+          "Responsive UI using Shadcn"
+        ],
+        "responsibilities": [
+          "Designed vector search architecture with Pinecone and FAISS",
+          "Implemented document conversation flows and summarization features",
+          "Built secure authentication and document-access controls with Clerk",
+          "Implemented real-time collaborative backend behavior with Convex"
+        ],
+        "impact": [
+          "Reduced document-analysis time by up to 60%",
+          "Enabled collaborative document workflows with low-latency synchronization",
+          "Maintained scalable performance through a serverless real-time architecture"
+        ]
+      },
+      "bullet_bank": [
+        "Built a semantic document retrieval system over 50K+ documents using transformer embeddings and FAISS, enabling contextual Q&A and summarization with sub-second retrieval through optimized embedding and similarity search pipelines.",
+        "Engineered a cloud-based data ingestion and indexing pipeline processing 50K+ records, implementing incremental updates, metadata persistence, and performance tuning to reduce retrieval latency by 40%.",
+        "Crafted an AI-assisted transcript and document ingestion platform using LLaMA-2 and FAISS, achieving 95% query accuracy across 50K+ documents, empowering 200+ users with semantic search and summarization pipelines.",
+        "Created an AI-powered document interaction platform with LLaMA-2 and FAISS, enabling intelligent analysis and real-time previews for 200+ users while sustaining 95% query accuracy.",
+        "Built secure document upload and management with Clerk, real-time summarization, and collaborative document workflows powered by Convex, reducing document review time by 60%."
+      ]
+    },
+    {
+      "name": "HMIS - Hospital Management Information System",
+      "alternate_names": [
+        "HMIS (Hospital Management Information System)"
+      ],
+      "live_url": "https://hims-rouge.vercel.app/",
+      "subtitles": [],
+      "technologies": [
+        "MERN",
+        "ABDM APIs",
+        "Sentry",
+        "Twilio",
+        "TailwindCSS",
+        "Appwrite",
+        "TypeScript"
+      ],
+      "detailed_context": {
+        "overview": "Built a healthcare management platform to streamline appointments, patient record access, and clinician workflows through secure ABDM-based integrations and operational automation.",
+        "key_features": [
+          "Consent-based access to patient history through ABDM APIs",
+          "Appointment booking, rescheduling, and cancellation workflows",
+          "Doctor and hospital dashboards for schedule management",
+          "Twilio SMS reminders, confirmations, and updates",
+          "Error monitoring and performance tracking through Sentry",
+          "Responsive TailwindCSS-based UI with Appwrite-backed authentication and data handling"
+        ],
+        "responsibilities": [
+          "Integrated ABDM APIs with explicit patient-consent flows",
+          "Built the appointment-management experience and dashboard features",
+          "Implemented automated notifications through Twilio",
+          "Monitored and improved performance through Sentry and backend optimization"
+        ],
+        "impact": [
+          "Reduced hospital administrative workload by 30%",
+          "Improved access to real-time patient histories for clinical decision-making",
+          "Improved appointment adherence through timely SMS reminders"
+        ]
+      },
+      "bullet_bank": [
+        "Architected a microservice-based healthcare platform integrating India's ABDM APIs, supporting 100+ daily appointment workflows and reducing patient record retrieval by 2x through structured schema design and real-time monitoring.",
+        "Won SIH hackathon by designing and implementing a system leveraging India's Ayushman Bharat Digital Mission (ABDM) APIs, applying low-level object-oriented design principles to enable doctors to access patient medical histories 2x faster and manage 100+ appointments daily, enhancing healthcare delivery.",
+        "Won Smart India Hackathon by building a system with ABDM APIs, enabling doctors to access patient histories 2x faster and manage 100+ appointments efficiently with OOP-based workflows.",
+        "Implemented consent-based patient-history access, Twilio appointment alerts, Sentry monitoring, and scalable TypeScript-backed workflows to reduce administrative workload by 30%."
+      ]
+    },
+    {
+      "name": "Comprehensive Analysis of Blockchain for Applicability in User Authentication",
+      "alternate_names": [
+        "Comprehensive Analysis of Blockchain for User Authentication",
+        "Comprehensive Analysis of Blockchain for User Authentication Paper"
+      ],
+      "live_url": "https://ieeexplore.ieee.org/document/10425535",
+      "subtitles": [
+        "IEEE Conference Paper"
+      ],
+      "technologies": [
+        "Blockchain",
+        "Distributed Ledger Technology",
+        "Smart Contracts",
+        "User Authentication",
+        "IoT Device Authentication",
+        "Role-Based Access Control",
+        "Self-Sovereign Identity"
+      ],
+      "publication": {
+        "publisher": "IEEE",
+        "conference": "2023 2nd International Conference on Futuristic Technologies (INCOFT)",
+        "conference_dates": "November 24-26, 2023",
+        "doi": "10.1109/INCOFT60753.2023.10425535",
+        "ieee_article_id": "10425535",
+        "authors": [
+          "Manav Ukani",
+          "Sahaj Bhadja",
+          "Kaushal Shah"
+        ]
+      },
+      "detailed_context": {
+        "overview": "Analyzed decentralized blockchain-based authentication as an alternative to centralized identity systems, including user, IoT-device, and role-based access scenarios.",
+        "key_concepts": [
+          "On-chain identity records and immutable verification trails",
+          "Smart-contract-driven authentication without a centralized verifier",
+          "Self-sovereign identity and selective credential sharing",
+          "IoT device identity and role-based authorization"
+        ],
+        "source_file": "e:\\Papers\\Comprehensive_Analysis_of_Blockchain_for_Applicability_in_User_Authentication.pdf"
+      },
+      "bullet_bank": [
+        "Co-authored an IEEE paper analyzing blockchain-based authentication architectures that replace centralized identity stores with immutable distributed records and smart-contract verification.",
+        "Evaluated blockchain authentication for online users, IoT device identity, and role-based access control, including self-sovereign identity and secure credential-sharing models.",
+        "Examined how distributed ledgers and smart contracts can reduce reliance on third-party verifiers while mitigating identity theft, replay, man-in-the-middle, and phishing risks."
+      ]
+    },
+    {
+      "name": "A Detailed Exploration to Quantum Resistant Blockchain Technology",
+      "alternate_names": [
+        "Quantum Resistant Blockchain Technology",
+        "A Detailed Exploration to Quantum-Resistant Blockchain Technology"
+      ],
+      "live_url": "https://ieeexplore.ieee.org/document/10677253",
+      "subtitles": [
+        "IEEE Conference Paper"
+      ],
+      "technologies": [
+        "Blockchain",
+        "Post-Quantum Cryptography",
+        "FALCON Digital Signatures",
+        "Delegated Proof of Stake with Node Behavior",
+        "Borda Count",
+        "Consensus Algorithms",
+        "Quantum Computing"
+      ],
+      "publication": {
+        "publisher": "IEEE",
+        "conference": "2024 IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)",
+        "year": 2024,
+        "pages": "1-6",
+        "doi": "10.1109/CONECCT62155.2024.10677253",
+        "ieee_article_id": "10677253",
+        "authors": [
+          "Kaushal Shah",
+          "Manav Ukani",
+          "Sahaj Bhadja"
+        ]
+      },
+      "detailed_context": {
+        "overview": "Proposed a quantum-resistant blockchain framework combining NIST-selected FALCON signatures with DPoSB consensus for secure, fair, and decentralized witness selection.",
+        "key_features": [
+          "FALCON lattice-based digital signatures for post-quantum transaction authentication",
+          "Node-behavior monitoring and Borda Count ranking for witness selection",
+          "Comparison against an ECDSA-based blockchain baseline across 100-1,000 transaction workloads"
+        ],
+        "results": [
+          "Reached 957.8 transactions per second at a 1,000-transaction workload versus 968.3 for the ECDSA baseline",
+          "Measured 224 ms latency at the highest workload versus 211 ms for the ECDSA baseline"
+        ],
+        "source_file": "e:\\Major project\\FINAL OUTCOMES\\Major_Project_Conf_paper.pdf"
+      },
+      "bullet_bank": [
+        "Co-authored an IEEE paper proposing a quantum-resistant blockchain framework that combines FALCON lattice-based signatures with DPoSB consensus, node-behavior monitoring, and Borda Count witness selection.",
+        "Evaluated the framework across 100-1,000 transaction workloads, sustaining 957.8 TPS at 224 ms latency at peak load versus 968.3 TPS and 211 ms for an ECDSA baseline.",
+        "Analyzed Shor's and Grover's algorithm threats to blockchain cryptography and designed a post-quantum approach that preserves decentralized, transparent validator selection."
+      ]
+    },
+    {
+      "name": "CaptionCraft - Image Caption Generator",
+      "alternate_names": [
+        "CaptionCraft - Image caption generator"
+      ],
+      "live_url": "https://imagecaptiongenerator.com/",
+      "subtitles": [],
+      "technologies": [
+        "Transformers",
+        "PyTorch",
+        "Flask",
+        "LLMs",
+        "DL",
+        "Streamlit",
+        "Gradio"
+      ],
+      "bullet_bank": [
+        "Benchmarked multiple transformer architectures (BLIP, GIT, ViT-GPT-2) on a 10K image / 100K caption dataset, improving caption accuracy by 15% (81% to 96%) while building inference APIs for scalable real-time caption generation.",
+        "Conducted comparative analysis of fine-tuned BLIP, GIT, ViT-GPT-2, and a custom model on a football dataset (10k images, 100k captions), boosting caption accuracy by 15% (81% -> 96%)."
+      ]
+    },
+    {
+      "name": "Chat2SQL",
+      "alternate_names": [],
+      "live_url": "https://github.com/SAHAJ-BHADJA/Chat2SQL",
+      "subtitles": [
+        "AI-Powered SQL Development and Database Management Platform"
+      ],
+      "technologies": [
+        "Java",
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "Less",
+        "SQL",
+        "PostgreSQL",
+        "MySQL",
+        "Oracle",
+        "SQLServer",
+        "SQLite",
+        "MariaDB",
+        "MongoDB",
+        "Redis",
+        "Snowflake",
+        "Docker",
+        "Maven",
+        "Node.js",
+        "Yarn"
+      ],
+      "detailed_context": {
+        "overview": "Built an AI-powered SQL development and database management workspace based on the Chat2DB project to help users connect to databases, explore schemas, generate SQL faster, and manage data from a unified interface.",
+        "key_features": [
+          "Intelligent SQL generation for faster query authoring and schema-aware development",
+          "Database management workspace supporting 10+ database systems from a single UI",
+          "AI-assisted reporting and dashboard generation",
+          "Database structure synchronization and schema management workflows",
+          "Cross-platform desktop support across Windows, macOS, and Linux",
+          "Docker-based deployment and local debugging workflows for frontend and backend services"
+        ],
+        "responsibilities": [
+          "Customized and extended the Chat2DB codebase for AI-assisted SQL and database workflows",
+          "Worked across Java backend and TypeScript frontend modules to support database exploration and query productivity",
+          "Set up multi-environment development and deployment workflows using Maven, Node.js, Yarn, and Docker",
+          "Supported schema sync, query console, and AI-ready SQL authoring capabilities from a single workspace"
+        ],
+        "impact": [
+          "Enabled a unified workspace for 10+ database types and AI-assisted SQL workflows",
+          "Improved SQL authoring and data exploration speed through schema-aware query generation",
+          "Created a developer-friendly setup spanning Java 17, Node 16+, Docker, and Maven-based services"
+        ]
+      },
+      "bullet_bank": [
+        "Designed a schema-aware SQL transformation pipeline generating optimized queries with 82% accuracy, implementing validation and structured execution against relational databases in enterprise-style environments.",
+        "Built an AI-powered SQL development workspace on top of the Chat2DB project, supporting 10+ databases and accelerating query authoring, schema exploration, and data management from a unified interface.",
+        "Worked across a Java and TypeScript codebase with Docker, Maven, Node.js, and Yarn to support cross-platform database workflows on Windows, macOS, and Linux with AI-ready local deployment."
+      ]
+    },
+    {
+      "name": "Linguistix",
+      "alternate_names": [],
+      "live_url": "",
+      "subtitles": [
+        "Scalable Data Processing API"
+      ],
+      "technologies": [
+        "Python",
+        "AWS",
+        "Docker",
+        "CI/CD"
+      ],
+      "bullet_bank": [
+        "Developed and deployed a containerized RESTful data processing API on AWS (CodePipeline, ECS/Fargate) with automated CI/CD releases, validation checks, achieving 87% accuracy and production-grade reliability."
+      ]
+    },
+    {
+      "name": "Trend Tracker with Fashion Recommendation System",
+      "alternate_names": [],
+      "live_url": "https://www.vastrado.com/",
+      "subtitles": [],
+      "technologies": [
+        "DL CNN",
+        "React.js",
+        "Material UI",
+        "Strapi",
+        "AWS EC2"
+      ],
+      "bullet_bank": [
+        "Developed e-commerce platform with CNN-based system, improving recommendation accuracy from 78% to 92% (14% gain) and an increase in user engagement, catering to more than 3M users and 200k positive retentions."
+      ]
+    },
+    {
+      "name": "PiXMod",
+      "alternate_names": [],
+      "live_url": "https://pixmod.vercel.app/",
+      "subtitles": [],
+      "technologies": [
+        "Next.js",
+        "Angular.js",
+        "Stripe",
+        "CLIP",
+        "Transformers",
+        "Pytorch",
+        "NoSQL",
+        "SAM",
+        "Stable Diffusion",
+        "MongoDB"
+      ],
+      "detailed_context": {
+        "overview": "Built an AI-powered SaaS image platform for segmentation, recoloring, inpainting, restoration, search, and subscription-based monetization.",
+        "key_features": [
+          "Image segmentation and object manipulation using Segment Anything Model",
+          "Generative restoration and inpainting using Stable Diffusion",
+          "Content-based image search using CLIP",
+          "Subscription and billing workflows using Stripe",
+          "Scalable image storage and metadata indexing using MongoDB",
+          "Responsive web UI using Next.js"
+        ],
+        "responsibilities": [
+          "Selected the stack and implemented core image-processing workflows",
+          "Integrated AI models including CLIP, SAM, and Stable Diffusion",
+          "Designed scalable storage and retrieval for images and metadata",
+          "Implemented SaaS monetization through Stripe subscription flows"
+        ],
+        "impact": [
+          "Improved creative workflow efficiency through AI-assisted manipulation tools",
+          "Enabled scalable monetization through subscriptions and premium feature access",
+          "Designed the system to scale with growing image volume and feature complexity"
+        ]
+      },
+      "bullet_bank": [
+        "Designed an AI-powered data ingestion pipeline using Transformers and MongoDB, enabling semantic search and intelligent retrieval with CLIP across 100K+ indexed image embeddings.",
+        "Innovated AI-powered SaaS platform using SAM for image segmentation and Stable Diffusion for generative tasks, processing 1K+ edited assets while storing images and metadata in MongoDB.",
+        "Built subscription-based billing with Stripe, scalable image storage in MongoDB, and a responsive Next.js interface, increasing premium conversion by 18%."
+      ]
+    },
+    {
+      "name": "FinNexus",
+      "alternate_names": [],
+      "live_url": "https://fin-nexus.vercel.app/",
+      "subtitles": [],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Kubernetes",
+        "Firewall",
+        "MongoDB",
+        "Plaid",
+        "TailwindCSS",
+        "WebSockets"
+      ],
+      "detailed_context": {
+        "overview": "Built a scalable fintech platform for secure bank linking, transaction visibility, filtering, and real-time updates under high transaction volume.",
+        "key_features": [
+          "Bank account linking through Plaid",
+          "Real-time account and transaction updates",
+          "Advanced transaction filtering",
+          "Token-based firewall for secure transaction access",
+          "Kubernetes-based scalable deployment and CI/CD automation",
+          "Responsive UI using Next.js, TypeScript, and TailwindCSS"
+        ],
+        "responsibilities": [
+          "Designed and implemented scalable platform architecture",
+          "Integrated Plaid and secure tokenized APIs",
+          "Managed Kubernetes deployments and deployment automation",
+          "Optimized MongoDB-backed data access under high transaction volume"
+        ],
+        "impact": [
+          "Supported 50,000+ users and 1M+ transactions",
+          "Maintained scalable performance and real-time transaction visibility",
+          "Improved operational efficiency through CI/CD and containerized deployment"
+        ]
+      },
+      "bullet_bank": [
+        "Crafted a scalable fintech platform supporting 50,000+ users and 1M+ transactions, with Plaid for bank linking, a token-based firewall, CI/CD pipelines, real-time updates compliant with financial security standards.",
+        "Built with Next.js, TypeScript, Kubernetes, MongoDB, and TailwindCSS to support secure bank linking, real-time synchronization, and advanced transaction filtering across 1M+ transactions."
+      ]
+    },
+    {
+      "name": "CPU-scheduling Simulator",
+      "alternate_names": [],
+      "live_url": "https://cpu-scheduler-amber.vercel.app/",
+      "subtitles": [],
+      "technologies": [
+        "C++",
+        "React.js",
+        "JavaScript",
+        "EJ-2",
+        "OS/storage systems (FCFS, SRT, RR, SJF, MLQ)"
+      ],
+      "detailed_context": {
+        "overview": "Built an educational simulator for CPU scheduling algorithms with interactive process input, metric calculation, and Gantt-chart visualization.",
+        "key_features": [
+          "Support for FCFS, SJF, SRT, priority scheduling, Round Robin, and Multi-Level Queue",
+          "Custom process input and runtime parameter tuning",
+          "Integrated Gantt chart using EJ-2 for execution visualization",
+          "Automatic waiting-time and turnaround-time calculations"
+        ],
+        "responsibilities": [
+          "Implemented scheduling algorithms and edge-case handling",
+          "Built a responsive React-based frontend for simulation controls and output",
+          "Integrated EJ-2 Gantt visualization and dynamic metric updates",
+          "Tested algorithm correctness across preemptive and non-preemptive scenarios"
+        ],
+        "impact": [
+          "Reduced debugging time by 20%",
+          "Demonstrated up to 25% reduction in average turnaround time across test scenarios",
+          "Improved learning outcomes through real-time scheduling visualization"
+        ]
+      },
+      "bullet_bank": [
+        "Software with algorithms reducing avg TAT by 25%, and integrated Gantt chart, resulting in 20% decrease in debugging. Applied performance engineering to optimize resource allocation in OS internals and job scheduling.",
+        "Implemented FCFS, SJF, SRT, RR, priority scheduling, and MLQ with React-based controls, EJ-2 visualization, and dynamic turnaround-time and waiting-time calculations across 1K+ simulated process combinations."
+      ]
+    }
+  ],
+  "additional_sections": {
+    "commented_position_of_responsibility": [
+      {
+        "title": "President",
+        "organization": "Science and Technical Committee",
+        "start_date": "January 2022",
+        "end_date": "November 2023"
+      },
+      {
+        "title": "Event Management Head",
+        "organization": "OFFBEAT",
+        "start_date": "January 2022",
+        "end_date": "March 2023"
+      }
+    ]
+  }
+}
