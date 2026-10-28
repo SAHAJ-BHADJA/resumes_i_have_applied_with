@@ -1,0 +1,107 @@
+{
+  "document": {
+    "title": "Project Status Report",
+    "filename": "project-status-report.pdf",
+    "page_size": "A4",
+    "author": "Codex"
+  },
+  "theme": {
+    "primary_color": "#17324d",
+    "accent_color": "#e9f0f7",
+    "text_color": "#222222"
+  },
+  "header": {
+    "title": "Project Status Report",
+    "subtitle": "April 2026 Delivery Snapshot",
+    "right_text": "Internal Use"
+  },
+  "footer": {
+    "text": "Generated from JSON configuration"
+  },
+  "sections": [
+    {
+      "type": "key_value",
+      "title": "Account Details",
+      "items": [
+        {
+          "label": "Client",
+          "value": "Northwind Traders"
+        },
+        {
+          "label": "Project Lead",
+          "value": "Ava Wilson"
+        },
+        {
+          "label": "Delivery Window",
+          "value": "April 15, 2026"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "title": "Executive Summary",
+      "text": "The implementation is on track. Core backend work is complete, the reporting API is stable, and the remaining work is focused on final UI integration and stakeholder sign-off."
+    },
+    {
+      "type": "table",
+      "title": "Milestone Status",
+      "columns": [
+        {
+          "header": "Milestone",
+          "key": "milestone",
+          "width": 230
+        },
+        {
+          "header": "Owner",
+          "key": "owner",
+          "width": 120
+        },
+        {
+          "header": "Status",
+          "key": "status",
+          "width": 90
+        },
+        {
+          "header": "Target",
+          "key": "target",
+          "width": 90
+        }
+      ],
+      "rows": [
+        {
+          "milestone": "Requirements approved",
+          "owner": "Priya",
+          "status": "Done",
+          "target": "Apr 01"
+        },
+        {
+          "milestone": "API delivery",
+          "owner": "Leo",
+          "status": "Done",
+          "target": "Apr 08"
+        },
+        {
+          "milestone": "UI integration",
+          "owner": "Mia",
+          "status": "Active",
+          "target": "Apr 18"
+        },
+        {
+          "milestone": "User acceptance test",
+          "owner": "Noah",
+          "status": "Pending",
+          "target": "Apr 25"
+        }
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Open Notes",
+      "items": [
+        "Branding assets were approved by the client.",
+        "Two dashboard widgets still need stakeholder review.",
+        "No blockers are currently affecting the backend release."
+      ]
+    }
+  ]
+}
