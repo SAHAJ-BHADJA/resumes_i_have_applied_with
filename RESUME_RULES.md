@@ -6,7 +6,7 @@ Single source of truth for generating Sahaj Bhadja's JD-tailored one-page resume
 
 | Path | Role |
 |---|---|
-| `E:\Projects\Random\master_resume_data.json` | All verified candidate facts, including canonical records for reusable portfolio projects. JD-specific project concepts may be added directly to a resume under the project policy. |
+| `master_resume_data.json` | All verified candidate facts, including canonical records for reusable portfolio projects. JD-specific project concepts may be added directly to a resume under the project policy. |
 | `FORMAT_BASELINE/resume_template.tex` | Locked template: preamble, macros, header, `%%PLACEHOLDER%%` slots. |
 | `FORMAT_BASELINE/FORMAT_LOCK.md` | Locked spacing values and the fit ladder. |
 | `FORMAT_BASELINE/CONTENT_SELECTION_POLICY.md` | Mandatory full-pool scoring for experience, projects, and JD-specific skills. |
@@ -49,7 +49,7 @@ Project discovery is allowed for resume fit. Project implementation is opt-in on
 
 ### 4. Select content
 
-Before selecting anything, follow `FORMAT_BASELINE/CONTENT_SELECTION_POLICY.md`. For every JD, enumerate and score the entire eligible work-experience pool and the entire verified project pool in `master_resume_data.json`, then decide whether one JD-specific project concept is needed. Never begin from the previous resume, a default five-role set, role-family heuristics, or recently used projects. Prior selections create no preference or entitlement for future resumes.
+Before selecting anything, follow `FORMAT_BASELINE/CONTENT_SELECTION_POLICY.md`. For every JD, enumerate and score the entire eligible work-experience pool and the entire verified project pool in `master_resume_data.json`, then decide whether up to two JD-specific project concepts are needed. Prefer existing verified projects when fit is equally strong; use a second concept only when it materially improves truthful JD alignment. Never begin from the previous resume, a default five-role set, role-family heuristics, or recently used projects. Prior selections create no preference or entitlement for future resumes.
 
 **Experience (exactly 5)**
 
@@ -66,7 +66,7 @@ Before selecting anything, follow `FORMAT_BASELINE/CONTENT_SELECTION_POLICY.md`.
 - Score every verified project in master data for each JD according to `FORMAT_BASELINE/PROJECT_PORTFOLIO_POLICY.md`. Never limit consideration to projects used in recent resumes or listed in a role-family heuristic.
 - Designate the first two projects as Direct Match Projects and optimize both as the closest possible JD matches. Either or both may be newly drafted JD-aligned real-world concepts.
 - Select the third project as the strongest suitable project from the verified master-data pool. Preserve truthful scope and outcomes while allowing defensible parallel-technology adaptation based on the JD and company research.
-- Never include more than one resume-only JD-specific project concept, even when multiple JD gaps remain. Report remaining gaps instead of creating or reshaping more projects.
+- Never include more than two resume-only JD-specific project concepts. The third project must remain verified. Prefer existing verified projects when fit is equally strong; use a second concept only when it materially improves truthful JD alignment. Report remaining gaps instead of creating a third concept.
 - Resume-only project concepts do not need implementation, testing, documentation, repository creation, or master-data insertion unless the user explicitly asks.
 - A project with a URL in master data gets a clickable title plus a red, underlined `Live` (deployed app) or `Code` (repo) label via `\resumeProjectLink`. A project without a URL is shown as a plain title. Prefer linked projects when fit is equal.
 - Never invent or infer a URL.
@@ -75,7 +75,7 @@ Before selecting anything, follow `FORMAT_BASELINE/CONTENT_SELECTION_POLICY.md`.
 
 ### 5. Write
 
-- **Summary**: 1-2 lines. Role family, years of experience (2+), strongest JD stack, 3-5 bolded keywords. No filler.
+- **Summary**: 1-2 lines. Role family, the phrase "2+ years of experience", strongest JD stack, 3-5 bolded keywords. No filler.
 - **Bullets**: 2 per role and 1 per project. Each bullet is 27-32 words, impact-first, and must bold the most relevant JD-critical keyword(s) in that bullet using `\textbf{...}`. Bold only truthful technologies, responsibilities, domains, or outcomes supported by master data, company/JD research, or an allowed JD-specific project concept; never bold filler or unsupported keyword stuffing. Rewrite or merge for emphasis. Experience bullets and verified project facts come from master data; JD-specific project concepts must avoid unsupported metrics, links, production scale, or claims the candidate cannot defend.
 - **Skills**: each category on its own line, **at least 40 distinct, evidence-supported terms**. Build the list from the JD, mandatory company/team research, and verified master data; order JD must-haves first, then research-supported role signals, credible adjacent terms, and remaining defensible skills. Never add an unsupported skill merely to reach 40. Baseline categories (rename/reorder/drop per JD): Languages, Backend & APIs, Frontend, Databases, Cloud & Infrastructure, AI/ML, Engineering Practices.
 

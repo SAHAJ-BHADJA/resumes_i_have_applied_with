@@ -10,7 +10,7 @@ Every resume includes exactly three projects:
 2. One **Secondary Direct Match Project**, also optimized as a closest possible JD match and allowed to be newly drafted.
 3. One strongest matching project selected from the existing verified project pool.
 
-Both Direct Match Projects may be verified projects or realistic JD-aligned project concepts. Never create more than two JD-specific concepts. The third project must remain a verified portfolio selection. The three-project count is compulsory and has no page-fit or layout exception.
+Both Direct Match Projects may be verified projects or realistic JD-aligned project concepts. Never create more than two JD-specific concepts. Prefer verified projects when fit is equally strong; draft a second concept only when it materially improves truthful JD alignment. The third project must remain a verified portfolio selection. The three-project count is compulsory and has no page-fit or layout exception.
 
 Both Direct Match Projects should receive direct JD-optimized positioning. For the third verified project, tailoring may change emphasis and may substitute or add an analogous technology when the implementation effect is technically equivalent and supported by the JD and company research (for example, AWS to Azure). Its product purpose, responsibilities, scale, metrics, implementation status, and outcomes must remain truthful. Drafted concepts must avoid unsupported metrics, public links, production scale, employer-specific claims, or technologies the candidate cannot defend.
 

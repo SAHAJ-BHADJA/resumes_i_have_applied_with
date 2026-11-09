@@ -30,7 +30,7 @@ CONTACT_EMAIL = "sahaj.bhadja@gmail.com"
 
 
 def find_tectonic() -> str:
-    if TECTONIC_LOCAL.exists():
+    if sys.platform == "win32" and TECTONIC_LOCAL.exists():
         return str(TECTONIC_LOCAL)
     found = shutil.which("tectonic")
     if found:
@@ -94,7 +94,9 @@ def section_body(tex: str, section: str, next_section: str | None = None) -> str
 
 def lint(tex: str) -> list[str]:
     problems = []
-    experience_count = len(re.findall(r"\\resumeSubheading\s*\{", section_body(tex, "Experience", "Skills")))
+    experience_count = len(
+        re.findall(r"\\resumeSubheading(?:Long)?\s*\{", section_body(tex, "Experience", "Skills"))
+    )
     project_count = len(re.findall(r"\\resumeProjectHeading\s*\{", section_body(tex, "Projects")))
     if experience_count != REQUIRED_EXPERIENCES:
         problems.append(
